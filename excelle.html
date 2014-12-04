@@ -25,6 +25,7 @@ support@elletricity.com
 <meta name="image:Custom header icon" content=""/>
 
 <meta name="text:Disqus Shortname" content=""/>
+<meta name="text:Email address" content=""/>
 <meta name="text:Dribbble username" content=""/>
 <meta name="text:Facebook username" content=""/>
 <meta name="text:Flickr ID" content=""/>
@@ -484,7 +485,8 @@ support@elletricity.com
 				</nav>
 				<hr/>
 				<nav id="social">
-					<ul class="nav_links">{block:ifDribbbleUsername}
+					<ul class="nav_links">{block:ifEmailAddress}
+						<li><a href="mailto:{text:Email address}"><i class="typcn typcn-social-at-circular"></i></a></li>{/block:ifEmailAddress}{block:ifDribbbleUsername}
 						<li><a href="http://dribbble.com/{text:Dribbble username}"><i class="typcn typcn-social-dribbble"></i></a></li>{/block:ifDribbbleUsername}{block:ifFacebookUsername}
 						<li><a href="http://facebook.com/{text:Facebook username}"><i class="typcn typcn-social-facebook-circular"></i></a></li>{/block:ifFacebookUsername}{block:ifFlickrID}
 						<li><a href="http://flickr.com/photos/{text:Flickr ID}"><i class="typcn typcn-social-flickr-circular"></i></a></li>{/block:ifFlickrID}{block:ifGithubUsername}
@@ -517,13 +519,13 @@ support@elletricity.com
 				<h2><a href="http://pinterest.com/{text:Pinterest username}">Pinterest</a></h2>
 				<ul id="pinterest_photos" class="small-block-grid-3"></ul>
 			</div>
-		</div>{/block:ifPinterestUsername}{/block:ifShowPinterestWidget}{block:ifShowLikes}{block:Likes}
+		</div>{/block:ifPinterestUsername}{/block:ifShowPinterestWidget}{block:ifShowLikesWidget}{block:Likes}
 		<div class="small-12 medium-6 columns show-for-medium-up">
 			<div class="inner invisible">
 				<h2><a href="http://tumblr.com/liked/by/{Name}">Likes</a></h2>
 				{Likes limit="3" summarize="100" width="300"}
 			</div>
-		</div>{/block:Likes}{/block:ifShowLikes}
+		</div>{/block:Likes}{/block:ifShowLikesWidget}
 		<div class="small-12 columns">
 			<div class="inner">
 				<div id="copyright" class="text-center">{block:ifShowCopyright}{block:ifNotCustomCopyright}{Name}{/block:ifNotCustomCopyright}{block:ifCustomCopyright}{text:Custom copyright}{/block:ifCustomCopyright} &copy; {CopyrightYears}{/block:ifShowCopyright}</div>
