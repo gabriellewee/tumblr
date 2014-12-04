@@ -484,51 +484,51 @@ support@elletricity.com
 				</nav>
 				<hr/>
 				<nav id="social">
-					<ul class="nav_links">
-						{block:ifDribbbleUsername}<li><a href="http://dribbble.com/{text:Dribbble username}"><i class="typcn typcn-social-dribbble"></i></a></li>{/block:ifDribbbleUsername}
-						{block:ifFacebookUsername}<li><a href="http://facebook.com/{text:Facebook username}"><i class="typcn typcn-social-facebook-circular"></i></a></li>{/block:ifFacebookUsername}
-						{block:ifFlickrID}<li><a href="http://flickr.com/photos/{text:Flickr ID}"><i class="typcn typcn-social-flickr-circular"></i></a></li>{/block:ifFlickrID}
-						{block:ifGithubUsername}<li><a href="http://github.com/{text:Github username}"><i class="typcn typcn-social-github-circular"></i></a></li>{/block:ifGithubUsername}
-						{block:ifGooglePlusUsername}<li><a href="http://google.com/+{text:Google Plus username}"><i class="typcn typcn-social-google-plus-circular"></i></a></li>{/block:ifGooglePlusUsername}
-						{block:ifInstagramUsername}<li><a href="http://instagram.com/{text:Instagram Username}"><i class="typcn typcn-social-instagram-circular"></i></a></li>{/block:ifInstagramUsername}
-						{block:ifLinkedInID}<li><a href="https://www.linkedin.com/profile/view?id={text:LinkedIn ID}"><i class="typcn typcn-social-linkedin-circular"></i></a></li>{/block:ifLinkedInID}
-						{block:ifPinterestUsername}<li><a href="http://pinterest.com/{text:Pinterest username}"><i class="typcn typcn-social-pinterest-circular"></i></a></li>{/block:ifPinterestUsername}
-						{block:ifTwitterHandle}<li><a href="http://twitter.com/{text:Twitter Handle}"><i class="typcn typcn-social-twitter-circular"></i></a></li>{/block:ifTwitterHandle}
-						{block:ifVimeoUsername}<li><a href="http://vimeo.com/{text:Vimeo username}"><i class="typcn typcn-social-vimeo-circular"></i></a></li>{/block:ifVimeoUsername}
-						{block:ifYoutubeUsername}<li><a href="http://youtube.com/user/{text:Youtube username}"><i class="typcn typcn-social-youtube-circular"></i></a></li>{/block:ifYoutubeUsername}
+					<ul class="nav_links">{block:ifDribbbleUsername}
+						<li><a href="http://dribbble.com/{text:Dribbble username}"><i class="typcn typcn-social-dribbble"></i></a></li>{/block:ifDribbbleUsername}{block:ifFacebookUsername}
+						<li><a href="http://facebook.com/{text:Facebook username}"><i class="typcn typcn-social-facebook-circular"></i></a></li>{/block:ifFacebookUsername}{block:ifFlickrID}
+						<li><a href="http://flickr.com/photos/{text:Flickr ID}"><i class="typcn typcn-social-flickr-circular"></i></a></li>{/block:ifFlickrID}{block:ifGithubUsername}
+						<li><a href="http://github.com/{text:Github username}"><i class="typcn typcn-social-github-circular"></i></a></li>{/block:ifGithubUsername}{block:ifGooglePlusUsername}
+						<li><a href="http://google.com/+{text:Google Plus username}"><i class="typcn typcn-social-google-plus-circular"></i></a></li>{/block:ifGooglePlusUsername}{block:ifInstagramUsername}
+						<li><a href="http://instagram.com/{text:Instagram Username}"><i class="typcn typcn-social-instagram-circular"></i></a></li>{/block:ifInstagramUsername}{block:ifLinkedInID}
+						<li><a href="https://www.linkedin.com/profile/view?id={text:LinkedIn ID}"><i class="typcn typcn-social-linkedin-circular"></i></a></li>{/block:ifLinkedInID}{block:ifPinterestUsername}
+						<li><a href="http://pinterest.com/{text:Pinterest username}"><i class="typcn typcn-social-pinterest-circular"></i></a></li>{/block:ifPinterestUsername}{block:ifTwitterHandle}
+						<li><a href="http://twitter.com/{text:Twitter Handle}"><i class="typcn typcn-social-twitter-circular"></i></a></li>{/block:ifTwitterHandle}{block:ifVimeoUsername}
+						<li><a href="http://vimeo.com/{text:Vimeo username}"><i class="typcn typcn-social-vimeo-circular"></i></a></li>{/block:ifVimeoUsername}{block:ifYoutubeUsername}
+						<li><a href="http://youtube.com/user/{text:Youtube username}"><i class="typcn typcn-social-youtube-circular"></i></a></li>{/block:ifYoutubeUsername}
 					</ul>
 				</nav>
 			</div>
-		</div>
-		{block:ifShowInstagramWidget}{block:ifInstagramAccessToken}<div class="small-12 medium-6 columns show-for-medium-up">
+		</div>{block:ifShowInstagramWidget}{block:ifInstagramAccessToken}
+		<div class="small-12 medium-6 columns show-for-medium-up">
 			<div class="photo_grid inner">
 				<h2>{block:ifInstagramUsername}<a href="http://instagram.com/{text:Instagram username}">Instagram</a>{/block:ifInstagramUsername}{block:ifnotInstagramUsername}Instagram{block:ifnotInstagramUsername}</h2>
 				<ul id="instagram_photos" class="small-block-grid-3"></ul>
 			</div>
-		</div>{/block:ifInstagramAccessToken}{/block:ifShowInstagramWidget}
-		{block:ifShowFlickrWidget}{block:ifFlickrID}<div class="small-12 medium-6 columns show-for-medium-up">
+		</div>{/block:ifInstagramAccessToken}{/block:ifShowInstagramWidget}{block:ifShowFlickrWidget}{block:ifFlickrID}
+		<div class="small-12 medium-6 columns show-for-medium-up">
 			<div class="photo_grid inner">
 				<h2><a href="http://flickr.com/photos/{text:Flickr ID}">Flickr</a></h2>
 				<ul id="flickr_photos" class="small-block-grid-3"></ul>
 			</div>
-		</div>{/block:ifFlickrID}{/block:ifShowFlickrWidget}
-		{block:ifShowPinterestWidget}{block:ifPinterestUsername}<div class="small-12 medium-6 columns show-for-medium-up">
+		</div>{/block:ifFlickrID}{/block:ifShowFlickrWidget}{block:ifShowPinterestWidget}{block:ifPinterestUsername}
+		<div class="small-12 medium-6 columns show-for-medium-up">
 			<div class="photo_grid inner">
 				<h2><a href="http://pinterest.com/{text:Pinterest username}">Pinterest</a></h2>
 				<ul id="pinterest_photos" class="small-block-grid-3"></ul>
 			</div>
-		</div>{/block:ifPinterestUsername}{/block:ifShowPinterestWidget}
-		{block:ifShowLikes}{block:Likes}<div class="small-12 medium-6 columns show-for-medium-up">
+		</div>{/block:ifPinterestUsername}{/block:ifShowPinterestWidget}{block:ifShowLikes}{block:Likes}
+		<div class="small-12 medium-6 columns show-for-medium-up">
 			<div class="inner invisible">
 				<h2><a href="http://tumblr.com/liked/by/{Name}">Likes</a></h2>
 				{Likes limit="3" summarize="100" width="300"}
 			</div>
 		</div>{/block:Likes}{/block:ifShowLikes}
-		{block:ifShowCopyright}<div class="small-12 columns">
+		<div class="small-12 columns">
 			<div class="inner">
-				<div id="copyright" class="text-center">{block:ifNotCustomCopyright}{Name}{/block:ifNotCustomCopyright}{block:ifCustomCopyright}{text:Custom copyright}{/block:ifCustomCopyright} &copy; {CopyrightYears}</div>
+				<div id="copyright" class="text-center">{block:ifShowCopyright}{block:ifNotCustomCopyright}{Name}{/block:ifNotCustomCopyright}{block:ifCustomCopyright}{text:Custom copyright}{/block:ifCustomCopyright} &copy; {CopyrightYears}{/block:ifShowCopyright}</div>
 			</div>
-		</div>{/block:ifShowCopyright}
+		</div>
 	</div>
 </footer>
 
@@ -562,7 +562,7 @@ var disqus_shortname = '{text:Disqus Shortname}';
 	}
 </script>
 
-<script async src="http://static.tumblr.com/cyx1twh/3cdng1ad9/scripts.min.js"></script>
+<script async src="http://static.tumblr.com/cyx1twh/ciYng1eyg/scripts.min.js"></script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
 <script>
