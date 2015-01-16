@@ -1,0 +1,476 @@
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[if IE 10]><html class="ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<title>{Title}{block:SearchPage} &middot; {lang:Search results for SearchQuery}{/block:SearchPage}{block:TagPage} &middot; {lang:Showing posts tagged Tag}{/block:TagPage}{block:PermalinkPage}{block:PostSummary} &middot; {PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:IndexPage}{block:Description} &middot; {PlaintextDescription}{/block:Description}{/block:IndexPage}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8"/>
+<meta name="description" content="{MetaDescription}"/>
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="icon" type="image/png" href="{PortraitURL-64}"/>
+<link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"/>
+<meta name="msapplication-square150x150logo" content="{PortraitURL-128}"/>
+<meta name="msapplication-TileImage" content="{PortraitURL-128}">
+<meta name="msapplication-TileColor" content="{AccentColor}"/>
+<meta name="application-name" content="{Title}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/cyx1twh/P5Cni9deq/style.min.css"/>
+
+<!--
+Transistor Theme - 1.0
+http://transistor.elletricity.com
+Theme by Gabrielle Wee
+support@elletricity.com
+-->
+
+
+<meta name="if:Process style buttons" content="1"/>
+<meta name="if:Infinite Scrolling" content="1"/>
+<meta name="if:Transitions" content="1"/>
+<meta name="if:Transition pulse" content="1"/>
+<meta name="if:White post controls" content="1"/>
+<meta name="if:Black post controls" content="0"/>
+<meta name="if:Ask box popup" content="1"/>
+<meta name="if:Submit box popup" content="1"/>
+<meta name="if:Searchbar popup" content="1"/>
+<meta name="if:Show archive link" content="1"/>
+<meta name="if:Show RSS link" content="0"/>
+<meta name="if:Show icon in description" content="1"/>
+<meta name="if:Show Twitter widget" content="1"/>
+<meta name="text:Twitter Widget ID" content=""/>
+<meta name="text:Twitter handle" content=""/>
+<meta name="if:Show Instagram widget" content="1"/>
+<meta name="text:Instagram access token" content=""/>
+<meta name="text:Instagram username" content=""/>
+<meta name="color:Text color" content="#0B0907"/>
+<meta name="color:Post background color" content="#ffffff"/>
+<meta name="color:Header color" content="#4B586B"/>
+<meta name="color:Tag color" content="#D2D1D0"/>
+<meta name="color:Menu color" content="#ffffff"/>
+<meta name="color:Menu background color" content="#000000"/>
+<meta name="color:Post control light color" content="#93272b"/>
+<meta name="color:Post control dark color" content="#3d0a09"/>
+<meta name="color:Post border light color" content="#f0e8de"/>
+<meta name="color:Post border medium color" content="#e1d2bd"/>
+<meta name="color:Post border dark color" content="#182230"/>
+<meta name="color:Like and reblog background color" content="#4B5F6B"/>
+<meta name="color:Twitter color" content="#86B1D1"/>
+<meta name="font:Body font" content="Roboto"/>
+<meta name="font:Menu font" content="Source Code Pro"/>
+<meta name="font:Header font" content="Raleway"/>
+<meta name="font:Pre font" content="Ubuntu Mono"/>
+<meta name="text:Custom text above ask" content=""/>
+<meta name="text:Custom text above submit" content=""/>
+<meta name="text:Text size" content="12"/>
+<meta name="text:Menu size" content="11"/>
+<meta name="text:Header size" content="24"/>
+<meta name="text:Menu spacing" content="1"/>
+<meta name="text:Custom Lyrics" content=""/>
+<meta name="text:Link decoration" content="( )"/>
+<meta name="text:Secret link 1 URL" content=""/>
+<meta name="text:Secret link 1 title" content=""/>
+<meta name="text:Secret link 2 URL" content=""/>
+<meta name="text:Secret link 2 title" content=""/>
+<meta name="text:Secret link 3 URL" content=""/>
+<meta name="text:Secret link 3 title" content=""/>
+<meta name="select:Menu capitalization" content="uppercase" title="Uppercase"/>
+<meta name="select:Menu capitalization" content="lowercase" title="Lowercase"/>
+<meta name="select:Menu capitalization" content="capitalize" title="First letter"/>
+<meta name="select:Menu capitalization" content="none" title="Default"/>
+<meta name="image:Background image" content=""/>
+<meta name="select:Background tiling" content="repeat" title="Tiled"/>
+<meta name="select:Background tiling" content="repeat-x" title="Tile horizontally"/>
+<meta name="select:Background tiling" content="repeat-y" title="Tile vertically"/>
+<meta name="select:Background tiling" content="no-repeat" title="None"/>
+<meta name="select:Background scroll" content="scroll" title="Scroll"/>
+<meta name="select:Background scroll" content="fixed" title="Fixed"/>
+<meta name="select:Background position" content="center center" title="Center"/>
+<meta name="select:Background position" content="center top" title="Center top"/>
+<meta name="select:Background position" content="center bottom" title="Center bottom"/>
+<meta name="select:Background position" content="left top" title="Left top"/>
+<meta name="select:Background position" content="left bottom" title="Left bottom"/>
+<meta name="select:Background position" content="left center" title="Left center"/>
+<meta name="select:Background position" content="right top" title="Right top"/>
+<meta name="select:Background position" content="right bottom" title="Right bottom"/>
+<meta name="select:Background position" content="right center" title="Right center"/>
+<meta name="select:Menu symbol" content="star" title="Star"/>
+<meta name="select:Menu symbol" content="spade" title="Spade"/>
+<meta name="select:Menu symbol" content="diamond" title="Diamond"/>
+<meta name="select:Menu symbol" content="heart" title="Heart"/
+<meta name="select:Menu symbol" content="club" title="Club"/>
+<meta name="select:Menu symbol" content="king" title="King"/>
+<meta name="select:Menu symbol" content="queen" title="Queen"/>
+<meta name="select:Menu symbol" content="rook" title="Rook"/>
+<meta name="select:Menu symbol" content="bishop" title="Bishop"/>
+<meta name="select:Menu symbol" content="knight" title="Knight"/>
+<meta name="select:Menu symbol" content="pawn" title="Pawn"/>
+<meta name="select:Menu symbol" content="number" title="Number"/>
+<meta name="select:Menu symbol" content="four-star" title="Four pointed star"/>
+<meta name="select:Menu symbol" content="flower" title="Flower"/>
+<meta name="if:Show copyright" content="1"/>
+<meta name="text:Custom copyright" content=""/>
+<style type="text/css">{block:ifTransitions}
+a,a:visited,.pop,.pop li:first-child a:before,.pop-inside:before,.pop-search span:before,input.pop-inside,.link .post-title i:before,.has-thumbnail a span img,.link .post-title a>span:first-child,#transistor-icon img,#lyrics,.photo_frame a:active img,.photo_frame a:focus img,.photo_frame a:hover img,.photo-grid a img{block:ifNotTransitionPulse},.process:before,.process:before,.process:before,.process span,.process span,.process span,.process:after,.process:after,.process:after,.process-small:after,.process-small:after,.process-small:after,.pag-button:after,.pag-button:after,.pag-button:after,.transistor-links,.transistor-links,.transistor-links,.star i:after,.star i:after,.star i:after{/block:ifNotTransitionPulse}{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+
+.bar-icon{-webkit-transition:-webkit-transform .15s linear;-ms-transition:-ms-transform .15s linear;-o-transition:-o-transform .15s linear; -moz-transition:-moz-transform .15s linear;transition:transform .15s linear}.bar-icon:nth-child(2) {-webkit-transition:opacity .1s linear;-ms-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}{block:ifTransitionPulse}
+
+@-webkit-keyframes pulse-light{0%{background:{color:Post control light color}}10%{background:{color:Post control dark color}}100%{background:{color:Post control light color}}}@-moz-keyframes pulse-light{0%{background:{color:Post control light color}}10%{background:{color:Post control dark color}}100%{background:{color:Post control light color}}}@-o-keyframes pulse-light{0%{background:{color:Post control light color}}10%{background:{color:Post control dark color}}100%{background:{color:Post control light color}}}@keyframes pulse-light{0%{background:{color:Post control light color}}10%{background:{color:Post control dark color}}100%{background:{color:Post control light color}}}
+
+@-webkit-keyframes pulse-dark{0%{background:{color:Post control dark color}}20%{background:{color:Post control light color}}100%{background:{color:Post control dark color}}}@-moz-keyframes pulse-dark{0%{background:{color:Post control dark color}}20%{background:{color:Post control light color}}100%{background:{color:Post control dark color}}}@-o-keyframes pulse-dark{0%{background:{color:Post control dark color}}20%{background:{color:Post control light color}}100%{background:{color:Post control dark color}}}@keyframes pulse-dark{0%{background:{color:Post control dark color}}20%{background:{color:Post control light color}}100%{background:{color:Post control dark color}}}
+
+@-webkit-keyframes pulse-transistor{0%{background:transparent}20%{background:#d7f1e5}100%{background:transparent}}@-moz-keyframes pulse-transistor{0%{background:transparent}20%{background:#d7f1e5}100%{background:transparent}}@-o-keyframes pulse-transistor{0%{background:transparent}20%{background:#d7f1e5}100%{background:transparent}}@keyframes pulse-transistor{0%{background:transparent}20%{background:#d7f1e5}100%{background:transparent}}
+
+@-webkit-keyframes star{0%{opacity:0}20%{opacity:1}100%{opacity:0}}@-moz-keyframes star{0%{opacity:0}20%{opacity:1}100%{opacity:0}}@-o-keyframes star{0%{opacity:0}20%{opacity:1}100%{opacity:0}}@keyframes star{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+@-webkit-keyframes star-outline{0%{opacity:1}20%{opacity:0}100%{opacity:1}}@-moz-keyframes star-outline{0%{opacity:1}20%{opacity:0}100%{opacity:1}}@-o-keyframes star-outline{0%{opacity:1}20%{opacity:0}100%{opacity:1}}@keyframes star-outline{0%{opacity:1}20%{opacity:0}100%{opacity:1}}
+
+.process:active:before,.process:focus:before,.process:hover:before,.process:active span,.process:focus span,.process:hover span{-webkit-animation:pulse-light .7s ease-in-out infinite;-moz-animation:pulse-light .7s ease-in-out infinite;-o-animation:pulse-light .7s ease-in-out infinite;animation:pulse-light .7s ease-in-out infinite }
+
+.process:active:after,.process:focus:after,.process:hover:after,.process-small:active:after,.process-small:focus:after,.process-small:hover:after,.pag-button:active:after,.pag-button:focus:after,.pag-button:hover:after{-webkit-animation:pulse-dark .7s ease-in-out infinite;-moz-animation:pulse-dark .7s ease-in-out infinite;-o-animation:pulse-dark .7s ease-in-out infinite;animation:pulse-dark .7s ease-in-out infinite }
+
+.transistor-links:active,.transistor-links:focus,.transistor-links:hover{-webkit-animation:pulse-transistor .7s ease-in-out infinite;-moz-animation:pulse-transistor .7s ease-in-out infinite;-o-animation:pulse-transistor .7s ease-in-out infinite;animation:pulse-transistor .7s ease-in-out infinite }
+
+.star:active i:before,.star:focus i:before,.star:hover i:before{opacity:0;-webkit-animation:star-outline .7s ease-in-out infinite;-moz-animation:star-outline .7s ease-in-out infinite;-o-animation:star-outline .7s ease-in-out infinite;animation:star-outline .7s ease-in-out infinite}
+
+.star:active i:after,.star:focus i:after,.star:hover i:after{opacity:1;-webkit-animation:star .7s ease-in-out infinite;-moz-animation:star .7s ease-in-out infinite;-o-animation:star .7s ease-in-out infinite;animation:star .7s ease-in-out infinite}{/block:ifTransitionPulse}{/block:ifTransitions}
+
+body, html, #content { background: {BackgroundColor}{block:ifBackgroundImage} url("{image:Background image}") {select:Background tiling} {select:Background scroll} {select:Background position}{/block:ifBackgroundImage}; min-height: 100% }
+body { font: {text:Text size}px {font:Body font}, "Roboto", "Source Sans Pro", "Gill Sans", GillSans, Calibri, Trebuchet, sans-serif; color: {color:Text color} }
+a, a:visited, .ask, .tags li a:active, .tags li a:focus, .tags li a:hover { color: {AccentColor} }
+a:active, a:focus, a:hover, .search_query { color: {color:Post control light color} }
+::selection, .post .caption pre, .filter-page input:focus { background: {color:Post border light color} }
+::-moz-selection { background: {color:Post border light color} }
+.ui-tooltip, .pop, input.pop-inside { background: rgba({RGBcolor:Menu background color},.9) }
+.ui-tooltip, .post-title, .filter-page .inside, #notes h2, #notes ol li, .regular-buttons { font-family: {font:Header font}, "Raleway", Futura, "Gill Sans", "Gill Sans MT", Calibri, sans-serif }
+div + .post-title { margin-top: 1rem }
+.post-title, .filter-page .inside { font-size: {text:Header size}px }
+.ui-tooltip, .pop, .pop > ul > li a, #notes h2, #notes, #notes a, input.pop-inside, .regular-buttons a { color: {color:Menu color} }
+.ui-tooltip, #lyrics-text, .pop > ul > li a, #notes h2, #notes li, .regular-buttons, #copyright { text-transform: {select:Menu capitalization} }
+#lyrics-text, .quote h1:after, .pop > ul > li a, #copyright { font-family: {font:Menu font}, "Source Code Pro", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace }
+#lyrics-text, .pop > ul > li a, #notes li, .ui-tooltip, #copyright { font-size: {text:Menu size}px }
+#lyrics-text, #notes a:active, #notes a:focus, #notes a:hover, #menu, .star, .regular-buttons a:active, .regular-buttons a:focus, .regular-buttons a:hover, #copyright { color: rgba({RGBcolor:Menu color},.6)!important }
+#lyrics-text, .pop > ul > li a, #notes h2, #notes li, .ui-tooltip, .regular-buttons, #copyright { letter-spacing: {text:Menu spacing}px }
+.bar-icon { background: rgba({RGBcolor:Menu color},.6) }
+.pop:not(.pop-mobile) li:first-child a:before, .pop-inside:before, .pop-search span:before { border-bottom-color: rgba({RGBcolor:Menu background color},.9) }
+.pop-mobile li:first-child a:before { border-left-color: rgba({RGBcolor:Menu background color},.9) }
+.pop > ul > li a:active, .pop > ul > li a:focus, .pop > ul > li a:hover { background: {AccentColor} }
+.pop:not(.pop-mobile) > ul > li a:active:before, .pop:not(.pop-mobile) > ul > li a:focus:before, .pop:not(.pop-mobile) > ul > li a:hover:before { border-bottom-color: {AccentColor} }
+.pop-mobile ul li a:active:before, .pop-mobile ul li a:focus:before, .pop-mobile ul li a:hover:before { border-left-color: {AccentColor} }
+#twitter-handle { background: {color:Twitter color} }
+.post .inside { background: {color:Post background color} }{block:ifProcessStyleButtons}
+.post:not(.no-border) .inside { border-top: .4rem solid {color:Post border medium color} }
+.post.appended .inside { border-bottom: .4rem solid {color:Post border dark color} }{/block:ifProcessStyleButtons}
+.process, .process-small, #pagination div:not(#infscr-loading), .pag-button { background: {color:Post border medium color} }
+.process:before, .process:active:after, .process:focus:after, .process:hover:after, .process span, .process-small:active:after, .process-small:focus:after, .process-small:hover:after, .pag-button:active:after, .pag-button:focus:after, .pag-button:hover:after { background: {color:Post control light color} }
+.process:active:before, .process:focus:before, .process:hover:before, .process:active span, .process:focus span, .process:hover span, .process:after, .process-small:after, .pag-button:after { background: {color:Post control dark color} }
+.post-title a:active, .post-title a:focus, .post-title a:hover, .quote h1, .link .post-title a:active i:before, .link .post-title a:focus i:before, .link .post-title a:hover i:before { color: {color:Header color} }
+.post .caption code, .post .caption pre { font-family: {font:Pre font}, "Inconsolata", "Consolas", Menlo, "Courier New", Courier, Mono, monospace }
+.post blockquote { border-left: .5rem solid {color:Post border light color} }
+.quote h1:after, link .post-title i:before { color: {color:Post border light color} }
+.link .post-title i:before, .has-thumbnail a span img { border: .4rem solid {color:Post border light color} }
+.link .post-title a:active i:before, .link .post-title a:focus i:before, .link .post-title a:hover i:before, .has-thumbnail a:active span img, .has-thumbnail a:focus span img, .has-thumbnail a:hover span img { border-color: {color:Header color} }
+.thumbnail, .link .post-title a > span:first-child { width: 6.4rem; height: 4.8rem }
+.post-title a > span:first-child *, .post-title a > span:first-child i:before { margin: 0 }
+.conversation li, .ask { border-bottom: .1rem solid {color:Post border light color} }
+.tags li a { color: {color:Tag color} }
+.meta li { border: .4rem solid {color:Post border dark color}; background: {color:Like and reblog background color} }
+#notes h2 { border-bottom: .1rem solid {color:Menu color} }
+#notes h2:before { background: {color:Menu color} }
+#button:before { border-top-color: {color:Post border medium color} }
+.up-button:before { border-bottom-color: {color:Post border medium color} }
+.prev-button:before { border-right-color: {color:Post border medium color} }
+.next-button:before { border-left-color: {color:Post border medium color} }
+@media only screen and (min-width:740px){
+    .star i:after { color: {color:Menu color} }
+	input.pop-inside:focus { background: rgba({RGBcolor:Menu color},.9); color: {color:Menu background color} }
+	input:focus + span:before { border-bottom-color: rgba({RGBcolor:Menu color},.9) }{block:IndexPage}
+	#posts, #pagination { max-width: 80rem }
+	.grid, .post.iso_posts:not(.filter-page) { width: 50% }
+	.post.appended:only-of-type, .filter-fix:only-of-type + .filter-page, .filter-fix:only-of-type + #pagination { position: static!important; width: 50rem; float: none!important }{/block:IndexPage}
+}
+#copyright { padding-top: 3rem }
+
+{CustomCSS}
+</style>
+<script src="http://static.tumblr.com/cyx1twh/4Lfnfxhmn/jquery.min.js"></script>
+<script src="http://static.tumblr.com/cyx1twh/1zDni2ah5/jquery-ui.min.js"></script>
+<script src="http://static.tumblr.com/cyx1twh/XzAnhwro3/modernizr.js"></script>
+</head>
+<body>
+<!--[if lt IE 11]>
+<div id="warning"><div class="row"><div class="large-12 columns">This theme does not support Internet Explorer 9 and below. You may also experience bugs in Internet Explorer 10. Please update to a <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">newer version</a> of Internet Explorer or try another browser - I recommend <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>.</div></div></div>
+<![endif]-->
+
+<header id="top">
+	<object id="transistor" type="image/svg+xml" data="http://static.tumblr.com/cyx1twh/D5Oni2755/transistor.svg">
+		<img src="http://static.tumblr.com/cyx1twh/rpeni27b0/transistor.png" alt=""/>
+	</object>
+	<a id="transistor-icon" class="transistor-link" href="/"><img src="{PortraitURL-128}" alt="" width="56" height="56" /></a>{block:ifSecretLink1URL}
+	<a id="transistor-link-1" class="transistor-link transistor-links" href="{text:Secret link 1 URL}" title="{text:Secret link 1 title}"></a>{/block:ifSecretLink1URL}{block:ifSecretLink2URL}
+	<a id="transistor-link-2" class="transistor-link transistor-links" href="{text:Secret link 2 URL}" title="{text:Secret link 2 title}"></a>{/block:ifSecretLink2URL}{block:ifSecretLink3URL}
+	<a id="transistor-link-3" class="transistor-link transistor-links" href="{text:Secret link 3 URL}" title="{text:Secret link 3 title}"></a>{/block:ifSecretLink3URL}
+	<div id="lyrics">
+		<div id="lyrics-text">{block:ifCustomLyrics}{text:Custom Lyrics}{/block:ifCustomLyrics}{block:ifNotCustomLyrics}When you speak I hear <strong>silence</strong><br/>Every word a <strong>defiance</strong><br/>I can hear, oh, I can hear{/block:ifNotCustomLyrics}</div>
+		<nav id="mobile-nav">
+			<a class="selector" href="#">
+				<div class="wrapper">
+					<span class="bar-icon"></span>
+					<span class="bar-icon"></span>
+					<span class="bar-icon"></span>
+				</div>
+			</a>
+			<div class="pop pop-mobile">
+				<ul class="pop-pages">
+					<li><a href="/">{lang:Home}</a></li>{block:HasPages}
+					{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}{block:ifShowArchiveLink}
+					<li><a href="/archive">{lang:Archive}</a></li>{/block:ifShowArchiveLink}{block:ifShowRSSLink}
+					<li><a href="{RSS}">{lang:RSS}</a></li>{/block:ifShowRSSLink}{block:AskEnabled}
+					<li><a href="/ask">Ask</a></li>{/block:AskEnabled}{block:SubmissionsEnabled}
+					<li><a href="/submit">Submit</a>{/block:SubmissionsEnabled}
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<nav id="menu">
+		<ul class="shape-{select:Menu symbol}">
+			<li><a class="star" href="/" title="Index{text:Link decoration}"><i></i></a></li>
+			{block:Description}<li>
+				<a class="star shape-{select:Menu symbol} selector" href="#" title="About{text:Link decoration}"><i></i></a>
+				<div class="pop pop-description">
+					<div class="pop-inside">{block:ifShowIconInDescription}
+						<span class="user-icon"><img src="{PortraitURL-128}" alt="{Name}" width="32" height="32" /></span>{/block:ifShowIconInDescription}
+						<div class="description">{Description}</div>{block:ifShowCopyright}
+						<p class="copyright">{block:ifNotCustomCopyright}{Name}{/block:ifNotCustomCopyright}{block:ifCustomCopyright}{text:Custom copyright}{/block:ifCustomCopyright} &copy; {CopyrightYears}</p>{/block:ifShowCopyright}
+					</div>
+				</div>
+			</li>{/block:Description}{block:HasPages}
+			<li>
+				<a class="star shape-{select:Menu symbol} selector" href="#" title="Pages{text:Link decoration}"><i></i></a>
+				<div class="pop">
+					<ul class="pop-pages">
+						{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+					</ul>
+				</div>
+			</li>{/block:HasPages}{block:ifShowArchiveLink}
+			<li><a class="star shape-{select:Menu symbol}" href="/archive" title="{lang:Archive}{text:Link decoration}"><i></i></a></li>{/block:ifShowArchiveLink}{block:ifShowRSSLink}
+			<li><a class="star shape-{select:Menu symbol}" href="{RSS}" title="{lang:RSS}{text:Link decoration}"><i></i></a></li>{/block:ifShowRSSLink}{block:AskEnabled}{block:ifAskBoxPopup}
+			<li>
+				<a class="star shape-{select:Menu symbol} selector" href="#" title="Ask{text:Link decoration}"><i></i></a>
+				<div class="pop pop-iframe">
+					<div class="pop-inside"><iframe frameborder="0" scrolling="no" width="100%" height="190" src="https://www.tumblr.com/ask_form/{Name}.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form_pop"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]--></div>
+				</div>
+			</li>{/block:ifAskBoxPopup}{block:ifNotAskBoxPopup}
+			<li><a class="star shape-{select:Menu symbol}" href="/ask" title="Ask{text:Link decoration}"><i></i></a></li>{/block:ifNotAskBoxPopup}{/block:AskEnabled}{block:SubmissionsEnabled}{block:ifSubmitBoxPopup}
+			<li>
+				<a class="star shape-{select:Menu symbol} selector" href="#" title="Submit{text:Link decoration}"><i></i></a>
+				<div class="pop pop-iframe">
+					<div class="pop-inside"><iframe frameborder="0" scrolling="no" width="100%" height="288" id="submit_form_pop" src="https://www.tumblr.com/submit_form/{Name}.tumblr.com" style="background-color:transparent; overflow:hidden;"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('submit_form').allowTransparency=true;</script><![endif]--></div>
+				</div>
+			</li>{/block:ifSubmitBoxPopup}{block:ifNotSubmitBoxPopup}
+			<li><a class="star shape-{select:Menu symbol}" href="/submit" title="Submit{text:Link decoration}"><i></i></a></li>{/block:ifNotSubmitBoxPopup}{/block:SubmissionsEnabled}{block:ifSearchbarPopup}
+			<li>
+				<a class="star shape-{select:Menu symbol} selector" href="#" title="Search{text:Link decoration}"><i></i></a>
+				<div class="pop pop-search">
+					<form action="/search" method="get">
+						<input class="pop-inside" type="search" name="q" value="{SearchQuery}" placeholder="Search tags"/>
+						<span></span>
+					</form>
+				</div>
+			</li>{/block:ifSearchbarPopup}
+		</ul>
+	</nav>
+</header>
+<section id="content">
+	<div id="posts"{block:IndexPage} class="mason"{/block:IndexPage}>{block:IndexPage}
+		<div class="grid"></div>{block:Description}
+		<div id="description" class="no-border post iso_posts"><div class="inside">
+			<div class="inner">{block:ifShowIconInDescription}
+				<span class="user-icon"><img src="{PortraitURL-128}" alt="{Name}" width="32" height="32" /></span>{/block:ifShowIconInDescription}
+				<div class="description">{Description}</div>
+			</div>
+		</div></div>{/block:Description}{/block:IndexPage}{block:Posts}
+		<span class="filter-fix {PostType}"></span>{/block:Posts}{block:TagPage}
+		<div id="tag-page" class="no-border filter-page post iso_posts"><div class="inside">
+			<div class="inner">{lang:Posts tagged Tag 3}</div>
+		</div></div>{/block:TagPage}{block:SearchPage}
+		<div id="search-page" class="no-border filter-page post iso_posts"><div class="inside">
+			<div class="inner{block:NoSearchResults} hide{/block:NoSearchResults}">{lang:Search results for SearchQuery 2}</div>{block:NoSearchResults}
+			<form action="/search" method="get">
+				<input class="inner" type="search" name="q" value="" placeholder="No results for #{PlaintextSearchQuery}. Search again?"/>
+			</form>{/block:NoSearchResults}
+		</div></div>{/block:SearchPage}{block:DayPage}
+		<div id="day-page" class="no-border filter-page post iso_posts"><div class="inside">
+			<div class="inner">{lang:Posted on Month DayOfMonth Year}</div>
+		</div></div>{/block:DayPage}{block:IndexPage}{block:ifShowTwitterWidget}{block:ifTwitterWidgetID}
+		<article id="twitter" class="no-border post iso_posts">
+			<div class="inside">
+				<div id="twitter-handle">{block:ifTwitterHandle}<a href="http://twitter.com/{text:Twitter handle}">{/block:ifTwitterHandle}<i class="typcn typcn-social-twitter"></i>{block:ifTwitterHandle}</a>{/block:ifTwitterHandle}</div>
+				<div id="twitter-status"><div id="tweet"></div></div>
+			</div>
+		</article>{/block:ifTwitterWidgetID}{/block:ifShowTwitterWidget}{block:ifShowInstagramWidget}{block:ifInstagramAccessToken}
+		<article id="instagram" class="photo-grid post iso_posts">
+			<div class="inside">{block:ifProcessStyleButtons}
+				<a class="process" href="http://instagram.com/{text:Instagram username}" title="Instagram{text:Link decoration}"><span></span></a>{/block:ifProcessStyleButtons}
+				<ul id="instagram_photos"></ul>
+			</div>{block:ifNotProcessStyleButtons}
+			<footer class="regular-buttons">
+			    <ul>
+			        <li><a href="http://instagram.com/{text:Instagram username}">Instagram{text:Link decoration}</a></li>
+			    </ul>
+			</footer>{/block:ifNotProcessStyleButtons}
+		</article>{/block:ifInstagramAccessToken}{/block:ifShowInstagramWidget}{/block:IndexPage}{block:Posts}
+		<article id="{PostID}" class="{PostType}{block:Panorama} panorama{/block:Panorama} post{block:Date}{block:IndexPage} iso_posts appended{/block:IndexPage}{/block:Date}">
+			<div class="inside">{block:ifProcessStyleButtons}{block:Date}{block:ContentSource}
+				<a class="process-small content-source" href="{SourceURL}" title="Source{text:Link decoration}"></a>{/block:ContentSource}
+				<a class="process" href="{Permalink}" title="Posted {TimeAgo} on {MonthNumberWithZero}/{DayOfMonthWithZero}/{ShortYear}{block:NoteCount} with {NoteCountWithLabel}{/block:NoteCount}"><span></span></a>{block:ContentSource}{block:RebloggedFrom}
+				<a class="process-small reblogged-from" href="{ReblogParentURL}" title="Reblog{text:Link decoration}"></a>{/block:RebloggedFrom}{/block:ContentSource}{/block:Date}{/block:ifProcessStyleButtons}{block:Text}
+				<div class="inner">{block:Title}
+					<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+					<div class="caption">{Body}</div>
+				</div>{/block:Text}{block:Photo}
+					<div class="photo_frame">
+						{LinkOpenTag}<img src="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+					</div>{block:Caption}
+					<div class="inner caption">{Caption}</div>{/block:Caption}{/block:Photo}{block:Panorama}
+					<div class="photo_frame">
+						{LinkOpenTag}<img src="{PhotoURL-Panorama}"/>{LinkCloseTag}
+					</div>{block:Caption}
+					<div class="inner caption">{Caption}</div>{/block:Caption}{/block:Panorama}{block:Photoset}
+					<div class="images">
+						<div class="ps-highres invisible" data-photoset-layout="{PhotosetLayout}" data-photoset-id="{PostID}">{block:Photos}
+							<span><img src="{PhotoURL-250}" data-500px="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" alt="{block:Caption}{PlaintextCaption}{/block:Caption}"/></span>{/block:Photos}
+						</div>
+					</div>{block:Caption}
+					<div class="inner caption">{Caption}</div>{/block:Caption}{/block:Photoset}{block:Quote}
+				<div class="inner">
+					<h1 class="post-title {Length}">{Quote}</h1>{block:Source}
+					<div class="caption">{Source}</div>{/block:Source}
+				</div>{/block:Quote}{block:Link}
+				<div class="inner">
+					<h1 class="post-title{block:Thumbnail} has-thumbnail{/block:Thumbnail}">
+						<a href="{URL}" {Target}>
+							<span class="thumbnail">
+								<i class="typcn typcn-attachment"></i>
+								{block:Thumbnail}<img src="{Thumbnail}" alt="{Name}" width="48" height="48" />{/block:Thumbnail}
+							</span>
+							<span>
+								<span>{Name}</span>{block:Host}
+								<small>{Host}</small>{/block:Host}
+							</span>
+						</a>
+					</h1>{block:Description}
+					<div class="caption">{Description}</div>
+				</div>{/block:Description}{/block:Link}{block:Chat}{block:Title}
+				<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+				<div class="inner">
+					<ul class="conversation">{block:Lines}
+						<li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>{/block:Lines}
+					</ul>
+				</div>{/block:Chat}{block:Audio}
+				<div class="audio_box">{block:AudioEmbed}{AudioEmbed-250}{/block:AudioEmbed}</div>{block:Caption}
+				<div class="caption inner">{Caption}</div>{/block:Caption}{/block:Audio}{block:Video}
+				<div class="video_box">{VideoEmbed-700}</div>{block:Caption}
+				<div class="caption inner">{Caption}</div>{/block:Caption}{/block:Video}{block:Answer}
+				<div class="inner">
+					<h3 class="asker">
+						<span class="ask">{Asker}</span>
+						<div class="caption">{Question}</div>
+					</h3>{block:Answerer}
+					<h4 class="answerer">
+						<span class="ask">{Answerer}</span>{/block:Answerer}
+						<div class="caption">{Answer}</div>{block:Answerer}
+					</h4>
+					<div class="caption">{Replies}</div>{/block:Answerer}
+				</div>{/block:Answer}{block:Date}
+				<ul class="tags">{block:ifNotProcessStyleButtons}{block:ContentSource}
+				    <li><a href="{SourceURL}">{lang:Source}: {SourceTitle}</a>&nbsp;&nbsp;</li>{/block:ContentSource}{/block:ifNotProcessStyleButtons}{block:HasTags}{block:Tags}
+					<li><a href="{TagURL}">#{Tag}</a></li>{/block:Tags}{/block:HasTags}</ul>{block:ifNotProcessStyleButtons}
+				<ul class="tags">
+				    <li><a href="{Permalink}">{lang:Posted on Month DayOfMonth Year with NoteCount notes}</a></li>
+				</ul>{/block:ifNotProcessStyleButtons}{block:ifProcessStyleButtons}
+				<footer class="meta">{block:RebloggedFrom}
+					<span class="hide">{ReblogParentName}</span>{/block:RebloggedFrom}
+					<ul>
+						<li class="like-button">
+							{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{LikeButton color="grey"}{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}{LikeButton color="grey"}{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifNotBlackPostControls}{block:ifWhitePostControls}{LikeButton color="white"}{/block:ifWhitePostControls}{/block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{block:ifBlackPostControls}{LikeButton color="black"}{/block:ifBlackPostControls}{/block:ifNotWhitePostControls}
+						</li>
+						<li class="reblog-button">
+							{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{ReblogButton color="grey"}{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}{ReblogButton color="grey"}{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifNotBlackPostControls}{block:ifWhitePostControls}{ReblogButton color="white"}{/block:ifWhitePostControls}{/block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{block:ifBlackPostControls}{ReblogButton color="black"}{/block:ifBlackPostControls}{/block:ifNotWhitePostControls}
+						</li>
+					</ul>
+				</footer>{/block:ifProcessStyleButtons}{/block:Date}
+			</div>{block:Date}{block:ifNotProcessStyleButtons}
+			<footer class="regular-buttons">{block:RebloggedFrom}
+				<span class="hide">{ReblogParentName}</span>{/block:RebloggedFrom}
+				<ul>
+					<li class="like-button">
+						{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{LikeButton color="grey"}{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}{LikeButton color="grey"}{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifNotBlackPostControls}{block:ifWhitePostControls}{LikeButton color="white"}{/block:ifWhitePostControls}{/block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{block:ifBlackPostControls}{LikeButton color="black"}{/block:ifBlackPostControls}{/block:ifNotWhitePostControls}
+					</li>
+					<li class="reblog-button">
+						{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{ReblogButton color="grey"}{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}{ReblogButton color="grey"}{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifNotBlackPostControls}{block:ifWhitePostControls}{ReblogButton color="white"}{/block:ifWhitePostControls}{/block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{block:ifBlackPostControls}{ReblogButton color="black"}{/block:ifBlackPostControls}{/block:ifNotWhitePostControls}
+					</li>
+				</ul>
+			</footer>{/block:ifNotProcessStyleButtons}{/block:Date}
+		</article>{block:PermalinkPagination}
+		<div id="pagination" class="permalink-pagination">
+			<div>
+				<ul>
+					<li id="pag" class="pag">{block:NextPost}<a id="next" class="next-selector pag-button prev-button" href="{NextPost}" title="Newer{text:Link decoration}"></a>{/block:NextPost}</li>
+					<li class="pag local-scroll"><a class="pag-button up-button" title="Scroll to top" href="#top"></a></li>
+					<li class="pag">{block:PreviousPost}<a href="{PreviousPost}" class="pag-button next-button" title="Older{text:Link decoration}"></a>{/block:PreviousPost}</li>
+				</ul>
+			</div>
+		</div>{/block:PermalinkPagination}{block:PostNotes}
+		<aside id="notes" class="post iso_posts">
+			<h2>Notes{text:Link decoration}</h2>
+			{PostNotes}
+		</aside>{/block:PostNotes}{/block:Posts}
+	</div>{block:Pagination}{block:Posts}
+	<span class="filter-fix {PostType}"></span>{/block:Posts}
+	<div id="pagination">
+		<div>
+			<ul>
+				<li class="pag">{block:PreviousPage}<a href="{PreviousPage}" class="pag-button prev-button" title="Newer{text:Link decoration}"></a>{/block:PreviousPage}</li>
+				<li class="pag local-scroll"><a class="pag-button up-button" title="Scroll to top" href="#top"></a></li>
+				<li id="load-more" class="pag pag-selector"><a id="button" class="pag-button" title="Load{text:Link decoration}"></a></li>
+				<li id="pag" class="pag">{block:NextPage}<a class="next-selector pag-button next-button" href="{NextPage}" title="Older{text:Link decoration}"></a>{/block:NextPage}</li>
+			</ul>
+		</div>
+	</div>{/block:Pagination}{block:DayPagination}{block:Posts}
+	<span class="filter-fix {PostType}"></span>{/block:Posts}
+	<div id="pagination">
+		<div>
+			<ul>
+				<li id="pag" class="pag">{block:NextDayPage}<a id="next" class="next-selector pag-button prev-button" href="{NextDayPage}" title="Newer{text:Link decoration}"></a>{/block:NextDayPage}</li>
+				<li class="pag local-scroll"><a class="pag-button up-button" title="Scroll to top" href="#top"></a></li>
+				<li class="pag">{block:PreviousDayPage}<a href="{PreviousDayPage}" class="pag-button next-button" title="Older{text:Link decoration}"></a>{/block:PreviousDayPage}</li>
+			</ul>
+		</div>
+	</div>{/block:DayPagination}{block:ifShowCopyright}
+	<div id="copyright" class="text-center">{block:ifNotCustomCopyright}{Name}{/block:ifNotCustomCopyright}{block:ifCustomCopyright}{text:Custom copyright}{/block:ifCustomCopyright} &copy; {CopyrightYears}</div>{/block:ifShowCopyright}
+</section>
+<script>
+	var theme = {{block:ifInfiniteScrolling}
+		infscr:true{/block:ifInfiniteScrolling}{block:ifShowTwitterWidget}{block:ifTwitterWidgetID},
+		twitter:true,
+		widget:"{text:Twitter Widget ID}"{/block:ifTwitterWidgetID}{block:ifNotTwitterWidgetID},
+		twitter:false,
+		widget:""{/block:ifNotTwitterWidgetID}{/block:ifShowTwitterWidget}{block:ifNotShowTwitterWidget},
+		twitter:false,
+		widget:""{/block:ifNotShowTwitterWidget}{block:ifShowInstagramWidget}{block:ifInstagramUsername},
+		instagram:true,
+		token:"{text:Instagram access token}"{/block:ifInstagramUsername}{/block:ifShowInstagramWidget}{block:ifNotInstagramUsername},
+		instagram:false,
+		token:""{/block:ifNotInstagramUsername}{/block:ifShowInstagramWidget}{block:ifNotShowInstagramWidget},
+		instagram:false,
+		token:""{/block:ifNotShowInstagramWidget}{block:ifCustomTextAboveAsk},
+		ask:"{text:Custom text above ask}"{/block:ifCustomTextAboveAsk}{block:ifNotCustomTextAboveAsk},
+		ask:""{/block:ifNotCustomTextAboveAsk}{block:ifCustomTextAboveSubmit},
+		submit:"{text:Custom text above submit}"{block:ifCustomTextAboveSubmit}{block:ifNotCustomTextAboveSubmit},
+		submit:""{/block:ifNotCustomTextAboveSubmit}
+	}
+</script>
+<script src="http://static.tumblr.com/cyx1twh/bqnni7kxy/scripts.min.js"></script>
+<script src="http://static.tumblr.com/cyx1twh/ykdni3p0n/webfont.js"></script>
+<script> WebFont.load({ google: { families: ['Roboto:400,700,400italic,700italic', 'Source Code Pro:300,400,700', 'Ubuntu Mono:400,700,400italic,700italic', 'Raleway:500,600,800'] } }); </script>
+</body>
+</html>
