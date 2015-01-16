@@ -6,7 +6,7 @@ Tumblr themes available for public consumption.
 1. When possible, please install themes at my official [Tumblr theme page](http://tumblr.com/themes/by/elleusine).
 2. Please do not remove credits from the source code.
 3. If you edit or otherwise modify my themes, you must still leave visible attribution.
-4. Don't redistribute; link people back to this page or to elletricity.com/resources.
+4. Don't redistribute; link people back to this page or to (elletricity.com/resources)[http://elletricity.com/resources].
 3. If you have questions, please read [my FAQ](http://elletricity.com/faq).
 4. If the FAQ does not answer your question, feel free to [contact me](http://elletricity.com/contact).
 
