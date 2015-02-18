@@ -1,0 +1,402 @@
+<!--
+Fleux Theme - 1.0
+http://fleux.elletricity.com
+Theme by Gabrielle Wee
+support@elletricity.com
+-->
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[if IE 10]><html class="ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+<head>
+<title>{Title}{block:SearchPage} &middot; {lang:Search results for SearchQuery}{/block:SearchPage}{block:TagPage} &middot; {lang:Showing posts tagged Tag}{/block:TagPage}{block:PermalinkPage}{block:PostSummary} &middot; {PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:IndexPage}{block:Description} &middot; {PlaintextDescription}{/block:Description}{/block:IndexPage}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8"/>
+<meta name="description" content="{MetaDescription}"/>
+<link rel="shortcut icon" href="{Favicon}"/>
+<link rel="icon" type="image/png" href="{PortraitURL-64}"/>
+<link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"/>
+<meta name="msapplication-square150x150logo" content="{PortraitURL-128}"/>
+<meta name="msapplication-TileImage" content="{PortraitURL-128}">
+<meta name="msapplication-TileColor" content="{AccentColor}"/>
+<meta name="application-name" content="{Title}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/cyx1twh/MJMni6s6j/style.min.css"/>
+<meta name="if:Infinite Scrolling" content="1"/>
+<meta name="text:Disqus Shortname" content=""/>
+<meta name="text:Google Analytics ID" content=""/>
+<meta name="if:Show Instagram widget" content="1"/>
+<meta name="text:Instagram access token" content=""/>
+<meta name="text:Instagram username" content=""/>
+<meta name="if:Show Twitter widget" content="1"/>
+<meta name="text:Twitter Widget ID" content=""/>
+<meta name="text:Twitter handle" content=""/>
+<meta name="select:Text size" content="1.4" title="14px"/>
+<meta name="select:Text size" content="1.2" title="12px"/>
+<meta name="select:Text size" content="1.6" title="16px"/>
+<meta name="select:Text size" content="1.8" title="18px"/>
+<meta name="font:Body font" content="Source Sans Pro"/>
+<meta name="font:Pre font" content="Inconsolata"/>
+<meta name="color:Accent light color" content="#81597a"/>
+<meta name="color:Secondary accent color" content="#7f9fa0"/>
+<meta name="color:Secondary accent light color" content="#cee8eb"/>
+<meta name="color:Post background color" content="#ffffff"/>
+<meta name="color:Border color" content="#eeeeee"/>
+<meta name="color:Tag color" content="#bbbbbb"/>
+<meta name="color:Text color" content="#444444"/>
+<meta name="color:Popup menu color" content="#000000"/>
+<meta name="color:Twitter color" content="#86B1D1"/>
+<meta name="if:Transitions" content="1"/>
+<meta name="if:White post controls" content="0"/>
+<meta name="if:Black post controls" content="0"/>
+<meta name="if:Ask box popup" content="1"/>
+<meta name="if:Submit box popup" content="1"/>
+<meta name="if:Show archive link" content="1"/>
+<meta name="if:Show RSS link" content="0"/>
+<meta name="if:Scroll to top button" content="1"/>
+<meta name="if:Show custom tag menu" content="0"/>
+<meta name="text:Custom text above ask" content=""/>
+<meta name="text:Custom text above submit" content=""/>
+<meta name="text:Custom tag 1" content=""/>
+<meta name="text:Custom tag 2" content=""/>
+<meta name="text:Custom tag 3" content=""/>
+<meta name="text:Custom tag 4" content=""/>
+<meta name="text:Custom tag 5" content=""/>
+<meta name="text:Custom tag 6" content=""/>
+<meta name="text:Custom tag 7" content=""/>
+<meta name="text:Adsense code" content=""/>
+<meta name="text:Google Site Verification" content=""/>{block:ifGoogleSiteVerification}
+<meta name="google-site-verification" content="{text:Google Site Verification}"/>{/block:ifGoogleSiteVerification}
+<style type="text/css">{block:ifTransitions}
+a, a:link, a:visited, .photo_frame a img, .link .post-title a img, .pop, .pop li:first-child a:before, .meta a svg, .photo-grid a img { -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out }
+.bar-icon { -webkit-transition: -webkit-transform .15s linear; -o-transition: -o-transform .15s linear; -ms-transition: -ms-transform .15s linear; -moz-transition: -moz-transform .15s linear; transition: transform .15s linear }
+.bar-icon:nth-child(2) { -webkit-transition: opacity .1s linear; -o-transition: opacity .1s linear; -ms-transition: opacity .1s linear; -moz-transition: opacity .1s linear; transition: opacity .1s linear }{/block:ifTransitions}
+body, html { background: {BackgroundColor} }
+body { font-family: {font:Body font}, "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: {select:Text size}rem; color: {color:Text color} }
+a, a:link, a:visited { color: {AccentColor} }
+a:active, a:focus, a:hover { color: {color:Secondary accent color} }
+::selection { background: {color:Secondary accent light color} }
+::-moz-selection { background: {color:Secondary accent light color} }
+#nav { background: {AccentColor} }
+.bar-icon { background: {color:Post background color} }
+#nav li a { color: {color:Post background color} }
+#nav li a:active, #nav li a:focus, #nav li a:hover { background: {color:Secondary accent color} }
+#top-nav .pop { background: rgba({RGBcolor:Popup menu color},.85) }
+#top-nav .pop li:first-child a:before { border-bottom-color: rgba({RGBcolor:Popup menu color},.9) }
+#top-nav .pop li a:hover:before, #top-nav .pop li a:active:before, #top-nav .pop li a:focus:before { border-bottom-color: {color:Secondary accent color} }
+#content { background: {BackgroundColor} }
+.inside { overflow-x: hidden }
+.inside, .results-page a { background: {color:Post background color} }
+.results-page a { color: {color:Tag color} }
+.results-page a:active, .results-page a:focus, .results-page a:hover { background: {color:Secondary accent light color}; color: {color:Text color} }
+.post .inner code, .post .inner pre { font-family: {font:Pre font}, "Inconsolata", "Consolas", Menlo, "Courier New", Courier, Mono, monospace }
+.post .inner pre {	background: {color:Border color} }
+.post blockquote { border-left: .5rem solid {color:Border color} }
+.photo_frame img { display: block; width: 100% }
+.images a:active, .images a:focus, .images a:hover { background: rgba({RGBcolor:Post background color},.2) }
+.quote .post-title { background: {color:Accent light color}; color: {color:Post background color} }
+.text .post-title a, .chat .post-title a, .link .post-title a, .photo-grid .post-title a { background: {color:Secondary accent color}; color: {color:Post background color} }
+.link .post-title a small { font-size: {select:Text size}rem }
+.conversation li { border-bottom: .1rem solid {color:Border color} }
+.ask { background: {color:Accent light color}; color: {color:Post background color} }
+.answerer { background: {color:Secondary accent color}; color: {color:Post background color} }
+.tags li a { color: {color:Tag color} }
+.tags li a:active, .tags li a:focus, .tags li a:hover, .meta a:active, .meta a:focus, .meta a:hover { color: {color:Accent light color} }
+.meta a:active svg, .meta a:focus svg, .meta a:hover svg { fill: {color:Accent light color} }{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}
+.meta a, .like_button { color: #ccc; }{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}
+.meta a, .like_button { color: #ccc; }{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifBlackPostControls}{block:ifNotWhitePostControls}
+.meta a, .like_button { color: #000; }{/block:ifNotWhitePostControls}{/block:ifBlackPostControls}	{block:ifWhitePostControls}{block:ifNotBlackPostControls}
+.meta a, .like_button { color: #fff; }{/block:ifNotBlackPostControls}{/block:ifWhitePostControls}
+#notes ol { background: {color:Post background color} }
+#notes li { border-bottom: .1rem solid {color:Border color} }
+#pag-bottom a { background: {color:Secondary accent color}; color: {color:Post background color} }
+#infscr-loading div { background: {color:Secondary accent color} }
+#infscr-loading div:before { color: {color:Post background color} }
+#twitter-handle { background: {color:Twitter color} }
+#twitter-handle a { color: {color:Post background color} }
+#twitter-handle a:active, #twitter-handle a:focus, #twitter-handle a:hover { color: rgba({RGBcolor:Post background color},.8) }
+#twitter-status { background: {color:Post background color} }
+@media only screen and (min-width:40.063em) and (min-height:650px){
+	#side-nav li a:not(.pop a) { background: {AccentColor} }
+	#icon { background: rgba({RGBcolor:Popup menu color},.1) }
+	.side-nav-pop .pop { background: rgba({RGBcolor:Popup menu color},.9) }
+	.side-nav-pop.active .selector { background: {color:Secondary accent color} }
+	.side-nav-pop .pop li:first-child a:before, #nav-about .pop:before, #nav-ask .pop:before, #nav-submit .pop:before { border-right-color: rgba({RGBcolor:Popup menu color},.9) }
+	.side-nav-pop .pop li a:hover:before, .side-nav-pop .pop li a:active:before, .side-nav-pop .pop li a:focus:before { border-right-color: {color:Secondary accent color} }
+	.pop div { font-size: {select:Text size}rem; color: {color:Post background color} }
+	#nav-ask .pop div p:first-child, #nav-submit .pop div p:first-child { margin-top: -.5rem }
+	.pop div a { font-size: {select:Text size}rem!important }{block:IndexPage}
+	.post.iso_posts, .grid { width: 50%; margin: 0 }{/block:IndexPage}
+}{block:IndexPage}
+@media only screen and (min-width:64.063em){
+	.post.iso_posts:not(.post-width), .grid:not(.post-width) { width: 33.33333333%; margin: 0 }
+	.post:first-of-type:last-of-type { position: static!important; width: 75%!important; margin: 0 auto!important }
+}{/block:IndexPage}
+{CustomCSS}
+</style>
+<script src="http://static.tumblr.com/cyx1twh/4Lfnfxhmn/jquery.min.js"></script>
+<script src="http://static.tumblr.com/cyx1twh/XzAnhwro3/modernizr.js"></script>{block:ifGoogleAnalyticsID}
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', '{text:Google Analytics ID}']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>{/block:ifGoogleAnalyticsID}
+</head>
+<body>
+<!--[if lt IE 11]>
+<div id="warning"><div class="row"><div class="large-12 columns">This theme does not support Internet Explorer 9 and below. You may also experience bugs in Internet Explorer 10. Please update to a <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">newer version</a> of Internet Explorer or try another browser - I recommend <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>.</div></div></div>
+<![endif]-->
+<div id="top"></div>
+<header id="nav">
+	<nav>
+		<div id="top-nav">
+			<a class="selector" href="#">
+				<div class="wrapper">
+					<span class="bar-icon"></span>
+					<span class="bar-icon"></span>
+					<span class="bar-icon"></span>
+				</div>
+			</a>
+			<div class="pop">
+				<ul>
+					<li><a href="/">Home</a></li>{block:HasPages}
+					{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}{block:ifShowArchiveLink}
+					<li><a href="/archive">{lang:Archive}</a></li>{/block:ifShowArchiveLink}{block:ifShowRSSLink}
+					<li><a href="{RSS}">{lang:RSS}</a></li>{/block:ifShowRSSLink}{block:AskEnabled}
+					<li><a href="/ask">Ask</a></li>{/block:AskEnabled}{block:SubmissionsEnabled}
+					<li><a href="/submit">Submit</a>{/block:SubmissionsEnabled}
+				</ul>
+			</div>
+		</div>
+		<ul id="side-nav">{block:ShowAvatar}
+			<li id="icon"><img src="{PortraitURL-128}" alt="{Title}"/></li>{/block:ShowAvatar}
+			<li><a class="typcn typcn-home" href="/">Home</a></li>{block:Description}
+			<li id="nav-about" class="side-nav-pop">
+				<a class="selector typcn typcn-user" href="#">About</a>
+				<div class="pop">
+					<div>{Description}</div>
+				</div>
+			</li>{/block:Description}
+			<li id="pages" class="side-nav-pop">
+				<a class="selector typcn typcn-link" href="#">Pages</a>
+				<div class="pop">
+					<ul>{block:HasPages}
+					{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}{block:ifShowArchiveLink}
+						<li><a href="/archive">{lang:Archive}</a></li>{/block:ifShowArchiveLink}{block:ifShowRSSLink}
+						<li><a href="{RSS}">{lang:RSS}</a></li>{/block:ifShowRSSLink}
+					</ul>
+				</div>
+			</li>{block:ifShowCustomTagMenu}
+			<li id="nav-tags" class="side-nav-pop">
+				<a class="selector typcn typcn-tag" href="#">Tags</a>
+				<div class="pop">
+					<ul>{block:ifCustomTag1}
+						<li><a href="/tagged/{text:Custom Tag 1}">#{text:Custom Tag 1}</a></li>{/block:ifCustomTag1}{block:ifCustomTag2}
+						<li><a href="/tagged/{text:Custom Tag 2}">#{text:Custom Tag 2}</a></li>{/block:ifCustomTag2}{block:ifCustomTag3}
+						<li><a href="/tagged/{text:Custom Tag 3}">#{text:Custom Tag 3}</a></li>{/block:ifCustomTag3}{block:ifCustomTag4}
+						<li><a href="/tagged/{text:Custom Tag 4}">#{text:Custom Tag 4}</a></li>{/block:ifCustomTag4}{block:ifCustomTag5}
+						<li><a href="/tagged/{text:Custom Tag 5}">#{text:Custom Tag 5}</a></li>{/block:ifCustomTag5}{block:ifCustomTag6}
+						<li><a href="/tagged/{text:Custom Tag 6}">#{text:Custom Tag 6}</a></li>{/block:ifCustomTag6}{block:ifCustomTag7}
+						<li><a href="/tagged/{text:Custom Tag 7}">#{text:Custom Tag 7}</a></li>{/block:ifCustomTag7}
+					</ul>
+				</div>
+			</li>{/block:ifShowCustomTagMenu}{block:AskEnabled}{block:ifAskBoxPopup}
+			<li id="nav-ask" class="side-nav-pop">
+				<a class="selector typcn typcn-lightbulb" href="#">Ask</a>
+				<div class="pop">
+					<div>
+						<iframe frameborder="0" scrolling="no" width="100%" height="190" src="https://www.tumblr.com/ask_form/{Name}.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form_pop"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]-->
+					</div>
+				</div>
+			</li>{/block:ifAskBoxPopup}{block:ifNotAskBoxPopup}
+			<li><a class="typcn typcn-lightbulb" href="/ask">Ask</a></li>{/block:ifNotAskBoxPopup}{/block:AskEnabled}{block:SubmissionsEnabled}{block:ifSubmitBoxPopup}
+			<li id="nav-submit" class="side-nav-pop">
+				<a class="selector typcn typcn-attachment" href="#">Submit</a>
+				<div class="pop">
+					<div>
+						<iframe frameborder="0" scrolling="no" width="100%" height="288" id="submit_form_pop" src="https://www.tumblr.com/submit_form/{Name}.tumblr.com" style="background-color:transparent; overflow:hidden;"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('submit_form').allowTransparency=true;</script><![endif]-->
+					</div>
+				</div>
+			</li>{/block:ifSubmitBoxPopup}{block:ifNotSubmitBoxPopup}
+			<li><a class="typcn typcn-attachment" href="/submit">Submit</a></li>{/block:ifNotSubmitBoxPopup}{/block:SubmissionsEnabled}{block:ifScrollToTopButton}
+			<li id="scroll-top" class="pag local-scroll" style="display: none;"><a class="typcn typcn-arrow-up" href="#top">Top</a></li>{/block:ifScrollToTopButton}{block:Pagination}{block:IndexPage}{block:ifInfiniteScrolling}
+			<li id="pagination" class="pag pag-selector"><a id="button" class="typcn typcn-arrow-down pag-button">More</a></li>{/block:ifInfiniteScrolling}{/block:IndexPage}{block:PreviousPage}
+			<li class="pag"><a class="typcn typcn-arrow-left" href="{PreviousPage}">Newer</a></li>{/block:PreviousPage}{block:NextPage}
+			<li id="pag" class="pag next-button"><a id="next" class="typcn typcn-arrow-right next-selector" href="{NextPage}">Older</a></li>{/block:NextPage}{/block:Pagination}{block:PermalinkPagination}{block:NextPost}
+			<li class="pag"><a class="typcn typcn-arrow-left next-button" href="{NextPost}">Newer</a></li>{/block:NextPost}{block:PreviousPost}
+			<li class="pag"><a class="typcn typcn-arrow-right" href="{PreviousPost}">Older</a></li>{/block:PreviousPost}{/block:PermalinkPagination}{block:DayPagination}{block:NextDayPage}
+			<li class="pag"><a class="typcn typcn-arrow-left" href="{NextDayPage}">Newer</a></li>{/block:NextDayPage}{block:PreviousDayPage}
+			<li class="pag"><a class="typcn typcn-arrow-right" href="{PreviousDayPage}">Older</a></li>{/block:PreviousDayPage}{/block:DayPagination}
+		</ul>
+	</nav>
+</header>
+<section id="content">
+	<div id="posts"{block:IndexPage} class="mason"{/block:IndexPage}>{block:IndexPage}
+		<div class="grid post-fix"></div>{/block:IndexPage}{block:TagPage}
+		<article id="tag-page" class="results-page post-fix post iso_posts">
+			<div class="inside">
+				<a class="inner" href="{TagURL}"><i class="typcn typcn-tag"></i>{Tag}</a>
+			</div>
+		</article>{/block:TagPage}{block:DayPage}
+		<article id="day-page" class="results-page post-fix post iso_posts">
+			<div class="inside">
+				<a class="inner" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/"><i class="typcn typcn-calendar"></i>{Month} {DayOfMonthWithZero} {Year}</a>
+			</div>
+		</article>{/block:DayPage}{block:IndexPage}{block:ifShowTwitterWidget}{block:ifTwitterWidgetID}
+		<article id="twitter" class="post-fix post iso_posts">
+			<div class="inside">
+				<div id="twitter-handle">{block:ifTwitterHandle}<a href="http://twitter.com/{text:Twitter handle}">{/block:ifTwitterHandle}<i class="typcn typcn-social-twitter"></i>{block:ifTwitterHandle}</a>{/block:ifTwitterHandle}</div>
+				<div id="twitter-status"><div id="tweet"></div></div>
+			</div>
+		</article>{/block:ifTwitterWidgetID}{/block:ifShowTwitterWidget}{block:ifShowInstagramWidget}{block:ifInstagramAccessToken}
+		<article id="instagram" class="photo-grid post-fix post iso_posts">
+			<div class="inside">
+				<h1 class="post-title">{block:ifInstagramUsername}<a href="http://instagram.com/{text:Instagram username}">Instagram</a>{/block:ifInstagramUsername}{block:ifnotInstagramUsername}Instagram{block:ifnotInstagramUsername}</h1>
+				<ul id="instagram_photos"></ul>
+			</div>
+		</article>{/block:ifInstagramAccessToken}{/block:ifShowInstagramWidget}{/block:IndexPage}{block:Posts}
+		<article id="{PostID}" class="post-fix {PostType}{block:Panorama} panorama{/block:Panorama} post{block:Date} iso_posts appended{/block:Date}"><div class="inside">{block:Text}{block:Title}
+			<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+			<div class="inner">{Body}</div>{/block:Text}{block:Photo}
+			<div class="photo_frame">
+				{LinkOpenTag}<img src="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+			</div>{block:Caption}
+			<div class="inner">{Caption}</div>{/block:Caption}{/block:Photo}{block:Panorama}
+			<div class="photo_frame">
+				{LinkOpenTag}<img src="{PhotoURL-Panorama}"/>{LinkCloseTag}
+			</div>{block:Caption}
+			<div class="inner">{Caption}</div>{/block:Caption}{/block:Panorama}{block:Photoset}
+			<div class="images">
+				<div class="ps-highres invisible" data-photoset-layout="{PhotosetLayout}" data-photoset-id="{PostID}">{block:Photos}
+					<span><img src="{PhotoURL-250}" data-500px="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" alt="{block:Caption}{PlaintextCaption}{/block:Caption}"/></span>{/block:Photos}
+				</div>
+			</div>{block:Caption}
+			<div class="inner">{Caption}</div>{/block:Caption}{/block:Photoset}{block:Quote}
+			<h1 class="post-title"><span class="{Length}">{Quote}</span></h1>{block:Source}
+			<div class="inner">{Source}</div>{/block:Source}{/block:Quote}{block:Link}
+			<h1 class="post-title{block:Thumbnail} has-thumbnail{/block:Thumbnail}">
+				<a href="{URL}" {Target}>
+					<i class="typcn typcn-link"></i>{block:Thumbnail}
+					<img src="{Thumbnail}" alt="{Name}"/>{/block:Thumbnail}
+					<span>
+						<span>{Name}</span>{block:Host}
+						<small>{Host}</small>{/block:Host}
+					</span>
+				</a>
+			</h1>{block:Description}
+			<div class="inner">{Description}</div>{/block:Description}{/block:Link}{block:Chat}{block:Title}
+			<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+			<ul class="conversation">{block:Lines}
+				<li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>{/block:Lines}
+			</ul>{/block:Chat}{block:Audio}
+			<div class="audio_box">{block:AudioEmbed}{AudioEmbed-400}{/block:AudioEmbed}</div>{block:Caption}
+			<div class="inner">{Caption}</div>{/block:Caption}{/block:Audio}{block:Video}
+			<div class="video_box">{VideoEmbed-700}</div>{block:Caption}
+			<div class="inner">{Caption}</div>{/block:Caption}{/block:Video}{block:Answer}
+			<h3 class="ask">
+				<a class="asker" href="http://{PlaintextAsker}.tumblr.com"><img src="{AskerPortraitURL-128}"/></a>
+				<span>{Question}</span>
+			</h3>{block:Answerer}
+			<h4 class="answerer">
+				<a class="asker" href="http://{PlaintextAnswerer}.tumblr.com"><img src="{AnswererPortraitURL-128}"/></a>{/block:Answerer}
+				<div class="inner">{Answer}</div>{block:Answerer}
+			</h4>
+			<div class="inner">{Replies}</div>{/block:Answerer}{/block:Answer}{block:Date}{block:PermalinkPage}
+			<div class="tags">
+				<ul>
+					<li><a class="typcn typcn-time" href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></li>
+					<li><a class="typcn typcn-calendar" href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/">{Month} {DayOfMonthWithZero} {Year}</a></li>{block:NoteCount}
+					<li class="notecount"><a class="typcn typcn-heart-full-outline local-scroll" href="{Permalink}#notes"><span>{NoteCount}</span></a></li>{/block:NoteCount}{block:HasTags}{block:Tags}
+					<li><a class="typcn typcn-tag" href="{TagURL}"><span>{Tag}</span></a></li>{/block:Tags}{/block:HasTags}
+				</ul>
+			</div>{/block:PermalinkPage}
+			<footer class="meta">{block:RebloggedFrom}
+				<span class="hide">{ReblogParentName}</span>{/block:RebloggedFrom}
+				<ul class="grid-small{block:ContentSource} grid-medium{/block:ContentSource}{block:Photo} grid-medium{block:ContentSource} grid-large{/block:ContentSource}{/block:Photo}">{block:Photo}
+					<li>
+						<a class="zoom" href="{PhotoURL-HighRes}">
+							<i class="typcn typcn-zoom-in-outline"></i>
+						</a>
+					</li>{/block:Photo}
+					<li>
+						<a href="{Permalink}">
+							<i class="typcn typcn-anchor"></i>
+						</a>
+					</li>
+					<li>
+						{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{LikeButton color="grey"}{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}{LikeButton color="grey"}{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifNotBlackPostControls}{block:ifWhitePostControls}{LikeButton color="white"}{/block:ifWhitePostControls}{/block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{block:ifBlackPostControls}{LikeButton color="black"}{/block:ifBlackPostControls}{/block:ifNotWhitePostControls}
+					</li>
+					<li>
+						{block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{ReblogButton color="grey"}{/block:ifNotWhitePostControls}{/block:ifNotBlackPostControls}{block:ifBlackPostControls}{block:ifWhitePostControls}{ReblogButton color="grey"}{/block:ifWhitePostControls}{/block:ifBlackPostControls}{block:ifNotBlackPostControls}{block:ifWhitePostControls}{ReblogButton color="white"}{/block:ifWhitePostControls}{/block:ifNotBlackPostControls}{block:ifNotWhitePostControls}{block:ifBlackPostControls}{ReblogButton color="black"}{/block:ifBlackPostControls}{/block:ifNotWhitePostControls}
+					</li>{block:ContentSource}
+					<li>
+						<a href="{SourceURL}">
+							<i class="typcn typcn-globe"></i>
+						</a>
+					</li>{/block:ContentSource}
+				</ul>
+			</footer>{/block:Date}
+		</div></article>{block:Post5}{block:ifAdsenseCode}
+		<article class="ad post-fix post iso_posts">
+			<div class="inside"><div class="inner">
+				{text:Adsense code}
+			</div></div>
+		</article>{/block:ifAdsenseCode}{/block:Post5}{block:PermalinkPagination}
+		<ul id="pag-bottom" class="cf">{block:NextPost}
+			<li class="pag-bottom-button"><a class="typcn typcn-arrow-left" href="{NextPost}"></a></li>{/block:NextPost}{block:PreviousPost}
+			<li class="pag-bottom-button"><a class="typcn typcn-arrow-right" href="{PreviousPost}"></a></li>{/block:PreviousPost}
+		</ul>{/block:PermalinkPagination}{block:ifDisqusShortname}{block:PermalinkPage}{block:Posts}{block:Date}
+		<div id="disqus_container" class="post">
+			<div id="disqus" class="inside">
+				<script type="text/javascript">
+					var disqus_url = "{Permalink}";
+					var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";  
+				</script>
+				<div id="disqus_thread"></div>
+			</div>
+		</div>{/block:Date}{/block:Posts}{/block:PermalinkPage}{/block:ifDisqusShortname}{block:PostNotes}
+		<aside id="notes" class="post">{PostNotes-64}</aside>{/block:PostNotes}{/block:Posts}
+	</div>{block:Pagination}
+	<ul id="pag-bottom" class="cf">{block:IndexPage}{block:ifInfiniteScrolling}
+		<li class="pag pag-selector">
+			<a class="typcn typcn-arrow-down pag-button"></a>
+		</li>{/block:ifInfiniteScrolling}{/block:IndexPage}{block:PreviousPage}
+		<li class="pag-bottom-button"><a class="typcn typcn-arrow-left" href="{PreviousPage}"></a></li>{/block:PreviousPage}{block:NextPage}
+		<li class="pag-bottom-button next-button"><a class="typcn typcn-arrow-right next-selector" href="{NextPage}"></a></li>{/block:NextPage}
+	</ul>{/block:Pagination}{block:DayPagination}
+	<ul id="pag-bottom" class="cf">{block:NextDayPage}
+		<li class="pag-bottom-button"><a class="typcn typcn-arrow-left" href="{NextDayPage}"></a></li>{/block:NextDayPage}{block:PreviousDayPage}
+		<li class="pag-bottom-button"><a class="typcn typcn-arrow-right" href="{PreviousDayPage}"></a></li>{/block:PreviousDayPage}
+	</ul>{/block:DayPagination}
+</section>
+<script>
+	var theme = {{block:ifInfiniteScrolling}
+		infscr:true{/block:ifInfiniteScrolling}{block:ifShowInstagramWidget}{block:ifInstagramUsername},
+		instagram:true,
+		token:"{text:Instagram access token}"{/block:ifInstagramUsername}{/block:ifShowInstagramWidget}{block:ifNotInstagramUsername},
+		instagram:false,
+		token:""{/block:ifNotInstagramUsername}{/block:ifShowInstagramWidget}{block:ifNotShowInstagramWidget},
+		instagram:false,
+		token:""{/block:ifNotShowInstagramWidget}{block:ifShowTwitterWidget}{block:ifTwitterWidgetID},
+		twitter:true,
+		widget:"{text:Twitter Widget ID}"{/block:ifTwitterWidgetID}{block:ifNotTwitterWidgetID},
+		twitter:false,
+		widget:""{/block:ifNotTwitterWidgetID}{/block:ifShowTwitterWidget}{block:ifNotShowTwitterWidget},
+		twitter:false,
+		widget:""{/block:ifNotShowTwitterWidget}{block:ifCustomTextAboveAsk},
+		ask:"{text:Custom text above ask}"{/block:ifCustomTextAboveAsk}{block:ifNotCustomTextAboveAsk},
+		ask:""{/block:ifNotCustomTextAboveAsk}{block:ifCustomTextAboveSubmit},
+		submit:"{text:Custom text above submit}"{block:ifCustomTextAboveSubmit}{block:ifNotCustomTextAboveSubmit},
+		submit:""{/block:ifNotCustomTextAboveSubmit}
+	}
+</script>
+<script src="http://static.tumblr.com/cyx1twh/BV6ni4xlu/scripts.min.js"></script>{block:PermalinkPage}{block:ifDisqusShortname}
+<script type="text/javascript">
+var disqus_shortname = '{text:Disqus Shortname}';
+(function () {
+	var dsq = document.createElement('script');
+	dsq.type = 'text/javascript';
+	dsq.async = true;
+	dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
+})();
+</script>{block:ifDisqusShortname}{/block:PermalinkPage}
+<script src="http://static.tumblr.com/cyx1twh/ykdni3p0n/webfont.js"></script>
+<script> WebFont.load({ google: { families: ['Source Sans Pro:400,700,400italic,700italic', 'Inconsolata:400,700'] } }); </script>
+</body>
+</html>
