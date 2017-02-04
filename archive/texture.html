@@ -1,0 +1,671 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/BzRl3ghe1/droidserif.css" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Texture.
+   Theme URI: http://www.tumblr.com/theme/11127
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   Music Overlays: http://komodomedia.com
+   -->
+
+   <meta name="if:Searchbar" content="1"/>
+   <meta name="if:Alternate Description" content="0"/>
+   <meta name="if:Textured Backgrounds" content="1"/>
+   <meta name="if:Icon Shadows" content="1"/>
+   <meta name="if:No Text Shadows" content="0"/>
+   <meta name="if:Infinite Scrolling" content="0"/>
+   <meta name="text:Disqus Shortname" content=""/>
+
+   <meta name="color:Background" content="#ffffff"/>
+   <meta name="font:Body" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Body" content="#343434"/>
+   <meta name="color:Text Shadows" content="#f1f1f1"/>
+
+   <meta name="color:Links" content="#787878"/>
+   <meta name="color:Links Hover" content="#000000"/>
+
+   <meta name="color:Pre" content="#ebebeb"/>
+
+   <meta name="color:Icon Bar" content="#000000"/>
+   <meta name="color:Icon Shadows" content="#565656"/>
+
+   <meta name="color:Text" content="#ff0000"/>
+   <meta name="color:Photo" content="#ff9900"/>
+   <meta name="color:Quote" content="#eec900"/>
+   <meta name="color:Chat" content="#32cd32"/>
+   <meta name="color:Link" content="#007fff"/>
+   <meta name="color:Audio" content="#820bbb"/>
+   <meta name="color:Video" content="#734a12"/>
+   <meta name="color:Answer" content="#454545"/>
+   <meta name="color:Alternate Description" content="#aaaaaa"/>
+
+   <meta name="color:Date" content="#ebebeb"/>
+   <meta name="color:Date Link" content="#aaaaaa"/>
+   <meta name="color:Date Text Shadows" content="#eeeeee"/>
+
+   <meta name="color:Chat Line" content="#ebebeb"/>
+
+   <meta name="font:Headers" content="'Droid Serif', serif"/>
+
+   <meta name="color:Sidebar Border" content="#cccccc"/>
+   <meta name="color:Current Page" content="#aaaaaa"/>
+   <meta name="color:Current Page Text" content="#ffffff"/>
+   <meta name="color:Searchbar" content="#909090"/>
+   <meta name="color:Sidebar Link Hover" content="#898989"/>
+
+
+   <style type="text/css">
+      html * {
+          margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: {color:Background} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+         font: 11px {font:Body};
+         color: {color:Body};
+         text-shadow: 1px 1px {color:Text Shadows};
+         {block:ifNoTextShadows}text-shadow: 0px 0px;{/block:ifNoTextShadows}
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Links};
+         text-decoration: none;
+         -webkit-transition: color 1.5s linear;
+         -moz-transition: color 1.5s linear;
+         -o-transition: color 1.5s linear;
+         transition: color 1.5s linear;
+      }
+
+      a:hover {
+         -webkit-transition: color .3s linear;
+         -moz-transition: color .3s linear;
+         -o-transition: color .3s linear;
+         transition: color .3s linear;
+      }
+
+      a img { border: 0; }
+
+      img { max-width: 500px; }
+      blockquote img { max-width: 490px; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid;
+      }
+
+      p { padding-top: 5px; }
+      blockquote p:first-child { padding: 0; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         white-space: pre-wrap;
+         white-space: -moz-pre-wrap;
+         white-space: -pre-wrap;
+         white-space: -o-pre-wrap;
+         background: {color:Pre}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         overflow: auto;
+      }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+
+      .left { float: left; }
+      .right { float: right; }
+      .clear { clear: both; }
+      .five { margin-top: -5px; }
+
+      #icons {
+         position: fixed;
+         top: 0;
+         left: 0;
+         z-index: -999;
+         width: 100px;
+         height: 100%;
+         background: {color:Icon Bar}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+      }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         float: left;
+         margin: 20px 0 0 100px;
+         width: 500px;
+      }
+
+      .icon {
+         float: left;
+         margin: 5px 0 0 -38px;
+         padding: 4px;
+         -moz-border-radius-topleft: 0.5em;
+         -moz-border-radius-bottomleft: 0.5em;
+         border-top-left-radius: 0.5em;
+         border-bottom-left-radius: 0.5em;
+         background-image:{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         {block:ifIconShadows}-moz-box-shadow: 0px 0px 5px {color:Icon Shadows};
+         -box-shadow: 0px 0px 5px {color:Icon Shadows};{/block:ifIconShadows}
+      }
+
+      .icon img { width: 30px; }
+
+      .text .icon { background-color: {color:Text}; }
+      .photo .icon { background-color: {color:Photo}; }
+      .quote .icon { background-color: {color:Quote}; }
+      .link .icon { background-color: {color:Link}; }
+      .chat .icon { background-color: {color:Chat}; }
+      .audio .icon { background-color: {color:Audio}; }
+      .video .icon { background-color: {color:Video}; }
+      .answer .icon { background-color: {color:Answer}; }
+      #alt .icon { background-color: {color:Alternate Description}; }
+
+      .text a, .text .tags a:hover { color: {color:Text}; }
+      .photo a, .photo .tags a:hover { color: {color:Photo}; }
+      .quote a, .quote .tags a:hover { color: {color:Quote}; }
+      .link a, .link .tags a:hover { color: {color:Link}; }
+      .chat a, .chat .tags a:hover { color: {color:Chat}; }
+      .audio a, .audio .tags a:hover { color: {color:Audio}; }
+      .video a, .video .tags a:hover { color: {color:Video}; }
+      .answer a, .answer .tags a:hover { color: {color:Answer}; }
+      #alt a { color: {color:Alternate Description}; }
+      a:hover { color: {color:Links Hover}; }
+
+      .post {
+         float: left;
+         padding-left: 20px;
+         margin-bottom: 30px;
+         width: 500px;
+         min-height: 48px;
+         background: {color:Background} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+      }
+
+      .body p:first-child { padding: 0; }
+
+      .tags { margin-top: 7px; }
+
+      .tags a {
+         color: #aaa;
+         font-size: 9px;
+      }
+
+      .date {
+         margin: 10px 0 0 -20px;
+         padding: 5px 10px;
+         {block:ifNotDisqusShortname}width: 150px;{/block:ifNotDisqusShortname}
+         {block:ifDisqusShortname}width: 200px;{/block:ifDisqusShortname}
+         height: 9px;
+         background: {color:Date}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         -moz-border-radius-topright: 20px;
+         -moz-border-radius-bottomright: 20px;
+         border-top-right-radius: 20px;
+         border-bottom-right-radius: 20px;
+         -webkit-transition: width 1.5s;
+         -moz-transition: width 1.5s;
+         -o-transition: width 1.5s;
+         transition: width 1.5s;
+         overflow: hidden;
+      }
+
+      .date:hover {
+         width: 500px;
+         overflow: hidden;
+         -webkit-transition: width 0.8s;
+         -moz-transition: width 0.8s;
+         -o-transition: width 0.8s;
+         transition: width 0.8s;
+      }
+
+      .date .right { display: none; }
+      .date:hover .right { display: block; }
+
+      .date, .date a {
+         color: {color:Date Link}!important;
+         text-shadow: 1px 1px {color:Date Text Shadows};
+         {block:ifNoTextShadows}text-shadow: 0px 0px;{/block:ifNoTextShadows}
+         font-size: 9px;
+         text-transform: uppercase;
+      }
+
+      h1 { font: 25px {font:Headers}; }
+      h1 a { color: {color:Body}!important; }
+      .link h1 a:hover { color: {color:Link}!important; }
+      h2 { font: 20px {font:Headers}; }
+      h3 { font: 13px {font:Headers}; }
+
+      .chat ul { padding: 0; list-style-type: none; }
+      .chat li { padding: 5px 10px; }
+      li.odd { background: {color:Chat Line}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds}; }
+
+      .cover {
+         display: block;
+         float: left;
+         width: 96px;
+         height: 76px;
+         margin: 0 20px 0 -74px;
+         background-image: url('http://static.tumblr.com/imovwvl/i1Hl4rcp8/vinyl.png');
+         z-index: 1;
+      }
+
+      .album_art {
+         display: block;
+         float: left;
+         margin-top: 1px;
+         width: 72px;
+      }
+
+      .info { float: left; }
+      .info span { display: block; }
+
+      .asker_icon { float: left; width: 42px; margin-right: 5px; }
+
+      #sidebar {
+         position: fixed;
+         padding: 10px;
+         bottom: 0;
+         right: 0;
+         width: 250px;
+         text-align: justify;
+         background: {color:Background} {block:ifTexturedBackgrounds}url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         -moz-border-radius-topleft: 1em;
+         border-top-left-radius: 1em;
+      }
+
+      #sidebar h1 { text-align: right; }
+      #sidebar #avatar, #alt #avatar { float: left; margin: 4px 5px 0 0; }
+
+      #nav a, #nav_alt a, #pages a, #pag a, #pag_alt a {
+         padding: 3px 6px;
+         background: {color:Date}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         -moz-border-radius: 0.2em;
+         border-radius: 0.2em;
+         font-size: 9px;
+         text-transform: uppercase;
+         color: {color:Date Link};
+         text-shadow: 1px 1px {color:Date Text Shadows};
+         {block:ifNoTextShadows}text-shadow: 0px 0px;{/block:ifNoTextShadows}
+      }
+
+      #pag {
+         text-align: right;
+         margin-top: 5px;
+         padding-top: 5px;
+         border-top: 1px solid {color:Sidebar Border};
+      }
+
+      #pag_alt { text-align: center; }
+
+      #current {
+         padding: 3px 6px;
+         background: {color:Current Page}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         -moz-border-radius: 0.2em;
+         border-radius: 0.2em;
+         font-size: 9px;
+         text-transform: uppercase;
+         color: {color:Current Page Text};
+         text-shadow: 0px 0px 0px;
+      }
+
+      #search {
+         margin-top: 5px;
+         padding-top: 5px;
+         border-top: 1px solid {color:Sidebar Border};
+      }
+
+      #alt #search { padding-bottom: 5px; border-bottom: 1px solid {color:Sidebar Border}; }
+
+      #search input {
+         width: 100%;
+         background: none;
+         border: 0;
+         font: italic 11px {font:Headers};
+         color: {color:Searchbar};
+         text-shadow: 1px 1px {color:Text Shadows};
+         {block:ifNoTextShadows}text-shadow: 0px 0px;{/block:ifNoTextShadows}
+      }
+
+      #footer, #footer_alt {
+         text-align: center;
+         margin-top: 5px;
+         padding-top: 5px;
+         border-top: 1px solid {color:Sidebar Border};
+      }
+
+      #footer, #footer_alt, #footer a, #footer_alt a {
+         font-size: 9px;
+         text-transform: uppercase;
+         color: {color:Searchbar};
+      }
+
+      #nav a, #pages a { float: right; }
+      #nav_alt a { float: left; }
+      #nav a, #pag a, #pag_alt a { margin: 0 0 5px 5px; }
+      #nav_alt a { margin: 0 5px 5px 0; }
+      #pages a { margin: 5px 0 0 5px; }
+      #nav a:hover, #pages a:hover, #pag a:hover, #pag_alt a:hover, #footer a:hover, #footer_alt a:hover { color: {color:Sidebar Link Hover}; }
+
+
+      #notes ol { list-style-type: none; padding: 0; }
+
+      #notes li {
+         float: left;
+         padding: 3px 6px;
+         margin: 0 5px 5px 0;
+         background: {color:Date}{block:ifTexturedBackgrounds} url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'){/block:ifTexturedBackgrounds};
+         -moz-border-radius: 0.2em;
+         border-radius: 0.2em;
+      }
+
+      #notes .avatar { display: none; }
+
+      {block:ifAlternateDescription}
+         {block:ifNotInfiniteScrolling}#sidebar { display: none; }{/block:ifNotInfiniteScrolling}
+         {block:ifInfiniteScrolling}
+            #sidebar h1, #sidebar #nav, #sidebar #desc, #sidebar #pages, #sidebar #search { display: none; }
+            #pag { border-top: 0; text-align: center; }
+         {/block:ifInfiniteScrolling}
+      {/block:ifAlternateDescription}
+
+      {CustomCSS}
+   </style>
+
+   <!--[if IE 07]>
+      <style tyle="text/css">.icon { margin-left: -41px; }</style>
+   <![endif]-->
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/GqMl77c4f/jquery.min.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/f2bldgcq4/youtube.js"></script>
+</head>
+<body>
+   <div id="container">
+      <div id="icons"></div>
+      <div id="content">
+         {block:ifAlternateDescription}<div id="alt">
+            <div class="icon">
+               <a href="{Permalink}"><img src="http://static.tumblr.com/imovwvl/ZxTl55hvj/about.png" alt="About" /></a>
+            </div>
+
+            <div class="post">
+               <h1>{Title}</h1>
+               <div id="nav_alt">
+                  <a href="/">Home</a>
+                  <a href="/archive">Archive</a>
+                  <a href="{RSS}">RSS</a>
+                  {block:AskEnabled}<a href="/ask">Ask</a>{/block:AskEnabled}
+                  {block:SubmissionsEnabled}<a href="/submit">Submit</a>{block:SubmissionsEnabled}
+                  {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
+               </div>
+
+               <div class="clear"></div>
+               {block:Description}<img id="avatar" src="{PortraitURL-48}" />
+               {Description}
+
+               <div class="clear"></div>{/block:Description}
+               {block:ifSearchbar}<div id="search"><form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form></div>{/block:ifSearchbar}
+            </div>
+         </div>{/block:ifAlternateDescription}
+
+         <div class="autopagerize_page_element">{block:Posts}
+            <div class="{block:Text}text{/block:Text}{block:Photo}photo{/block:Photo}{block:Photoset}photo{/block:Photoset}{block:Quote}quote{/block:Quote}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}{block:Audio}audio{/block:Audio}{block:Video}video{/block:Video}{block:Answer}answer{/block:Answer}">
+               <div class="icon">
+                  <a href="{Permalink}"><img src="{block:Text}http://static.tumblr.com/imovwvl/Mxil4r75x/text.png{/block:Text}{block:Photo}http://static.tumblr.com/imovwvl/Zu3l4r795/photo.png{/block:Photo}{block:Photoset}http://static.tumblr.com/imovwvl/Zu3l4r795/photo.png{/block:Photoset}{block:Quote}http://static.tumblr.com/imovwvl/qB5l4r7x4/quote.png{/block:Quote}{block:Link}http://static.tumblr.com/imovwvl/xAel4rivv/link.png{/block:Link}{block:Chat}http://static.tumblr.com/imovwvl/tPUl4ray4/chat.png{/block:Chat}{block:Audio}http://static.tumblr.com/imovwvl/SzBl4rcbj/audio.png{/block:Audio}{block:Video}http://static.tumblr.com/imovwvl/yMJl4rdqn/video.png{/block:Video}{block:Answer}http://static.tumblr.com/imovwvl/dH2l4re1u/answer.png{/block:Answer}" alt="{block:Text}Text{/block:Text}{block:Photo}Photo{/block:Photo}{block:Photoset}Photoset{/block:Photoset}{block:Quote}Quote{/block:Quote}{block:Link}Link{/block:Link}{block:Chat}Chat{/block:Chat}{block:Audio}Audio{/block:Audio}{block:Video}Video{/block:Video}{block:Answer}Answer{/block:Answer}" /></a>
+               </div>
+
+               <div class="post">
+                  {block:Text}
+                     {block:Title}<h1>{Title}</h1>{/block:Title}
+                     <div class="body">{Body}</div>
+                  {/block:Text}
+
+                  {block:Photo}
+                     {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                     {block:Caption}{Caption}{/block:Caption}
+                  {/block:Photo}
+
+                  {block:Photoset}
+                     {Photoset-500}
+                     {block:Caption}{Caption}{/block:Caption}
+                  {/block:Photoset}
+
+                  {block:Quote}
+                     <h2><em>{Quote}</em></h2>
+                     {block:Source}<div class="body">{Source}</div>{/block:Source}
+                  {/block:Quote}
+
+                  {block:Link}
+                     <h1><a href="{URL}" {Target}>{Name} &rsaquo;</a></h1>
+                     {block:Description}<div class="body">{Description}</div>{/block:Description}
+                  {/block:Link}
+
+                  {block:Chat}
+                     {block:Title}<h1>{Title}</h1>{/block:Title}
+                     <ul class="five">{block:Lines}
+                        <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                     {/block:Lines}</ul>
+                  {/block:Chat}
+
+                  {block:Audio}
+                     {block:AlbumArt}
+                        <img src="{AlbumArtURL}" class="album_art" />
+                        <span class="cover"></span>
+                     {/block:AlbumArt}
+                     <div class="info">
+                        {AudioPlayerGrey}
+                        <div style="margin-top:5px;">
+                           {block:TrackName}<span><strong>Title</strong>: {TrackName}</span>{/block:TrackName}
+                           {block:Artist}<span><strong>Artist:</strong> {Artist}</span>{/block:Artist}
+                           <span>{PlayCountWithLabel}</span>
+                        </div>
+                     </div>
+                     <div class="clear"></div>
+                     {block:Caption}{Caption}{/block:Caption}
+                  {/block:Audio}
+
+                  {block:Video}
+                     {Video-500}
+                     {block:Caption}{Caption}{/block:Caption}
+                  {/block:Video}
+
+                  {block:Answer}
+                     <img class="asker_icon" src="{AskerPortraitURL-96}" />
+                     <h3><strong>{Asker} asked:</strong> {Question}</h3>
+                     {Answer}
+                     <div class="clear"></div>
+                  {/block:Answer}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+                  {block:Date}
+                     <div class="date">
+                        <a class="left" href="{Permalink}">{TimeAgo}</a>
+                        <span class="right">{block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}{block:ifDisqusShortname}{block:NoteCount} & {/block:NoteCount}<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>{/block:ifDisqusShortname}</span>
+                     </div>
+                  {/block:Date}
+               </div>
+
+               <div class="clear"></div>
+               {block:ifDisqusShortname}{block:PermalinkPage}
+                  <div class="icon">
+                     <a href="{Permalink}"><img src="http://static.tumblr.com/imovwvl/aa8l4shtp/notes.png" alt="Notes" /></a>
+                  </div>
+
+<div class="post"><script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink" style="display: block; text-align: center;">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+{/block:Permalink}<script type="text/javascript">
+var disqus_shortname = '{text:Disqus Shortname}';
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://disqus.com/forums/{text:Disqus Shortname}/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script></div>
+                  {block:PostNotes}<div class="post" id="notes">{PostNotes}</div>{/block:PostNotes}
+                  <div class="clear"></div>
+               {/block:PermalinkPage}{/block:ifDisqusShortname}
+
+               {block:ifNotDisqusShortname}{block:PostNotes}
+                  <div class="icon">
+                     <a href="{Permalink}"><img src="http://static.tumblr.com/imovwvl/aa8l4shtp/notes.png" alt="Notes" /></a>
+                  </div>
+
+                  <div class="post" id="notes">{PostNotes}</div>
+                  <div class="clear"></div>
+               {/block:PostNotes}{/block:ifNotDisqusShortname}
+            </div>
+         {/block:Posts}</div>
+
+         {block:ifAlternateDescription}{block:ifNotInfiniteScrolling}<div class="post">
+            {block:Pagination}
+               <div id="pag_alt">
+                  {block:PreviousPage}
+                     <a href="{PreviousPage}">&lsaquo; Previous</a>
+                  {/block:PreviousPage}
+                  {block:JumpPagination length="5"}
+                     {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                     {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                  {/block:JumpPagination}
+                  {block:NextPage}
+                     <a href="{NextPage}">Next &rsaquo;</a>
+                  {/block:NextPage}
+               </div>
+            {/block:Pagination}
+
+            {block:DayPagination}
+               <div id="pag_alt">
+                  {block:PreviousDayPage}
+                     <a href="{PreviousDayPage}">&lsaquo; Previous</a>
+                  {/block:PreviousDayPage}
+                  {block:JumpPagination length="5"}
+                     {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                     {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                  {/block:JumpPagination}
+                  {block:NextDayPage}
+                     <a href="{NextDayPage}">Next &rsaquo;</a>
+                  {/block:NextDayPage}
+               </div>
+            {/block:DayPagination}
+
+            {block:PermalinkPagination}
+               <div id="pag_alt">
+                  {block:PreviousPost}
+                     <a href="{PreviousPost}">&lsaquo; Previous</a>
+                  {/block:PreviousPost}
+                  {block:NextPost}
+                     <a href="{NextPost}">Next &rsaquo;</a>
+                  {/block:NextPost}
+               </div>
+            {/block:PermalinkPagination}
+
+            <div id="footer_alt">
+               <a href="http://www.tumblr.com/theme/11127">Texture</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+               Powered by <a href="http://tumblr.com">Tumblr</a>.
+            </div>
+         </div>{/block:ifNotInfiniteScrolling}{/block:ifAlternateDescription}
+      </div>
+
+      <div id="sidebar">
+         <h1>{Title}</h1>
+         <div id="nav">
+            {block:SubmissionsEnabled}<a href="/submit">Submit</a>{block:SubmissionsEnabled}
+            {block:AskEnabled}<a href="/ask">Ask</a>{/block:AskEnabled}
+            <a href="{RSS}">RSS</a>
+            <a href="/archive">Archive</a>
+            <a href="/">Home</a>
+         </div>
+
+         <div class="clear"></div>
+         {block:Description}<div id="desc"><img id="avatar" src="{PortraitURL-48}" />
+         {Description}</div>
+         <div class="clear"></div>{/block:Description}
+
+         {block:HasPages}
+            <div id="pages">
+               {block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}
+            </div>
+         {/block:HasPages}
+
+         <div class="clear"></div>
+         {block:ifSearchbar}<div id="search"><form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form></div>{/block:ifSearchbar}
+
+         {block:Pagination}
+            <div id="pag">
+               {block:PreviousPage}
+                  <a href="{PreviousPage}">&lsaquo; Previous</a>
+               {/block:PreviousPage}
+               {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+               {/block:JumpPagination}
+               {block:NextPage}
+                  <a href="{NextPage}">Next &rsaquo;</a>
+               {/block:NextPage}
+            </div>
+         {/block:Pagination}
+
+         {block:DayPagination}
+            <div id="pag">
+               {block:PreviousDayPage}
+                  <a href="{PreviousDayPage}">&lsaquo; Previous</a>
+               {/block:PreviousDayPage}
+               {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+               {/block:JumpPagination}
+               {block:NextDayPage}
+                  <a href="{NextDayPage}">Next &rsaquo;</a>
+               {/block:NextDayPage}
+            </div>
+         {/block:DayPagination}
+
+         {block:PermalinkPagination}
+            <div id="pag">
+               {block:PreviousPost}
+                  <a href="{PreviousPost}">&lsaquo; Previous</a>
+               {/block:PreviousPost}
+               {block:NextPost}
+                  <a href="{NextPost}">Next &rsaquo;</a>
+               {/block:NextPost}
+            </div>
+         {/block:PermalinkPagination}
+
+         <div id="footer">
+            <a href="http://www.tumblr.com/theme/11127">Texture</a> by <a href="http://elletricity.tumblr.com">Gabrielle Wee</a>.
+            <br />Powered by <a href="http://tumblr.com">Tumblr</a>.
+         </div>
+      </div>
+   </div>
+
+   {block:ifInfiniteScrolling}<script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>{/block:ifInfiniteScrolling}
+</body>
+</html>
