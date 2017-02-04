@@ -1,0 +1,1527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}">
+   <link rel="alternate" type="application/rss+xml" href="{RSS}">
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Glow.
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   --> 
+
+   <!-- CUSTOM THEME DATA -->
+   <meta name="color:Background" content="#141414" />
+   <meta name="font:Text" content="Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans serif" />
+   <meta name="color:Nav Background" content="#030303" />
+   <meta name="color:Text" content="#eee" />
+   <meta name="color:Posts Background" content="#1e1e1e" />
+   <meta name="font:Headers" content="Bookman Old Style, Serifa BT, URW Bookman L, itc bookman, Georgia, serif" />
+   <meta name="color:Pagination" content="#fff" />
+   <meta name="if:Show People I Follow" content="1" />
+   <meta name="if:Show Ask Link" content="1" />
+   <meta name="if:Show Submit Link" content="1" />
+   <meta name="if:Show Pages" content="1" />
+   <meta name="color:Footer" content="#000" />
+
+   <style type="text/css">
+      /* Basics */
+         html * {
+             margin: 0;
+            padding: 0;
+         }
+
+         body { background-color: {color:Background}; }
+
+         div, table, td, p, font, textarea, input, code {
+                           font: 11px {font:Text};
+            -webkit-text-stroke: 1px transparent;
+               -moz-text-stroke: 1px transparent;
+                 -o-text-stroke: 1px transparent;
+                    text-stroke: 1px transparent;
+         }
+
+         a, a:link, a:active, a:visited {
+                          color: #7e7e7e;
+                text-decoration: none;
+                        outline: none;
+             -webkit-transition: color .6s linear;
+                -moz-transition: color .6s linear;
+                  -o-transition: color .6s linear;
+                     transition: color .6s linear;
+         }
+
+         a:hover {
+                          color: #fff!important;
+                        outline: none;
+             -webkit-transition: color .1s linear;
+                -moz-transition: color .1s linear;
+                  -o-transition: color .1s linear;
+                     transition: color .1s linear;
+         }
+
+         img, a img {
+                        border: 0px;
+                     max-width: 400px;
+                       opacity: 0.5;
+                        filter: alpha(opacity=50);
+            -webkit-transition: opacity 1.5s linear;
+               -moz-transition: opacity 1.5s linear;
+                 -o-transition: opacity 1.5s linear;
+                    transition: opacity 1.5s linear;
+         }
+
+         img:hover, a:hover img {
+                       opacity: 1;
+                        filter: alpha(opacity=100);
+            -webkit-transition: opacity .1s linear;
+               -moz-transition: opacity 1.5s linear;
+                 -o-transition: opacity .1s linear;
+                    transition: opacity .1s linear;
+         }
+
+         p { padding-bottom:7px; }
+
+         blockquote {
+                  margin: 3px 0 7px 11px;
+            padding-left: 10px;
+             border-left: 1px solid;
+         }
+
+         pre {
+                      margin: 10px 0;
+                     padding: 10px;
+                   word-wrap: break-word;
+                 white-space: pre-wrap;
+                 white-space: -moz-pre-wrap;
+                 white-space: -pre-wrap;
+                 white-space: -o-pre-wrap;
+            background-color: #323232;
+                    overflow: auto;
+         }
+
+      /* Containers */
+         #container {
+             margin: auto;
+            padding: 0px;
+         }
+
+         #content {
+            margin: auto;
+             width: 700px;
+          }
+
+      /* Navigation */
+         #nav {
+             float: left;
+            margin: 15px 0 10px;
+             width: 700px;
+         }
+
+         #navlinks {
+                margin: 0px auto;
+            list-style: none;
+         }
+ 
+         #navlinks li {
+                   float: left;
+            margin-right: 10px;
+         }
+ 
+         #nav ul li a {
+                          display: block;
+                          padding: 6px 9px;
+                 background-color: {color:Nav Background};
+            -webkit-border-radius: 1px;
+               -moz-border-radius: 1px;
+                 -o-border-radius: 1px;
+                    border-radius: 1px;
+               -webkit-transition: -webkit-box-shadow 1.5s linear;
+                  -moz-transition: -webkit-box-shadow 1.5s linear;
+                    -o-transition: -webkit-box-shadow 1.5s linear;
+                       transition: -webkit-box-shadow 1.5s linear;
+         }
+
+         #nav ul li a:hover {
+            -webkit-transition: -webkit-box-shadow .1s linear;
+               -moz-transition: -moz-box-shadow .1s linear;
+                 -o-transition: box-shadow .1s linear;
+                    transition: box-shadow .1s linear;
+         }
+
+      /* Navigation Links */
+         #home a {
+                         color: #e3d0cf!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.1);
+                    box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.1);
+         }
+
+         #home a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.9);
+                    box-shadow: 0px 0px 4px rgba(227, 23, 13, 0.9);
+         }
+
+         #about a {
+                         color: #ffd0c1!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.1);
+                    box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.1);
+         }
+
+         #about a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.9);
+                    box-shadow: 0px 0px 4px rgba(255, 87, 33, 0.9);
+         }
+
+         #archive a {
+                         color: #fffbd4!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.1);
+                    box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.1);
+         }
+
+         #archive a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.9);
+                    box-shadow: 0px 0px 4px rgba(255, 230, 0, 0.9);
+         }
+
+         #rss a {
+                         color: #d8ffe8!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.1);
+                    box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.1);
+         }
+
+         #rss a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.9);
+                    box-shadow: 0px 0px 4px rgba(0, 255, 102, 0.9);
+         }
+
+         #random a {
+                         color: #ddf9f3!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.1);
+                    box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.1);
+         }
+
+         #random a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.9);
+                    box-shadow: 0px 0px 4px rgba(15, 221, 175, 0.9);
+         }
+
+         #following a {
+                         color: #c7e3ff!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.1);
+                    box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.1);
+         }
+
+         #following a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.9);
+                    box-shadow: 0px 0px 4px rgba(0, 127, 255, 0.9);
+         }
+
+         #pages a {
+                         color: #dbd2ff!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.1);
+                    box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.1);
+         }
+
+         #pages a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.9);
+                    box-shadow: 0px 0px 4px rgba(51, 0, 255, 0.9);
+         }
+
+         #search a {
+                         color: #e7c7f7!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.1);
+                    box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.1);
+         }
+
+         #search a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.9);
+                    box-shadow: 0px 0px 4px rgba(153, 50, 204, 0.9);
+         }
+
+         #ask a {
+                         color: #ffd2ea!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.1);
+                    box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.1);
+         }
+
+         #ask a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.9);
+                    box-shadow: 0px 0px 4px rgba(255, 20, 147, 0.9);
+         }
+
+         #submit a {
+                         color: #dcdcdc!important;
+            -webkit-box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.1);
+               -moz-box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.1);
+                 -o-box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.1);
+                    box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.1);
+         }
+
+         #submit a:hover {
+            -webkit-box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.9);
+               -moz-box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.9);
+                 -o-box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.9);
+                    box-shadow: 0px 0px 4px rgba(130, 130, 130, 0.9);
+         }
+
+      /* Posts */
+         #posts {
+            float: left;
+            clear: both;
+            width: 700px;
+            }
+
+         .post {
+                            float: left;
+                            clear: none;
+                    margin-bottom: 10px;
+                          padding: 6px 9px;
+                            width: 400px;
+                 background-color: {color:Posts Background};
+            -webkit-border-radius: 1px;
+               -moz-border-radius: 1px;
+                 -o-border-radius: 1px;
+                    border-radius: 1px;
+               -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+                  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+                    -o-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+                       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+               -webkit-transition: -webkit-box-shadow 1.5s linear;
+                  -moz-transition: -moz-box-shadow 1.5s linear;
+                    -o-transition: box-shadow 1.5s linear;
+                       transition: box-shadow 1.5s linear;
+         }
+
+         .post:hover {
+            -webkit-transition: -webkit-box-shadow .1s linear;
+               -moz-transition: -moz-box-shadow .1s linear;
+                 -o-transition: box-shadow .1s linear;
+                    transition: box-shadow .1s linear;
+         }
+
+      /* Info Bar */
+         .info {
+              float: right;
+              clear: none;
+            padding: 6px 9px;
+              width: 250px;
+         }
+
+         .info p, .info ul { padding-bottom: 7px; }
+
+         .info ul {
+                    padding: 0 0 5px 25px;
+            list-style-type: square;
+         }
+
+         .info ol { padding: 0 0 5px 25px; }
+
+         h1 {
+            padding-left: 10px;
+                    font: italic normal 18px {font:Headers};
+         }
+
+         .day {
+                float: left;
+                clear: none;
+            font-size: 10px;
+         }
+
+         a.permalink {
+                            float: right;
+                            clear: none;
+                          padding: 2px 4px;
+                       margin-top: -2px;
+                 background-color: {color:Posts Background};
+            -webkit-border-radius: 2px;
+               -moz-border-radius: 2px;
+                 -o-border-radius: 2px;
+                    border-radius: 2px;
+                        font-size: 9px;
+                   text-transform: uppercase;
+               -webkit-transition: -webkit-box-shadow 1.5s linear;
+                  -moz-transition: -moz-box-shadow 1.5s linear;
+                    -o-transition: box-shadow 1.5s linear;
+                       transition: box-shadow 1.5s linear;
+         }
+
+         a.permalink:hover {
+            -webkit-transition: -webkit-box-shadow .1s linear;
+               -moz-transition: -moz-box-shadow .1s linear;
+                    transition: box-shadow .1s linear;
+                 -o-transition: box-shadow .1s linear;
+         }
+
+         .caption, .source, .tags {
+                 clear: both;
+                 float: left;
+            margin-top: 2px;
+                 width: 100%;
+         }
+
+         #shownotes {
+                 clear: both;
+                 float: right;
+            margin-top: 2px;
+         }
+
+         .tags a {
+                     font-size: 9px;
+            -webkit-transition: color 1s;
+               -moz-transition: color 1s;
+                 -o-transition: color 1s;
+                    transition: color 1s;
+         }
+
+      /* Text Posts */
+         .text { color: #e3d0cf; }
+
+         .text .post p, .text .post ul { padding-bottom: 7px; }
+
+         .text .post ul {
+                    padding: 0 0 5px 25px;
+            list-style-type: square;
+          }
+
+         .text .post ol { padding: 0 0 5px 25px; }
+
+         .text .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(227, 23, 13, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(227, 23, 13, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(227, 23, 13, 0.9);
+                    box-shadow: 0px 0px 5px rgba(227, 23, 13, 0.9);
+         }
+
+         .text a { color: #e36059; }
+
+         .text h1 {
+                          color: #fff;
+            -webkit-text-shadow: 0px 0px 3px rgba(227, 23, 13, 0.9);
+               -moz-text-shadow: 0px 0px 3px rgba(227, 23, 13, 0.9);
+                 -o-text-shadow: 0px 0px 3px rgba(227, 23, 13, 0.9);
+                    text-shadow: 0px 0px 3px rgba(227, 23, 13, 0.9);
+         }
+
+         .text a.permalink { color: #e3d0cf!important; }
+
+         .text a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(227, 23, 13, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(227, 23, 13, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(227, 23, 13, 0.5);
+                    box-shadow: 0px 0px 3px rgba(227, 23, 13, 0.5);
+         }
+
+         .text .tags a { color: #e3aba8; }
+
+      /* Photo Posts */
+         .photo { color: #ffd0c1; }
+
+         .photo .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(255, 87, 33, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(255, 87, 33, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(255, 87, 33, 0.9);
+                    box-shadow: 0px 0px 5px rgba(255, 87, 33, 0.9);
+         }
+
+         .photo a { color: #ff9370; }
+
+         .photo a.permalink { color: #ffd0c1!important; }
+
+         .photo a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(255, 87, 33, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(255, 87, 33, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(255, 87, 33, 0.5);
+                    box-shadow: 0px 0px 3px rgba(255, 87, 33, 0.5);
+         }
+
+         .photo .tags a { color: #ffbca7; }
+
+      /* Quote Posts */
+         .quote { color: #fffbd4; }
+
+         .quote .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(255, 230, 0, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(255, 230, 0, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(255, 230, 0, 0.9);
+                    box-shadow: 0px 0px 5px rgba(255, 230, 0, 0.9);
+            }
+
+         .quote a { color: #fff277; }
+
+         .quote h1 { padding: 0; }
+
+         .quote h1 {
+                          color: #fff;
+            -webkit-text-shadow: 0px 0px 3px rgba(255, 230, 0, 0.9);
+               -moz-text-shadow: 0px 0px 3px rgba(255, 230, 0, 0.9);
+                 -o-text-shadow: 0px 0px 3px rgba(255, 230, 0, 0.9);
+                    text-shadow: 0px 0px 3px rgba(255, 230, 0, 0.9);
+         }
+
+         .quote a.permalink { color: #fffbd4!important; }
+
+         .quote a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(255, 230, 0, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(255, 230, 0, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(255, 230, 0, 0.5);
+                    box-shadow: 0px 0px 3px rgba(255, 230, 0, 0.5);
+         }
+
+         .quote .tags a { color: #fff6a0; }
+
+      /* Link Posts */
+         .link { color: #d8ffe8; }
+
+         .link .post p, .link .post ul { padding-bottom: 7px; }
+
+         .link .post ul {
+                    padding: 0 0 5px 25px;
+            list-style-type: square;
+            }
+
+         .link .post ol { padding: 0 0 5px 25px; }
+
+         .link .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 255, 102, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(0, 255, 102, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(0, 255, 102, 0.9);
+                    box-shadow: 0px 0px 5px rgba(0, 255, 102, 0.9);
+         }
+
+         .link a { color: #69ffa5; }
+
+         .link h1 a {
+                          color: #fff!important;
+            -webkit-text-shadow: 0px 0px 3px rgba(0, 255, 102, 0.9);
+               -moz-text-shadow: 0px 0px 3px rgba(0, 255, 102, 0.9);
+                 -o-text-shadow: 0px 0px 3px rgba(0, 255, 102, 0.9);
+                    text-shadow: 0px 0px 3px rgba(0, 255, 102, 0.9);
+         }
+
+         .link a.permalink { color: #d8ffe8!important; }
+
+         .link a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(0, 255, 102, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(0, 255, 102, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(0, 255, 102, 0.5);
+                    box-shadow: 0px 0px 3px rgba(0, 255, 102, 0.5);
+         }
+
+         .link .tags a { color: #a0ffc6; }
+
+      /* Chat Posts */
+         .chat { color: #ddf9f3; }
+
+         .chat ul { list-style-type: none; }
+
+         .chat li { padding: 6px 9px; }
+
+         .chat li.odd {
+            background-color: #aeeddf;
+            background-color: rgba(174, 237, 223, 0.1); 
+                      filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19AEEDDF',EndColorStr='#19AEEDDF');
+                  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19AEEDDF',EndColorStr='#19AEEDDF')";
+         }
+
+         .chat .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(15, 221, 175, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(15, 221, 175, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(15, 221, 175, 0.9);
+                    box-shadow: 0px 0px 5px rgba(15, 221, 175, 0.9);
+         }
+
+         .chat a { color: #8addcd; }
+
+         .chat h1 {
+                          color: #fff;
+            -webkit-text-shadow: 0px 0px 3px rgba(15, 221, 175, 0.9);
+               -moz-text-shadow: 0px 0px 3px rgba(15, 221, 175, 0.9);
+                 -o-text-shadow: 0px 0px 3px rgba(15, 221, 175, 0.9);
+                    text-shadow: 0px 0px 3px rgba(15, 221, 175, 0.9);
+         }
+
+         .chat a.permalink { color: #ddf9f3!important; }
+
+         .chat a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(15, 221, 175, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(15, 221, 175, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(15, 221, 175, 0.5);
+                    box-shadow: 0px 0px 3px rgba(15, 221, 175, 0.5);
+         }
+
+         .chat .tags a { color:#aeeddf; }
+
+      /* Audio Posts */
+         .audio { color:#c7e3ff; }
+
+         .audio .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 127, 255, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(0, 127, 255, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(0, 127, 255, 0.9);
+                    box-shadow: 0px 0px 5px rgba(0, 127, 255, 0.9);
+         }
+
+         .audio a { color: #6fb7ff; }
+
+         .audio h1 {
+                          color: #fff;
+            -webkit-text-shadow: 0px 0px 3px rgba(0, 127, 255, 0.9);
+               -moz-text-shadow: 0px 0px 3px rgba(0, 127, 255, 0.9);
+                 -o-text-shadow: 0px 0px 3px rgba(0, 127, 255, 0.9);
+                    text-shadow: 0px 0px 3px rgba(0, 127, 255, 0.9);
+         }
+
+         .audio a.permalink { color: #c7e3ff!important; }
+
+         .audio a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(0, 127, 255, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(0, 127, 255, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(0, 127, 255, 0.5);
+                    box-shadow: 0px 0px 3px rgba(0, 127, 255, 0.5);
+         }
+
+         .audio .tags a { color: #9acdff; }
+
+         .albumart {
+              float: left;
+            padding: 0px 10px 5px 0px;
+              width: 100px;
+         }
+
+      /* Video Posts */
+         .video { color: #dbd2ff; }
+
+         .video .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(51, 0, 255, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(51, 0, 255, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(51, 0, 255, 0.9);
+                    box-shadow: 0px 0px 5px rgba(51, 0, 255, 0.9);
+         }
+
+         .video a { color: #8566ff; }
+
+         .video a.permalink { color: #dbd2ff!important; }
+
+         .video a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(51, 0, 255, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(51, 0, 255, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(51, 0, 255, 0.5);
+                    box-shadow: 0px 0px 3px rgba(51, 0, 255, 0.5);
+         }
+
+         .video .tags a { color: #baa9fe; }
+
+      /* Answer Posts */
+         .answer { color: #e7c7f7; }
+
+         .answer .post p, .answer .post ul { padding-bottom: 7px; }
+
+         .answer .post ul {
+                    padding: 0 0 5px 25px;
+            list-style-type: square;
+         }
+
+         .answer .post ol { padding: 0 0 5px 25px; }
+
+         .answer h1 {
+              padding: 0;
+            font-size: 15px;
+         }
+
+         .answer .post:hover {
+            -webkit-box-shadow: 0px 0px 5px rgba(153, 50, 204, 0.9);
+               -moz-box-shadow: 0px 0px 5px rgba(153, 50, 204, 0.9);
+                 -o-box-shadow: 0px 0px 5px rgba(153, 50, 204, 0.9);
+                    box-shadow: 0px 0px 5px rgba(153, 50, 204, 0.9);
+         }
+
+         .answer a { color: #bd6fe4; }
+
+         .answer h1 {
+                          color: #fff;
+            -webkit-text-shadow: 0px 0px 3px rgba(153, 50, 204, 0.9);
+               -moz-text-shadow: 0px 0px 3px rgba(153, 50, 204, 0.9);
+                 -o-text-shadow: 0px 0px 3px rgba(153, 50, 204, 0.9);
+                    text-shadow: 0px 0px 3px rgba(153, 50, 204, 0.9);
+         }
+
+         .answer a.permalink { color:#e7c7f7!important; }
+
+         .answer a.permalink:hover {
+            -webkit-box-shadow: 0px 0px 3px rgba(153, 50, 204, 0.5);
+               -moz-box-shadow: 0px 0px 3px rgba(153, 50, 204, 0.5);
+                 -o-box-shadow: 0px 0px 3px rgba(153, 50, 204, 0.5);
+                    box-shadow: 0px 0px 3px rgba(153, 50, 204, 0.5);
+         }
+
+         .answer .tags a { color: #cd96e9; }
+
+      /* Notes */
+         #notes {
+              float: left;
+              clear: both;
+            padding: 6px 9px;
+              width: 400px;
+              color: {color:Text};
+            }
+
+         .notes .avatar { display: none; }
+         .notes li { padding: 0; }
+
+      /* Pagination */
+         #pagination {
+              position: fixed;
+                bottom: 5px;
+                 right: 10px;
+                 width: 120px;
+            text-align: center;
+                 color: {color:Pagination};
+            }
+
+         #pagination h2 {
+                          font: normal 100px/80px {font:Text};
+                letter-spacing: 5px;
+                    text-align: right;
+         }
+
+      /* Search and Tag Pages */
+         #results {
+                    float: left;
+            margin-bottom: 10px;
+                    width: 700px;
+         }
+
+         #results h3 {
+            padding-left: 10px;
+                    font: italic normal 25px {font:Headers};
+                   color: #fff;
+            }
+
+      /* Hidden Divs */
+         #aboutme, #follow, #pagelist, #searchbar {
+            margin: 0 10px;
+             color: {color:Text};
+            }
+
+         .hidden { width: 680px; }
+         .desc {
+               overflow: hidden;
+            padding-top: 10px;
+         }
+
+         #icon {
+            padding: 5px;
+              width: 35px;
+         }
+
+         #pagelist ul li a {
+                     padding: 0;
+            background-color: transparent;
+         }
+
+         #searchbar input {
+                          padding: 6px 9px;
+                           margin: 0 0 5px 5px;
+                            width: 200px;
+                 background-color: {color:Posts Background};
+                           border: 0;
+            -webkit-border-radius: 1px;
+               -moz-border-radius: 1px;
+                 -o-border-radius: 1px;
+                    border-radius: 1px;
+                            color: {color:Text};
+               -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                    -o-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+         }
+
+      /* Footer */
+         #footer {
+                     float: left;
+                     clear: both;
+            padding-bottom: 5px;
+                     width: 700px;
+                text-align: center;
+            }
+
+         #footer, #footer a {
+                          color: {color:Footer};
+            -webkit-text-shadow: 0px 0px 3px rgba(69, 69, 69, 0.4);
+               -moz-text-shadow: 0px 0px 3px rgba(69, 69, 69, 0.4);
+                 -o-text-shadow: 0px 0px 3px rgba(69, 69, 69, 0.4);
+                    text-shadow: 0px 0px 3px rgba(69, 69, 69, 0.4);
+         }
+
+    {CustomCSS}
+
+   </style>
+
+   <script src="http://static.tumblr.com/i4mzrmx/lk4kqww5w/jquery-1.3.2.min.js" type="text/javascript"></script> 
+   <script type="text/javascript"> 
+      $(document).ready(function(){
+         $('.pulldown').click(function() {
+            var target = $(this).attr("rev");
+            var title = $(this).text();
+            var selected = $(this).hasClass("selected");
+            var el = $(this);
+         
+            $('#navlinks .selected').removeClass("selected");
+         
+            if ($('div.hidden:not(#' + target + ')').is(':visible')) {
+               $('div.hidden:visible').slideUp('slow', function () {
+                  $('#' + target ).slideDown('slow');
+                  el.addClass("selected");
+               });
+            } else {
+               if (selected) {
+                  $('#' + target ).slideUp('slow');
+               } else {
+                  $('#' + target).slideDown('slow');
+                  el.addClass("selected");
+               }
+            }
+            return false;
+         });
+      });
+   </script>
+
+   <script type="text/javascript">
+      function highlight(field) {
+         field.focus();
+         field.select();
+         }
+   </script>
+
+</head>
+<body>
+
+   {block:Pagination}
+      <div id="pagination">
+         <h2>{block:PreviousPage}<a href="{PreviousPage}">&#171;</a>{/block:PreviousPage}{block:NextPage}<a href="{NextPage}">&#187;</a>{/block:NextPage}</h2>
+         Page {CurrentPage} of {TotalPages}
+      </div>  
+   {/block:Pagination}
+
+   {block:DayPagination}
+      <div id="pagination">
+         <h2>{block:PreviousDayPage}<a href="{PreviousPage}">&#171;</a>{/block:PreviousDayPage}{block:NextDayPage}<a href="{NextDayPage}">&#187;</a>{/block:NextDayPage}</h2>
+         Page {CurrentPage} of {TotalPages}
+      </div>  
+   {/block:DayPagination}
+
+   {block:PermalinkPagination}
+      <div id="pagination">
+         <h2>{block:PreviousPost}<a href="{PreviousPost}">&#171;</a>{/block:PreviousPost}{block:NextPost}<a href="{NextPost}">&#187;</a>{/block:NextPost}</h2>
+         Page {CurrentPage} of {TotalPages}
+      </div>  
+   {/block:PermalinkPagination}
+
+   <div id="container">
+   <div id="content">
+
+      <div id="nav">
+         <ul id="navlinks">
+            <li id="home">
+               <a href="/">Home</a>
+            </li>
+
+            <li id="about">
+               <a href="#" title="#aboutme" class="pulldown" rev="aboutme">About</a>
+            </li>
+
+            <li id="archive">
+               <a href="/archive">Archive</a>
+            </li>
+
+            <li id="rss">
+               <a href="{RSS}">RSS</a>
+            </li>
+
+            <li id="random">
+               <a href="/random">Random</a>
+            </li>
+
+            {block:IfShowPeopleIFollow}{block:Following}
+               <li id="following">
+                  <a href="#" title="#follow" class="pulldown" rev="follow">Following</a>
+               </li>
+            {/block:Following}{/block:IfShowPeopleIFollow}
+
+            {block:IfShowPages}{block:HasPages}
+               <li id="pages">
+                  <a href="#" title="#pagelist" class="pulldown" rev="pagelist">Pages</a>
+               </li>
+            {/block:HasPages}{block:IfShowPages}
+
+            <li id="search">
+               <a href="#" title="#searchbar" class="pulldown" rev="searchbar">Search</a>
+            </li>
+
+            {block:IfShowAskLink}{block:AskEnabled}
+               <li id="ask">
+                  <a href="/ask">Ask</a>
+               </li>
+            {/block:AskEnabled}{/block:IfShowAskLink}
+
+            {block:IfShowSubmitLink}{block:SubmissionsEnabled}
+               <li id="submit">
+                  <a href="/submit">Submit</a>
+               </li>
+            {/block:SubmissionsEnabled}{/block:IfShowSubmitLink}
+         </ul>
+
+         <div style="clear:both;"></div>
+
+         <div class="hidden" id="aboutme">
+            <div class="desc">
+               <h1>{Title}</h1>
+               <img src="{PortraitURL-40}" align="left" id="icon" />
+               {Description}
+            </div>
+         </div>
+
+         {block:IfShowPages}{block:HasPages}
+            <div class="hidden" id="pagelist">
+               <div class="desc">
+                  <ul>
+                     {block:Pages}
+                        <li><a href="{URL}" class="page">{Label}</a></li>
+                     {/block:Pages}
+                  </ul>
+               </div>
+            </div>
+         {/block:HasPages}{block:IfShowPages}
+
+         <div class="hidden" id="searchbar">
+            <div class="desc">
+               <form action="/search" method="get">
+                  <input name="q" value="Type here and press enter" type="text" onclick="highlight(this);" />
+               </form>
+            </div>
+         </div>
+
+         {block:IfShowPeopleIFollow}{block:Following}
+            <div class="hidden" id="follow">
+               <div class="desc">
+                  {block:Followed}
+                     <a href="{FollowedURL}"><img src="{FollowedPortraitURL-30}" /></a>
+                  {/block:Followed}
+               </div>
+            </div>
+         {/block:Following}{block:IfShowPeopleIFollow}
+
+         <script type="text/javascript">$('div.hidden').hide();</script>
+
+      </div>
+
+      {block:SearchPage}
+         <div id="results">
+            <h3>You searched for
+            <a href="{SearchQuery}">{URLSafeSearchQuery}</a>
+            with {SearchResultCount} result(s).</h3>
+         </div>
+      {/block:SearchPage}
+
+      {block:TagPage}
+         <div id="results">
+            <h3>Posts tagged with <a href="{Tag}">{URLSafeTag}</a>.</h3>
+         </div>
+      {/block:TagPage}
+
+      <div id="posts">
+      {block:Posts}
+
+         {block:Text}
+            <div class="text">
+               <div class="post">
+                  {block:Title}<h1>{Title}</h1>{/block:Title}
+                  {Body}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:HasTags}
+                      <div class="tags">
+                         {block:Tags}
+                            <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                         {/block:Tags}
+                      </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Text}
+
+         {block:Photo}
+            <div class="photo">
+               <div class="post">
+                  {LinkOpenTag}
+                     <img src="{PhotoURL-400}" alt="{PhotoAlt}" />
+                  {LinkCloseTag}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:Caption}
+                     <div class="caption">
+                        {Caption}
+                     </div>
+                  {/block:Caption}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Photo}
+
+         {block:Photoset}
+            <div class="photo">
+               <div class="post">
+                  {Photoset-400}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:Caption}
+                     <div class="caption">
+                        {Caption}
+                     </div>
+                  {/block:Caption}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Photoset}
+
+         {block:Quote}
+            <div class="quote">
+               <div class="post">
+                  <h1>{Quote}</h1>
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:Source}<div class="source">{Source}</div>{/block:Source}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Quote}
+
+         {block:Link}
+            <div class="link">
+               <div class="post">
+                  <h1><a href="{URL}" {Target}>{Name}</a></h1>
+                  {block:Description}{Description}{/block:Description}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Link}
+
+         {block:Chat}
+            <div class="chat">
+               <div class="post">
+                  {block:Title}<h1>{Title}</h1>{/block:Title}
+                  <ul>
+                     {block:Lines}
+                        <li class="{Alt} user_{UserNumber}">
+                           {block:Label}
+                              <strong>{Label}</strong>
+                           {/block:Label}
+                           {Line}
+                        </li>
+                     {/block:Lines}
+                  </ul>
+            </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Chat}
+
+         {block:Audio}
+            <div class="audio">
+               <div class="post">
+                  {block:AlbumArt}
+                     <img src="{AlbumArtURL}" border="0" class="albumart" />
+                  {/block:AlbumArt}
+                  {block:TrackName}<h1>{TrackName}</h1>{/block:TrackName}
+                  {block:Artist}<strong>Artist:</strong> {Artist}<br />{/block:Artist}
+                  {block:Album}<strong>Album:</strong> {Album}<br />{/block:Album}
+                  <br />
+                  {AudioPlayerBlack}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:Caption}
+                     <div class="caption">
+                        {Caption}
+                     </div>
+                  {/block:Caption}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Audio}
+
+         {block:Video}
+            <div class="video">
+               <div class="post">
+                  {Video-400}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:Caption}
+                     <div class="caption">
+                        {Caption}
+                     </div>
+                  {/block:Caption}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Video}
+
+         {block:Answer}
+            <div class="answer">
+               <div class="post">
+                  <h1><strong>{Asker} asked</strong>: {Question}</h1>
+                  {Answer}
+               </div>
+
+               <div class="info">
+                  {block:Date}
+                     {block:SameDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:SameDayDate}
+
+                     {block:NewDayDate}
+                        <span class="day">
+                           <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                           &#8226;
+                           <span class="time"><a href="{Permalink}">{12HourWithZero}&middot;{Minutes} {AmPm}</a></span>
+                           {block:NoteCount}
+                              &#8226;
+                              <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                           {/block:NoteCount}
+                        </span>
+                     {/block:NewDayDate}
+                  {/block:Date}
+
+                  <a class="permalink" href="{Permalink}">&infin;</a>
+
+                  {block:HasTags}
+                      <div class="tags">
+                         {block:Tags}
+                            <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                         {/block:Tags}
+                      </div>
+                  {/block:HasTags}
+
+               </div>
+
+               {block:PostNotes}
+                  <div id="notes">
+                     {PostNotes}
+                  </div>
+               {/block:PostNotes}
+
+            </div>
+         {/block:Answer}
+
+      {/block:Posts}
+      </div>
+
+      <div id="footer">
+         <a href="http://www.tumblr.com/theme/9783">Glow</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+         Powered by <a href="http://tumblr.com">Tumblr</a>.
+      </div>
+
+   </div>
+   </div>
+</body>
+
+<script type="text/javascript"> 
+   var menu=new menu.dd("menu");
+   menu.init("menu","menuhover");
+</script>
+
+</html>
