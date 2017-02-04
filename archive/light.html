@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/BzRl3ghe1/droidserif.css" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Light.
+   Theme URI: http://www.tumblr.com/theme/14012
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   -->
+
+   <meta name="color:Background" content="#ffffff"/>
+   <meta name="image:Background" content=""/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+   <meta name="text:Top Margin" content="125"/>
+
+   <meta name="font:Text" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Text" content="#676767"/>
+   <meta name="text:Text Size" content="11"/>
+   <meta name="if:Anti Aliased Text" content="1"/>
+
+   <meta name="color:Link" content="#676767"/>
+   <meta name="color:Link Hover" content="#676767"/>
+   <meta name="color:Link Hover Background" content="#ffff00"/>
+   <meta name="if:Link Hover Background" content="1"/>
+   <meta name="if:Underlined Links" content="1"/>
+   <meta name="if:Link Transitions" content="0"/>
+
+   <meta name="text:Blockquote Border Width" content="1"/>
+   <meta name="text:Blockquote Border Style" content="solid"/>
+   <meta name="text:List Bullet Style" content="square"/>
+
+   <meta name="text:Navigation Size" content="15"/>
+   <meta name="font:Navigation" content="'Droid Serif', serif"/>
+   <meta name="color:Navigation" content="#bbbbbb"/>
+
+   <meta name="color:Content Background" content="#eeeeee"/>
+   <meta name="color:Post Background" content="#ffffff"/>
+   <meta name="if:Hidden Date" content="1"/>
+   <meta name="text:Date Size" content="10"/>
+   <meta name="color:Tags" content="#aaaaaa"/>
+
+   <meta name="text:Quote Size" content="15"/>
+   <meta name="font:Quote" content="'Droid Serif', serif"/>
+   <meta name="color:Chat Line" content="#f5f5f5"/>
+
+   <meta name="if:Icon" content="1"/>
+   <meta name="if:Searchbar" content="1"/>
+   <meta name="if:Endless Scrolling" content="0"/>
+
+   <style type="text/css">
+      html * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: {color:Background}{block:ifBackgroundImage} url('{image:Background}'){/block:ifBackgroundImage}{block:ifNotTiledBackground} no-repeat{/block:ifNotTiledBackground}{block:ifNotScrollingBackground} fixed{/block:ifNotScrollingBackground} {text:Background Position};
+         font: {text:Text Size}px {font:Text};
+         color: {color:Text};
+         {block:ifAntiAliasedText}-webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;{/block:ifAntiAliasedText}
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Link};
+         {block:ifNotUnderlinedLinks}text-decoration: none!important;{/block:ifNotUnderlinedLinks}
+         {block:ifLinkTransitions}-webkit-transition: color 1.5s linear;
+         -moz-transition: color 1.5s linear;
+         -o-transition: color 1.5s linear
+         transition: color 1.5s linear;{/block:ifLinkTransitions}
+      }
+
+      a:hover {
+         color: {color:Link Hover};
+         {block:ifLinkHoverBackground}background: {color:Link Hover Background};{/block:ifLinkHoverBackground}
+         {block:ifLinkTransitions}-webkit-transition: color .1s linear;
+         -moz-transition: color .1s linear;
+         -o-transition: color .1s linear;
+         transition: color .1s linear;{/block:ifLinkTransitions}
+      }
+
+      img, a img { max-width: 500px; border: 0; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: {text:Blockquote Border Width}px {text:Blockquote Border Style};
+      }
+
+      p { padding-top: 5px; }
+      blockquote p:first-child { padding: 0; }
+
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: {text:List Bullet Style}; }
+      ul ul, ul ol, ol ol, ol ul { padding-bottom: 5px; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         background: {color:Content Background};
+         max-height: 300px;
+         overflow: auto;
+         {block:IndexPage}overflow: none!important;{/block:IndexPage}
+      }
+
+      .clear { clear: both; }
+      .right { float: right; }
+      .left { float: left; }
+      .five { margin-top: -5px; }
+
+      h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+      h1 a { text-decoration: none; }
+      h1.right {
+         margin-top: 7px;
+         font: italic {text:Navigation Size}px {font:Navigation};
+         color: {color:Navigation};
+         text-transform: lowercase;
+      }
+
+      h1.right a { color: {color:Navigation}; }
+      h1.right a:hover, .tags a:hover { color: {color:Link Hover}; }
+
+      h2 { margin-top: -3px; }
+      .answer h3 {
+         padding: 5px;
+         background: {color:Chat Line};
+      }
+
+      h4 { font: italic {text:Quote Size}px {font:Quote}; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         margin: {text:Top Margin}px auto 50px;
+         width: 795px;
+         height: 100%;
+         padding: 0;
+      }
+
+      #icon {
+         float: left;
+         width: 50px!important;
+         margin-right: 5px;
+      }
+
+      #posts {
+         overflow: auto;
+         background: {color:Content Background};
+         padding-top: 5px;
+         margin-left: -5px;
+      }
+
+      .results {
+         padding: 5px;
+         margin: 0 5px 5px;
+         background: {color:Post Background};
+         text-align: center;
+      }
+
+      .results a, .results span { font-weight: bold; }
+
+      .post {
+         float: left;
+         margin: 0 0 5px 5px;
+         width: 780px;
+         padding: 5px;
+         background: {color:Post Background};
+      }
+
+      .date_pp {
+         margin-bottom: 5px;
+         font-size: {text:Date Size}px;
+         text-transform: uppercase;
+      }
+
+      .date_pp a { text-decoration: none; }
+
+      .tags { margin-top: 2px; }
+      .chat .tags { padding: 0 5px; }
+
+      .tags a {
+         font-size: {text:Date Size}px;
+         color: {color:Tags};
+         text-decoration: none;
+      }
+
+      #notes { margin-top: 10px; }
+      #notes ol { padding: 0; list-style-type: none; }
+      #notes li { margin-bottom: 10px; }
+      .avatar { display: none; }
+
+      .right .five img { max-width: 275px; }
+      .body p:first-child { padding: 0; }
+
+      .chat ul { padding: 0; list-style-type: none; }
+      .chat ul li { padding: 5px 10px; }
+      .odd { background: {color:Chat Line}; }
+
+      .album_art {
+         display: block;
+         float: left;
+         width: 50px;
+         margin-bottom: 5px;
+      }
+
+      .info { float: left; margin-left: 5px; width: 155px; overflow: hidden; }
+      .info span { display: block; }
+
+      .player {
+         width: 250px;
+         background: #e4e4e4;
+         text-align: center;
+      }
+
+      #footer {
+         margin-top: 5px;
+         text-align: center;
+      }
+
+      input {
+         margin-top: 5px;
+         padding: 3px;
+         background: {color:Content Background};
+         border: 0;
+         font: italic {text:Text Size}px {font:Text};
+         color: {color:Text};
+         {block:ifAntiAliasedText}-webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;{/block:ifAntiAliasedText}
+      }
+
+      {block:ifLinkHoverBackground}input:hover { background-color: {color:Link Hover Background}; }{/block:ifLinkHoverBackground}
+
+      .arrow, .arrow a {
+         font: 50px Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif;
+         text-decoration: none;
+         color: {color:Content Background};
+      }
+
+      .arrow { position: absolute; margin-top: -10px; }
+      .left .arrow { margin-left: -25px; }
+      .right .arrow { margin-right: -20px; padding: 5px; }
+      .arrow a:hover { background: none; color: {color:Link Hover}; }
+
+      {block:IndexPage}
+         img { width: 260px; }
+         object, .video embed, .photoset embed { width: 260px; height: 160px; }
+         .post { width: 260px; height: 160px; padding: 0; }
+         .inside { overflow: hidden; }
+         .text, .quote, .link, .audio { width: 250px; height: 150px; padding: 5px; }
+         .photo, .photoset, .chat, .video, .answer { width: 260px; height: 160px; }
+
+         .date {
+            position: absolute;
+            {block:ifHiddenDate}visibility: hidden;{/block:ifHiddenDate}
+            margin-top: 138px;
+            padding: 5px;
+            width: 250px;
+            background: #000;
+            opacity: 0.75;
+            filter: alpha(opacity=75);
+            font-size: 10px;
+         }
+
+         .date a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+         }
+
+         .date a:hover { background: none; }
+         .post:hover .date { visibility: visible; }
+
+         .single { float: left; }
+      {/block:IndexPage}
+
+      {block:ifEndlessScrolling}
+         #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            background: {color:Background};
+            text-align: center;
+         }
+      {block:ifEndlessScrolling}
+
+      {CustomCSS}
+   </style>
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/GqMl77c4f/jquery.min.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/f2bldgcq4/youtube.js"></script>
+</head>
+<body>
+   <div id="container">
+      <div id="content">
+         <h1 class="left"><a href="/">{Title}</a></h1>
+         <h1 class="right">
+            <a href="/archive">{lang:Archive}</a>/<a href="{RSS}">RSS</a>{block:AskEnabled}/<a href="/ask">Ask</a>{/block:AskEnabled}{block:SubmissionsEnabled}/<a href="/submit">Submit</a>{/block:SubmissionsEnabled}
+         </h1>
+         <div class="clear"></div>
+
+         {block:ifIcon}<img id="icon" src="{PortraitURL-128}" alt="" />{/block:ifIcon}
+
+         {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a>&nbsp;&middot;&nbsp;{/block:Pages}{/block:HasPages}{block:Description}{Description}{/block:Description}
+         <div class="clear" style="height: 5px;"></div>
+
+         {block:Pagination}
+            <div class="left"><div class="arrow">
+               {block:PreviousPage}
+                  <a href="{PreviousPage}">&lsaquo;</a>
+               {/block:PreviousPage}
+            </div></div>
+
+            <div class="right"><div class="arrow">
+               {block:NextPage}
+                  <a href="{NextPage}">&rsaquo;</a>
+               {/block:NextPage}
+            </div></div>
+         {/block:Pagination}
+
+         {block:DayPagination}
+            <div class="left"><div class="arrow">
+               {block:PreviousDayPage}
+                  <a href="{PreviousDayPage}">&lsaquo;</a>
+               {/block:PreviousDayPage}
+            </div></div>
+
+            <div class="right"><div class="arrow">
+               {block:NextDayPage}
+                  <a href="{NextDayPage}">&rsaquo;</a>
+               {/block:NextDayPage}
+            </div></div>
+         {/block:DayPagination}
+
+         {block:PermalinkPagination}
+            <div class="left"><div class="arrow">
+               {block:PreviousPost}
+                  <a href="{PreviousPost}">&lsaquo;</a>
+               {/block:PreviousPost}
+            </div></div>
+
+            <div class="right"><div class="arrow">
+               {block:NextPost}
+                  <a href="{NextPost}">&rsaquo;</a>
+               {/block:NextPost}
+            </div></div>
+         {/block:PermalinkPagination}
+
+         <div id="posts">
+            {block:TagPage}<h4 class="results">{lang:Posts tagged Tag 3}.</h4>{/block:TagPage}
+            {block:SearchPage}<h4 class="results">{lang:SearchResultCount results for SearchQuery 2}{block:NoSearchResults}{lang:No results for SearchQuery 2}{/block:NoSearchResults}.</h4>{/block:SearchPage}
+            {block:Posts}
+               <div class="post">
+                  {block:IndexPage}{block:Date}
+                     <div class="date">
+                        <div class="left"><a href="{Permalink}">{TimeAgo}</a></div>
+                        {block:NoteCount}<div class="right"><a href="{Permalink}">{NoteCountWithLabel}</a></div>{/block:NoteCount}
+                     </div>
+                  {/block:Date}{/block:IndexPage}
+
+                  <div class="{block:Text}text{/block:Text}{block:Photo}photo{/block:Photo}{block:Photoset}photoset{/block:Photoset}{block:Quote}quote{/block:Quote}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}{block:Audio}audio{/block:Audio}{block:Video}video{/block:Video}{block:Answer}answer{/block:Answer} inside">
+                  {block:PermalinkPage}{block:Date}<div class="date_pp">
+                     <a href="{Permalink}">{TimeAgo}</a> on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a> at {12HourWithZero}:{Minutes}{AmPm}{block:ContentSource} via {block:SourceLogo}<a href="{SourceURL}"><img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" /></a>{/block:SourceLogo}{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}{/block:ContentSource}{block:NoteCount} with {NoteCountWithLabel}{/block:NoteCount}
+                  </div>{/block:Date}{/block:PermalinkPage}
+
+                  {block:Text}
+                     {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                     <div class="body">{Body}</div>
+                  {/block:Text}
+
+                  {block:Photo}
+                     {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="single" />{LinkCloseTag}
+                     {block:PermalinkPage}
+                        {block:Caption}
+                           <div class="right" style="width: 275px;">
+                              <div class="body">{Caption}</div>
+                           </div>
+                           <div class="clear"></div>
+                        {/block:Caption}
+                     {/block:PermalinkPage}
+                  {/block:Photo}
+
+                  {block:Photoset}
+                     {Photoset-500}
+                     {block:PermalinkPage}
+                        {block:Caption}
+                           <div class="right" style="width: 275px;">
+                              <div class="body">{Caption}</div>
+                           </div>
+                           <div class="clear"></div>
+                        {/block:Caption}
+                     {/block:PermalinkPage}
+                  {/block:Photoset}
+
+                  {block:Quote}
+                     <h4>{Quote}</h4>
+                     {block:Source}<div class="body">{Source}</div>{/block:Source}
+                  {/block:Quote}
+
+                  {block:Link}
+                     <h2><a href="{URL}" {Target}>{Name} &rarr;</a></h2>
+                     {block:Description}<div class="body">{Description}</div>{/block:Description}
+                  {/block:Link}
+
+                  {block:Chat}
+                     <ul>
+                        {block:Title}<li class="even"><h3>{Title}</h3></li>{/block:Title}
+                        {block:Lines}<li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                     {/block:Lines}</ul>
+                  {/block:Chat}
+
+                  {block:Audio}
+                     {block:AlbumArt}
+                        <img src="{AlbumArtURL}" class="album_art" alt="" />
+                        <div class="info">
+                           {block:TrackName}<span><strong>Title</strong>: {TrackName}</span>{/block:TrackName}
+                           {block:Artist}<span><strong>Artist:</strong> {Artist}</span>{/block:Artist}
+                           {block:Album}<span><strong>Album:</strong> {Album}</span>{/block:Album}
+                           <span><strong>Playcount:</strong> {PlayCountWithLabel}</span>
+                        </div>
+                        <div class="clear"></div>
+                     {/block:AlbumArt}
+
+                     <div class="player">{AudioPlayerGrey}</div>
+
+                     {block:Caption}{Caption}{/block:Caption}
+                  {/block:Audio}
+
+                  {block:Video}
+                     {Video-500}
+                     {block:PermalinkPage}
+                        {block:Caption}
+                           <div class="right" style="width: 275px;">
+                              <div class="five">{Caption}</div>
+                           </div>
+                           <div class="clear"></div>
+                        {/block:Caption}
+                     {/block:PermalinkPage}
+                  {/block:Video}
+
+                  {block:Answer}
+                     <h3>{Asker} asked: {Question}</h3>
+                     <div style="padding: 0 5px 5px;">{Answer}</div>
+                  {/block:Answer}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                     </div>
+                     <div class="clear"></div>
+                  {/block:HasTags}
+               </div></div>
+            {/block:Posts}
+         </div>
+
+         {block:Posts}
+            {block:PostNotes}
+               <div id="notes">{PostNotes}</div>
+            {/block:PostNotes}
+         {/block:Posts}
+
+         {block:ifNotEndlessScrolling}<div id="footer">
+            <a href="http://www.tumblr.com/theme/14012">Light</a> by <a href="http://elletricity.com">Gabrielle Wee</a>. Powered by <a href="http://tumblr.com">Tumblr</a>.
+            {block:ifSearchbar}<form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form>{/block:ifSearchbar}
+         </div>{/block:ifNotEndlessScrolling}
+      </div>
+   </div>
+
+   {block:ifEndlessScrolling}
+      <div id="footer">
+         <a href="http://www.tumblr.com/theme/14012">Light</a> by <a href="http://elletricity.com">Gabrielle Wee</a>. Powered by <a href="http://tumblr.com">Tumblr</a>.
+         {block:ifSearchbar}<form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form>{/block:ifSearchbar}
+      </div>
+      <script type="text/javascript" src="http://static.tumblr.com/q0etgkr/Lillcjek4/infinitetumblrbycodysherman.js"></script>
+   {/block:ifEndlessScrolling}
+</body>
+</html>
