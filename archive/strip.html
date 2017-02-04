@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Strip.
+   Theme URI: http://www.tumblr.com/theme/13159
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   -->
+
+   <meta name="image:Background 1" content=""/>
+   <meta name="image:Background 2" content=""/>
+   <meta name="color:Background 1" content="#FFFFFF"/>
+   <meta name="color:Background 2" content="#EEEEEE"/>
+   <meta name="font:Text" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Text" content="#000000"/>
+   <meta name="color:Tags" content="#909090"/>
+   <meta name="color:Hover 1" content="#FFFF00"/>
+   <meta name="color:Hover 2" content="#DDDDDD"/>
+   <meta name="color:Hover 3" content="#FFFFFF"/>
+   <meta name="if:Endless Scrolling" content="0"/>
+
+   <style type="text/css">
+      html * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: {color:Background 1};
+         font: 11px {font:Text};
+         color: {color:Text};
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:visited, a:active { color: {color:Text}; }
+      a:hover { background-color: {color:Hover 1}; }
+
+      img, a img {
+         max-width: 500px;
+         border: 0;
+      }
+
+      blockquote img { max-width: 490px; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid;
+      }
+
+      p { padding-top: 5px; }
+      blockquote p:first-child { padding: 0; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         white-space: pre-wrap;
+         white-space: -moz-pre-wrap;
+         white-space: -pre-wrap;
+         white-space: -o-pre-wrap;
+         background: {color:Hover 2};
+         overflow: auto;
+      }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+      ul ul, ul ol, ol ol, ol ul { padding-bottom: 5px; }
+
+      .left { float: left; }
+      .right { float: right; }
+      .clear { clear: both; }
+      .five { margin-top: -5px; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #nav, #desc, .post, #footer {
+         width: 100%;
+         padding: 10px 0;
+      }
+
+      #desc div, .inside {
+         width: 800px;
+         margin: 0 auto;
+      }
+
+      #nav {
+         background: {color:Background 1} url('{image:Background 1}');
+         position: fixed;
+         top: 0;
+         left: 0;
+         height: 18px;
+      }
+
+      #nav .inside { overflow: auto; }
+      #nav ul { padding: 0; list-style-type: none; }
+      #nav li { float: left; margin-right: 5px; }
+
+      #nav a, #nav span, #nav input {
+         display: block;
+         padding: 2px 4px;
+         border: 0;
+         background: {color:Background 2} url('{image:Background 2}');
+         text-decoration: none;
+      }
+
+      #nav a:hover, #nav span:hover, #nav input:hover { background-color: {color:Hover 1}; }
+      #nav input { font: 11px {font:Text}; }
+
+      #desc {
+         margin-top: 38px;
+         background: {color:Background 2} url('{image:Background 2}');
+      }
+
+      .post {
+         width: 100%;
+         padding: 10px 0;
+      }
+
+      .body p:first-child { padding: 0; }
+
+      .odds { background: {color:Background 1} url('{image:Background 1}'); }
+      .odds:hover { background-color: {color:Hover 3}; }
+      .evens { background: {color:Background 2} url('{image:Background 2}'); }
+      .evens:hover, #desc:hover { background-color: {color:Hover 2}; }
+
+      .date {
+         margin-top: 5px;
+         text-transform: uppercase;
+      }
+
+      h1, h2, h3 { font-weight: normal; }
+
+      .caption {
+         float: left;
+         width: 290px;
+         margin: -5px 0 0 10px;
+      }
+
+      .chat { padding: 0; list-style-type: none; }
+      .chat li { padding: 5px 0; }
+
+      .tags { margin-top: 3px; }
+
+      .tags a {
+         color: {color:Tags};
+         font-size: 10px;
+         text-decoration: none;
+      }
+
+      .tags a:hover { color: {color:Text}; }
+
+      #notes .avatar { display: none; }
+      #notes ol li { padding-bottom: 7px; }
+
+      #footer {
+         background: {color:Background 1} url('{image:Background 1}');
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         height: 18px;
+      }
+
+      #footer ul { padding: 0; list-style-type: none; }
+      #footer li { float: left; margin-right: 5px; }
+
+      #footer a {
+         padding: 2px 4px;
+         background: {color:Background 2} url('{image:Background 2}');
+         text-decoration: none;
+      }
+
+      #footer a:hover { background: {color:Hover 1}; }
+      #footer span { padding: 2px 4px; }
+
+      {CustomCSS}
+   </style>
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/GqMl77c4f/jquery.min.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/f2bldgcq4/youtube.js"></script>
+</head>
+<body>
+   <div id="container">
+      <div id="nav"><div class="inside">
+         <ul class="left">
+            <li><a href="/">Home</a></li>
+            <li><a href="/archive">{lang:Archive}</a></li>
+            <li><a href="{RSS}">{lang:RSS}</a></li>
+            {block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
+            {block:SubmissionsEnabled}
+               <li><a href="/submit">Submit</a></li>
+            {/block:SubmissionsEnabled}
+            {block:HasPages}
+               {block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+            {/block:HasPages}
+            <li>
+               <form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search" /></form>
+            </li>
+         </ul>
+         <div class="right">
+            <span>{lang:Page CurrentPage of TotalPages}</span>
+         </div>
+      </div></div>
+
+      <div id="desc"><div>
+         <h1><a href="/">{Title}</a></h1>
+         {block:Description}{Description}{/block:Description}
+      </div></div>
+
+      <div class="autopagerize_page_element">{block:Posts}
+         <div class="post{block:Even} evens{/block:Even}{block:Odd} odds{/block:Odd}">
+            <div class="inside">
+               {block:Text}
+                  {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+                  <div class="body">{Body}</div>
+               {/block:Text}
+
+               {block:Photo}
+                  {LinkOpenTag}<img class="left" src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                  {block:Caption}
+                     <div class="caption">{Caption}</div>
+                     <div class="clear"></div>
+                  {/block:Caption}
+               {/block:Photo}
+
+               {block:Photoset}
+                  <div class="left">{Photoset-500}</div>
+                  {block:Caption}
+                     <div class="caption">{Caption}</div>
+                     <div class="clear"></div>
+                  {/block:Caption}
+               {block:Photoset}
+
+               {block:Quote}
+                  <h1><big><em>{Quote}</em></big></h1>
+                  {block:Source}<div class="body">{Source}</div>{/block:Source}
+               {/block:Quote}
+
+               {block:Link}
+                  <h2><a href="{URL}" {Target}>{Name} &rarr;</a></h2>
+                  {block:Description}<div class="body">{Description}</div>{/block:Description}
+               {/block:Link}
+
+               {block:Chat}
+                  {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+                  <ul class="five chat">{block:Lines}
+                     <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                  {/block:Lines}</ul>
+               {/block:Chat}
+
+               {block:Audio}
+                  <div style="overflow: auto;">
+                     <div class="left">{AudioPlayerBlack}</div>
+                     <div class="left" style="margin-left: 5px;">
+                        <span style="display: block;">{block:Artist}{Artist} -{/block:Artist}
+                        {block:TrackName}{TrackName}{/block:TrackName}</span>
+                        {PlayCountWithLabel}
+                     </div>
+                     <div class="clear"></div>
+                     {block:Caption}{Caption}{/block:Caption}
+                  </div>
+               {/block:Audio}
+
+               {block:Video}
+                  <div class="left">{Video-500}</div>
+                  {block:Caption}
+                     <div class="caption">{Caption}</div>
+                     <div class="clear"></div>
+                  {/block:Caption}
+               {block:Video}
+
+               {block:Answer}
+                  <h2>{Asker} asked: {Question}</h2>
+                  {Answer}
+               {/block:Answer}
+
+               {block:HasTags}
+                   <div class="tags">
+                      {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                   </div>
+               {/block:HasTags}
+
+               {block:Date}
+                  <div class="date">
+                     <div class="left">
+                        <a href="{Permalink}">{TimeAgo}</a> on <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a> at {12HourWithZero}:{Minutes}{AmPm}
+                     </div>
+                     {block:NoteCount}
+                        <div class="right"><a href="{Permalink}">{NoteCountWithLabel}</a></div>
+                     {block:NoteCount}
+                     <div class="clear"></div>
+                  </div>
+               {block:Date}
+            </div>
+         </div>
+         {block:PostNotes}
+            <div class="post" id="notes"><div class="inside">{PostNotes}</div></div>
+         {/block:PostNotes}
+      {/block:Posts}</div>
+
+      <div style="height: 38px;">&nbsp;</div>
+
+      <div id="footer"><div class="inside">
+         <div class="left" style="width: 200px; text-align: left;">
+            {block:Pagination}
+               &nbsp;{block:PreviousPage}<a href="{PreviousPage}">&larr; Previous</a>{/block:PreviousPage}
+            {/block:Pagination}
+
+            {block:DayPagination}
+               &nbsp;{block:PreviousDayPage}<a href="{PreviousDayPage}">&larr; Previous</a>{/block:PreviousDayPage}
+            {/block:DayPagination}
+
+            {block:PermalinkPagination}
+               &nbsp;{block:PreviousPost}<a href="{PreviousPost}">&larr; Previous</a>{/block:PreviousPost}
+            {/block:PermalinkPagination}
+         </div>
+         <div class="left" style="width: 400px; text-align: center;">
+            <span>
+               <a href="http://www.tumblr.com/theme/13159">Strip</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+               Powered by <a href="http://tumblr.com">Tumblr</a>.
+            </span>
+         </div>
+         <div class="right" style="width: 200px; text-align: right;">
+            {block:Pagination}
+               {block:NextPage}<a href="{NextPage}">Next &rarr;</a>{/block:NextPage}&nbsp;
+            {/block:Pagination}
+
+            {block:DayPagination}
+               {block:NextDayPage}<a href="{NextDayPage}">Next &rarr;</a>{/block:NextDayPage}&nbsp;
+            {/block:DayPagination}
+
+            {block:PermalinkPagination}
+               {block:NextPost}<a href="{NextPost}">Next &rarr;</a>{/block:NextPost}&nbsp;
+            {/block:PermalinkPagination}
+         </div>
+      </div></div>
+   </div></div>
+
+   {block:ifEndlessScrolling}
+      <script type="text/javascript" src="http://static.tumblr.com/q0etgkr/Lillcjek4/infinitetumblrbycodysherman.js"></script>
+   {/block:ifEndlessScrolling}
+</body>
+</html>
