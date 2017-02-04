@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Simple Wood 2.0
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   -->
+
+   <!-- CUSTOM THEME DATA -->
+   <meta name="color:Background" content="#000000"/>
+   <meta name="image:Background" content="http://static.tumblr.com/imovwvl/w0Clocj9p/34515aa.gif"/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+   <meta name="font:Text" content="Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif"/>
+   <meta name="color:Text" content="#121212"/>
+   <meta name="color:Links" content="#007FFF"/>
+   <meta name="color:Links Hover" content="#ff6b6b"/>
+   <meta name="color:Nav Links" content="#ff9900"/>
+   <meta name="color:Nav Links Hover" content="#007FFF"/>
+   <meta name="color:Date" content="#ff9900"/>
+   <meta name="color:Time" content="#aaaaaa"/>
+   <meta name="color:Title" content="#ff0000"/>
+   <meta name="color:Title Border" content="#ffb8b8"/>
+   <meta name="color:Tags" content="#aaaaaa"/>
+   <meta name="font:Headers" content="Georgia, serif"/>
+   <meta name="color:Footer" content="#f9f9f9"/>
+   <meta name="color:Footer Hover" content="#ff9900"/>
+
+   <style type="text/css">
+      html * {
+          margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background-color: {color:Background};
+         background-image: url('{image:Background}');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: {text:Background Position};
+         font: 11px {font:Text};
+         color: {color:Text};
+         {block:ifTiledBackground}background-repeat: repeat!important;{/block:ifTiledBackground}
+         {block:ifScrollingBackground}background-attachment: scroll!important;{/block:ifScrollingBackground}
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Links};
+         text-decoration: none;
+         -webkit-transition: color 1.5s linear;
+         -moz-transition: color 1.5s linear;
+         -o-transition: color 1.5s linear;
+         transition: color 1.5s linear;
+      }
+
+      a:hover {
+         color: {color:Links Hover};
+         -webkit-transition: color .3s linear;
+         -moz-transition: color .3s linear;
+         -o-transition: color .3s linear;
+         transition: color .3s linear;
+      }
+
+      img, a img {
+         max-width: 400px;
+         border: 0px;
+         opacity: 0.75;
+         filter: alpha(opacity=75);
+         -webkit-transition: opacity 1.5s linear;
+         -moz-transition: opacity 1.5s linear;
+         -o-transition: opacity 1.5s linear;
+         transition: opacity 1.5s linear;
+      }
+
+      img:hover, a:hover img {
+         opacity: 1;
+         filter: alpha(opacity=100);
+         -webkit-transition: opacity .1s linear;
+         -moz-transition: opacity .1s linear;
+         -o-transition: opacity .1s linear;
+         transition: opacity .1s linear;
+      }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid;
+      }
+
+      p { padding-top: 5px; }
+
+      pre {
+         margin: 10px 0;
+         padding: 10px;
+         word-wrap: break-word;
+         white-space: pre-wrap;
+         white-space: -moz-pre-wrap;
+         white-space: -pre-wrap;
+         white-space: -o-pre-wrap;
+         background-color: #ebebeb;
+         overflow: auto;
+      }
+
+      ul {
+         padding: 5px 0 0 25px;
+         list-style-type: square;
+      }
+
+      ol { padding: 5px 0 0 25px; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         margin: 0 auto;
+         width: 470px;
+         height: 100%;
+      }
+
+      #header { padding-top: 10px; }
+
+      h1 {
+         text-align: center;
+         color: rgba(255, 255, 255, 0.7);
+      }
+
+      #icon {
+         float: left;
+         width: 50px;
+         height: 50px;
+      }
+
+      #icon img { opacity: 1; }
+
+      .info a { color: {color:Nav Links}; }
+      .info a:hover { color: {color:Nav Links Hover}; }
+
+      .date {
+         float: left;
+         padding: 5px;
+         width: 40px;
+         height: 40px;
+         background-color: {color:Date};
+         text-align: right;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         -o-border-radius: 2px;
+         border-radius: 2px;
+      }
+
+      .date span {
+         display: block;
+         color: #fff;
+      }
+
+      .month {
+         font-size: 17px;
+         font-weight: bold;
+         height: 17px;
+      }
+
+      .day, .year { height: 8px; }
+
+      .arrow {
+         float: left;
+         width: 10px;
+         height: 50px;
+         background-image: url('http://static.tumblr.com/imovwvl/jbnl28hyp/arrow.png');
+         background-position: top right;
+         background-repeat: no-repeat;
+      }
+
+      .post {
+         float: right;
+         width: 400px;
+         padding: 5px;
+         margin-bottom: 10px;
+         background-color: #fff;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         -o-border-radius: 2px;
+         border-radius: 2px;
+         min-height: 50px;
+      }
+
+      .time a {
+         color: {color:Time};
+         font-size: 9px;
+      }
+
+      h2 {
+         color: {color:Title};
+         text-align: right;
+         border-bottom: 1px solid {color:Title Border};
+      }
+
+      .tags { padding-top: 5px; }
+
+      .tags, .tags a {
+         font-size: 9px;
+         color: {color:Tags};
+         text-align: center;
+      }
+
+      h3 {
+         font: italic 15px {font:Headers};
+      }
+
+      .quote h3 {
+         background-image: url('http://static.tumblr.com/imovwvl/hb5l28nzg/quote.png');
+         background-repeat: no-repeat;
+         background-position: 350px -7px;
+      }
+
+      .photo .time, .audio .time, .video .time { padding-bottom: 3px; }
+
+      .chat ul {
+         margin-top: -5px;
+         padding: 0;
+         list-style-type: none;
+      }
+
+      .chat li { margin-top: 5px; }
+
+      .chat .inner li { float: left; }
+
+      .odd_arrow, .even_arrow {
+         width: 1px;
+         height: 13px;
+         background-repeat: no-repeat;
+         background-position: center right;
+      }
+
+      .odd_arrow { background-image:url('http://static.tumblr.com/imovwvl/2UGl28pko/odd_arrow.png'); }
+      .even_arrow { background-image:url('http://static.tumblr.com/imovwvl/h9Gl28pjx/even_arrow.png'); }
+      .odd_line, .odd_label, .odd_arrow, .even_line, .even_label, .even_arrow { padding: 5px; }
+      .odd_line { background-color: #ebebeb; }
+      .even_line { background-color: #ffeaea; }
+      .odd_line, .even_line { max-width: 300px; }
+
+      .odd_label, .even_label { background-color: #f4f4f4; }
+
+      .album_art {
+                 float: left;
+                 width: 80px;
+         padding-right: 5px;
+      }
+
+      .album_info { float: left; }
+
+      .asker, .answer_arrow, .question { float: left; }
+      .asker { width: 50px; }
+      .question { width: 330px; }
+
+      .asker a, .asker {
+         font-size: 9px;
+         color: #121212;
+         text-align: center;
+      }
+
+      .answer_arrow {
+         width: 10px;
+         height: 50px;
+         background-image: url('http://static.tumblr.com/imovwvl/oXZl28qzi/answer_arrow.png');
+         background-position: top right;
+         background-repeat: no-repeat;
+      }
+
+      .question {
+         padding: 5px;
+         background-color: #ebebeb;
+         min-height: 40px;
+      }
+
+      #pag {
+           position: fixed;
+             bottom: 0;
+              width: 100%;
+             height: 30px;
+            padding: 5px 0;
+         text-align: center;
+      }
+
+      #pag img { width: 30px; }
+
+      #pag a img {
+         opacity: 0.5;
+          filter: alpha(opacity=50);
+      }
+
+      #pag a:hover img {
+         opacity: 1;
+          filter: alpha(opacity=100);
+      }
+
+      #footer {
+         clear: both;
+         padding-bottom: 45px;
+         width: 470px;
+         text-align: center;
+      }
+
+      #footer, #footer a {
+         color: {color:Footer};
+         font-size: 9px;
+      }
+
+      #footer a:hover { color: {color:Footer Hover}; }
+
+      #notes {
+         float: right;
+         width: 400px;
+         padding: 5px;
+         margin-bottom: 10px;
+         background-color: #fff;
+         -webkit-border-radius: 2px;
+         -moz-border-radius: 2px;
+         -o-border-radius: 2px;
+         border-radius: 2px;
+      }
+
+      #notes img.avatar { display: none; }
+      #notes ol { padding-left: 30px; }
+      #notes li { padding-bottom: 3px; }
+
+      ol.notes { margin-top:-5px; }
+
+      {CustomCSS}
+   </style>
+
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/Onxl255xc/jquery.min.js"></script> 
+      <script type="text/javascript" src="http://static.tumblr.com/imovwvl/OIpl28qhx/youtube.js"></script>
+</head>
+<body>
+<div id="container"><div id="content">
+   <div id="header"><h1>{Title}</h1></div>
+   <div id="icon">
+      <img src="{PortraitURL-64}" alt="{PlaintextTitle}" width="50px" />
+   </div>
+   <div class="arrow"></div>
+   <div class="info post">
+      <a href="/">Home</a> &middot; <a href="/archive">Archive</a> &middot;
+      <a href="{RSS}">RSS</a> &middot; <a href="/mobile">Mobile</a> &middot;
+      {block:SubmissionsEnabled}<a href="/submit">Submit</a> &middot;{/block:SubmissionsEnabled}
+      {block:AskEnabled}<a href="/ask">Ask</a> &middot;{/block:AskEnabled}
+      {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a> &middot; {/block:Pages}{/block:HasPages}
+      {Description}
+   </div>
+   <div style="clear:both;"></div>
+   {block:Posts}
+      {block:Text}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="text post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            {block:Title}<h2>{Title}</h2>{/block:Title}
+            <div style="margin-top:-3px;">{Body}</div>
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Text}
+
+      {block:Photo}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="photo post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}" />{LinkCloseTag}
+            {block:Caption}<div style="margin-top:-3px;">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Photo}
+
+      {block:Photoset}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="photo post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            {Photoset-400}
+            {block:Caption}<div style="margin-top:-3px;">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Photoset}
+
+      {block:Quote}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="quote post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            <h3>{Quote}</h3>
+            {block:Source}{Source}{/block:Source}
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Quote}
+
+      {block:Link}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="link post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            <h3><a href="{URL}" {Target}>{Name} &rarr;</a></h3>
+            {block:Description}<div style="margin-top:-5px">{Description}</div>{/block:Description}
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Link}
+
+      {block:Chat}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="chat post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            {block:Title}<h2>{Title}</h2>{/block:Title}
+            <ul>{block:Lines}
+               <li class="{Alt} user_{UserNumber}">
+                  <ul class="inner">
+                     {block:Label}
+                     <li class="{Alt}_label">
+                        <strong>{Label}</strong>
+                     </li>
+                     <li class="{Alt}_arrow"></li>
+                     {/block:Label}
+                     <li class="{Alt}_line">{Line}</li>
+                     <li style="clear:both;"></li>
+                  </ul>
+               </li>
+            {/block:Lines}</ul>
+            <div style="clear:both;"></div>
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Chat}
+
+      {block:Audio}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="audio post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            {block:AlbumArt}
+               <img src="{AlbumArtURL}" border="0" class="album_art" alt="{block:TrackName}{PlaintextTrackName}{/block:TrackName}" />
+            {/block:AlbumArt}
+            <div class="album_info">
+               {block:TrackName}<strong>Track:</strong> {TrackName}<br />{/block:TrackName}
+               {block:Artist}<strong>Artist:</strong> {Artist}<br />{/block:Artist}
+               {block:Album}<strong>Album:</strong> {Album}<br />{/block:Album}
+               <br />{AudioPlayerGrey}
+            </div>
+            <div style="clear:both;"></div>
+            {block:Caption}<div style="margin-top:-3px;">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Audio}
+
+      {block:Video}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="video post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            {Video-400}
+            {block:Caption}<div style="margin-top:-3px;">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Video}
+
+      {block:Answer}
+         {block:Date}
+            {block:NewDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:NewDayDate}
+            {block:SameDayDate}
+               <div class="date">
+                  <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+                     <span class="day">{DayOfMonthWithZero}</span>
+                     <span class="month">{ShortMonth}</span>
+                     <span class="year">{Year}</span>
+                  </a>
+               </div>
+            {/block:SameDayDate}
+            <div class="arrow"></div>
+         {/block:Date}
+         <div class="answer post">
+            {block:Date}
+               <div class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a></div>
+            {/block:Date}
+            <div class="asker">
+               <img src="{AskerPortraitURL-64}" alt="{PlaintextAsker}" width="50px" />
+               {Asker}
+            </div>
+            <div class="answer_arrow"></div>
+            <div class="question"><h3>{Question}</h3></div>
+            <div style="clear:both;height:3px;"></div>
+            <div style="margin-top:-5px">{Answer}</div>
+            {block:HasTags}
+               <div class="tags">
+                  {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+         </div>
+         <div style="clear:both;"></div>
+         {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Answer}
+   {/block:Posts}
+
+   <div id="footer">
+      <a href="http://www.tumblr.com/theme/9874">Simple Wood 2.0</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+      Powered by <a href="http://tumblr.com">Tumblr</a>.
+   </div>
+
+</div></div>
+
+<div id="pag">
+   <div style="float:left;width:30px;">
+   {block:Pagination}
+      {block:PreviousPage}
+         <a href="{PreviousPage}" title="Previous">
+            <img src="http://static.tumblr.com/imovwvl/3nzl28cgg/previous.png" alt="previous" />
+         </a>
+      {/block:PreviousPage}
+   {/block:Pagination}
+
+   {block:DayPagination}
+      {block:PreviousDayPage}
+         <a href="{PreviousDayPage}" title="Previous">
+            <img src="http://static.tumblr.com/imovwvl/3nzl28cgg/previous.png" alt="previous" />
+         </a>
+      {/block:PreviousDayPage}
+   {/block:DayPagination}
+
+   {block:PermalinkPagination}
+      {block:PreviousPost}
+         <a href="{PreviousPost}" title="Previous">
+            <img src="http://static.tumblr.com/imovwvl/3nzl28cgg/previous.png" alt="previous" />
+         </a>
+      {/block:PreviousPost}
+   {/block:PermalinkPagination}
+</div>
+
+<div style="float:right;width:30px;">
+   {block:Pagination}
+      {block:NextPage}
+         <a href="{NextPage}" title="Next">
+            <img src="http://static.tumblr.com/imovwvl/H6il28cgm/next.png" alt="next" />
+         </a>
+      {/block:NextPage}
+   {/block:Pagination}
+
+   {block:DayPagination}
+      {block:NextDayPage}
+         <a href="{NextDayPage}" title="Next">
+            <img src="http://static.tumblr.com/imovwvl/H6il28cgm/next.png" alt="next" />
+         </a>
+      {/block:NextDayPage}
+   {/block:DayPagination}
+
+   {block:PermalinkPagination}
+      {block:NextPost}
+         <a href="{NextPost}" title="Next">
+            <img src="http://static.tumblr.com/imovwvl/H6il28cgm/next.png" alt="next" />
+         </a>
+      {/block:NextPost}
+   {/block:PermalinkPagination}
+</div>
+</div>
+</body>
+</html>
