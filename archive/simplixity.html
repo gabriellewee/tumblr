@@ -1,0 +1,1028 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}">
+   <link rel="alternate" type="application/rss+xml" href="{RSS}">
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Simplixity.
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   --> 
+
+   <!-- CUSTOM THEME DATA -->
+   <meta name="color:Background" content="#ebebeb" />
+   <meta name="image:Background" content=""/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+
+   <meta name="font:Text" content="'Latin Modern Mono', 'Courier New', Courier, monospace" />
+   <meta name="color:Text" content="#888" />
+   <meta name="color:Links" content="#444" />
+   <meta name="color:Links Hover" content="#121212" />
+   <meta name="color:Nav Hover" content="#fff" />
+   <meta name="color:Footer" content="#ccc" />
+
+   <meta name="color:Text Links" content="#8b3a3a" />
+   <meta name="color:Text Tags" content="#da5b5b" />
+   <meta name="color:Text Titles" content="#361717" />
+
+   <meta name="color:Photo Links" content="#cd3700" />
+   <meta name="color:Photo Tags" content="#db3b00" />
+
+   <meta name="color:Quote Links" content="#daa520" />
+   <meta name="color:Quote Tags" content="#fdbf23" />
+   <meta name="color:Quotes" content="#785b12" />
+
+   <meta name="color:Link Post Links" content="#2f4f2f" />
+   <meta name="color:Link Tags" content="#538a53" />
+   <meta name="color:Link Titles" content="#132013" />
+
+   <meta name="color:Chat Links" content="#1b6453" />
+   <meta name="color:Chat Tags" content="#2b9f84" />
+   <meta name="color:Chat Titles" content="#103b31" />
+   <meta name="color:Chat Lines" content="#effffb" />
+
+   <meta name="color:Audio Links" content="#42526c" />
+   <meta name="color:Audio Tags" content="#718cb7" />
+   <meta name="color:Audio Titles" content="#1f2632" />
+
+   <meta name="color:Video Links" content="#412778" />
+   <meta name="color:Video Tags" content="#653db9" />
+
+   <meta name="color:Answer Links" content="#754c78" />
+   <meta name="color:Answer Tags" content="#ae72b2" />
+   <meta name="color:Answers" content="#3b263c" />
+   <meta name="if:Show Description" content="1" />
+   <meta name="if:Show People I Follow" content="1" />
+   <meta name="if:Show Pages" content="1" />
+
+   <style type="text/css">
+      /* Basics */
+         @font-face {
+            font-family: 'Latin Modern Mono';
+            src: url('http://static.tumblr.com/imovwvl/TJil0s0vh/lmmono10-regular.eot');
+            src: local('Latin Modern Mono'), local('LMMono10-Regular'),
+            url('http://static.tumblr.com/imovwvl/ruJl0s0x3/lmmono10-regular.woff') format('woff'), 
+            url('http://static.tumblr.com/imovwvl/749l0xj0r/lmmono10-regular.otf') format('opentype'),
+            url('http://static.tumblr.com/imovwvl/Z5Rl0xmcv/lmmono10-regular.ttf') format('truetype'),
+            url('http://static.tumblr.com/imovwvl/uQKl0s0w1/lmmono10-regular.svg#LMMono10-Regular') format('svg');
+         }
+ 
+         html * {
+             margin: 0;
+            padding: 0;
+         }
+
+         body {
+                 background-color: {color:Background};
+                 background-image: url('{image:Background}');
+                background-repeat: no-repeat;
+            background-attachment: fixed;
+              background-position: {text:Background Position};
+                             font: 11px {font:Text};
+                            color: {color:Text};
+              -webkit-text-stroke: 1px transparent;
+                 -moz-text-stroke: 1px transparent;
+                   -o-text-stroke: 1px transparent;
+                      text-stroke: 1px transparent;
+                      line-height: 12px;
+           {block:ifTiledBackground}background-repeat: repeat!important;{/block:ifTiledBackground}
+         {block:ifScrollingBackground}background-attachment: scroll!important;{/block:ifScrollingBackground}
+
+         }
+
+         a, a:link, a:active, a:visited {
+                          color: {color:Links};
+                text-decoration: none;
+                        outline: none;
+             -webkit-transition: color .6s linear;
+                -moz-transition: color .6s linear;
+                  -o-transition: color .6s linear;
+                     transition: color .6s linear;
+         }
+
+         a:hover {
+                          color: {color:Links Hover}!important;
+                        outline: none;
+             -webkit-transition: color .1s linear;
+                -moz-transition: color .1s linear;
+                  -o-transition: color .1s linear;
+                     transition: color .1s linear;
+         }
+
+         strong { color: #464646; }
+
+         img, a img {
+                        border: 0px;
+                     max-width: 400px;
+                       opacity: 0.75;
+                        filter: alpha(opacity=75);
+            -webkit-transition: opacity 1.5s linear;
+               -moz-transition: opacity 1.5s linear;
+                 -o-transition: opacity 1.5s linear;
+                    transition: opacity 1.5s linear;
+         }
+
+         img:hover, a:hover img {
+                       opacity: 1;
+                        filter: alpha(opacity=100);
+            -webkit-transition: opacity .1s linear;
+               -moz-transition: opacity .1s linear;
+                 -o-transition: opacity .1s linear;
+                    transition: opacity .1s linear;
+         }
+
+         p { padding-bottom:7px; }
+
+         blockquote {
+                  margin: 3px 0 7px 11px;
+            padding-left: 10px;
+             border-left: 1px solid;
+         }
+
+         pre {
+                      margin: 10px 0;
+                     padding: 10px;
+                   word-wrap: break-word;
+                 white-space: pre-wrap;
+                 white-space: -moz-pre-wrap;
+                 white-space: -pre-wrap;
+                 white-space: -o-pre-wrap;
+            background-color: #ebebeb;
+                    overflow: auto;
+         }
+
+      /* Containers */
+         #container {
+             margin: auto;
+            padding: 0px;
+         }
+
+         #content { width: 985px; }
+
+      /* Description */
+         #sidebar {
+                       float: left;
+                    position: fixed;
+                         top: 15px;
+                        left: 20px;
+                       width: 200px;
+                 line-height: 12px;
+         }
+
+         #icon { padding: 0 5px 2px 0; }
+
+         .hidden { width: 200px; }
+         .desc { overflow: hidden; }
+
+         .desc { margin-top: 5px; }
+
+         #navlinks {
+            list-style-type: none;
+                      float: right;
+         }
+
+         #navlinks a {
+                         display: block;
+                           width: 55px;
+                   margin-bottom: 2px;
+                         padding: 1px 4px;
+                background-color: transparent;
+                       font-size: 11px;
+              -webkit-transition: background-color .6s linear, color .6s linear;
+                 -moz-transition: background-color .6s linear, color .6s linear;
+                   -o-transition: background-color .6s linear, color .6s linear;
+                      transition: background-color .6s linear, color .6s linear;
+         }
+
+         #navlinks a:hover {
+                background-color: {color:Nav Hover};
+              -webkit-transition: background-color .1s linear, color .1s linear;
+                 -moz-transition: background-color .1s linear, color .1s linear;
+                   -o-transition: background-color .1s linear, color .1s linear;
+                      transition: background-color .1s linear, color .1s linear;
+         }
+
+         #pages ul {
+                    padding: 0 0 5px 25px;
+            list-style-type: square;
+         }
+
+         #search input {
+               padding: 1px 2px;
+            margin-top: 5px;
+                 width: 196px;
+                border: 0;
+         }
+
+         #results {
+            margin-top: 5px;
+            font-style: italic;
+         }
+
+         #pagination { margin-top:5px; }
+
+         #footer {
+            padding-top: 5px;
+            font-size: 10px;
+         }
+
+         #footer, #footer a { color: {color:Footer}!important; }
+         #footer a:hover { color: {color:Links}!important; }
+
+         .left { float: left; }
+         .right { float: right; }
+         .clear { clear: both; }
+
+      /* Posts */
+         #posts { margin: 15px 0 0 285px; }
+
+         #posts ul {
+                    padding: 0 0 5px 25px;
+            list-style-type: square;
+         }
+
+         .asterisk {
+                  float: left;
+            padding-top: 5px;
+            margin-left: -20px;
+              font-size: 25px;
+         }
+
+         h1 {
+                 font-size: 14px;
+            text-transform: uppercase;
+               line-height: 16px;
+         }
+
+         h2 {
+              font-size: 14px;
+            font-weight: normal;
+            line-height: 16px;
+         }
+
+         .info, h1, h2 { padding-bottom:1px; }
+         .info .day { font-size: 12px; }
+
+         .tags { font-size: 10px; }
+
+         #notes img.avatar { display: none; }
+
+         .text a { color: {color:Text Links}; }
+         .text .tags a { color: {color:Text Tags}; }
+         .text h1 { color: {color:Text Titles}; }
+
+         .photo a { color: {color:Photo Links}; }
+         .photo .tags a { color: {color:Photo Tags}; }
+         .cap { width: 290px; }
+
+         .quote a { color: {color:Quote Links}; }
+         .quote .tags a { color: {color:Quote Tags}; }
+         .quote h2 { color: {color:Quotes}; }
+
+         .link a { color: {color:Link Post Links}; }
+         .link .tags a { color: {color:Link Tags}; }
+         .link h1 a { color: {color:Link Titles}; }
+
+         .chat a { color: {color:Chat Links}; }
+         .chat h1 { color: {color:Chat Titles}; }
+         .chat .tags a { color: {color:Chat Tags}; }
+         .chat ul { list-style-type: none!important; padding: 0!important; }
+         .chat li { padding: 3px 6px!important; }
+         .chat li.odd { background-color: {color:Chat Lines}; }
+
+         .audio a { color: {color:Audio Links}; }
+         .audio h1 { color: {color:Audio Titles}; }
+         .audio .tags a { color: {color:Audio Tags}; }
+         .albumart {
+              float: left;
+            padding: 0px 10px 5px 0px;
+              width: 100px;
+         }
+
+         .albuminfo { float: right; }
+
+         .video a { color: {color:Video Links}; }
+         .video .tags a { color: {color:Video Tags}; }
+
+         .answer a { color: {color:Answer Links}; }
+         .answer h2 { color: {color:Answers}; }
+         .answer .tags a { color: {color:Answer Tags}; }
+
+         {CustomCSS}
+
+   </style>
+
+   <script src="http://static.tumblr.com/i4mzrmx/lk4kqww5w/jquery-1.3.2.min.js" type="text/javascript"></script> 
+   <script type="text/javascript"> 
+      $(document).ready(function(){
+         $('.pulldown').click(function() {
+            var target = $(this).attr("rev");
+            var title = $(this).text();
+            var selected = $(this).hasClass("selected");
+            var el = $(this);
+         
+            $('#navlinks .selected').removeClass("selected");
+         
+            if ($('div.hidden:not(#' + target + ')').is(':visible')) {
+               $('div.hidden:visible').slideUp('slow', function () {
+                  $('#' + target ).slideDown('slow');
+                  el.addClass("selected");
+               });
+            } else {
+               if (selected) {
+                  $('#' + target ).slideUp('slow');
+               } else {
+                  $('#' + target).slideDown('slow');
+                  el.addClass("selected");
+               }
+            }
+            return false;
+         });
+      });
+   </script>
+
+   <script type="text/javascript">
+      function highlight(field) {
+         field.focus();
+         field.select();
+         }
+   </script>
+</head>
+<body>
+   <div id="container">
+      <div id="content">
+         <div id="sidebar">
+            <img src="{PortraitURL-128}" id="icon" align="left" />
+            <ul id="navlinks">
+               <li><a href="/">Home</a></li>
+               {block:IfShowDescription}{block:Description}
+                  <li><a href="#" title="#about" class="pulldown" rev="about">About</a></li>
+               {/block:Description}{block:IfShowDescription}
+               <li><a href="/archive">Archive</a></li>
+               <li><a href="{RSS}">RSS</a></li>
+               {block:IfShowPeopleIFollow}{block:Following}
+                  <li><a href="#" title="#following" class="pulldown" rev="following">Following</a></li>
+               {/block:Following}{/block:IfShowPeopleIFollow}
+               {block:IfShowPages}{block:HasPages}
+                  <li><a href="#" title="#pages" class="pulldown" rev="pages">Pages</a></li>
+               {/block:HasPages}{block:IfShowPages}
+               <li><a href="/ask">Ask</a></li>
+               <li><a href="/submit">Submit</a></li>
+               <li><a href="#" title="#search" class="pulldown" rev="search">Search</a></li>
+            </ul>
+
+            <div class="clear"></div>
+
+            {block:Description}
+               <div class="hidden" id="about">
+                  <div class="desc">
+                     <strong>{Title}</strong> &middot; {Description}
+                  </div>
+               </div>
+            {/block:Description}
+
+            {block:IfShowPeopleIFollow}{block:Following}
+               <div class="hidden" id="following">
+                  <div class="desc">
+                     {block:Followed}
+                        <a href="{FollowedURL}"><img src="{FollowedPortraitURL-30}" /></a>
+                     {/block:Followed}
+                  </div>
+               </div>
+            {/block:Following}{block:IfShowPeopleIFollow}
+
+            {block:IfShowPages}{block:HasPages}
+               <div class="hidden" id="pages">
+                  <div class="desc">
+                     <ul>
+                        {block:Pages}
+                           <li><a href="{URL}">{Label}</a></li>
+                        {/block:Pages}
+                     </ul>
+                  </div>
+               </div>
+            {/block:HasPages}{block:IfShowPages}
+
+            <div class="hidden" id="search">
+               <div class="desc">
+                  <form action="/search" method="get">
+                     <input name="q" value="Type here and press enter" type="text" onclick="highlight(this);" />
+                  </form>
+               </div>
+            </div>
+
+         <script type="text/javascript">$('div.hidden').hide();</script>
+
+         {block:SearchPage}
+            <div id="results">
+               You searched for
+               <a href="{SearchQuery}">{URLSafeSearchQuery}</a>
+               with {SearchResultCount} result(s).
+            </div>
+         {/block:SearchPage}
+
+         {block:TagPage}
+            <div id="results">
+               Posts tagged with <a href="{Tag}">{URLSafeTag}</a>.
+            </div>
+         {/block:TagPage}
+
+         {block:Pagination}
+            <div id="pagination">
+               <div class="left">
+                  {block:PreviousPage}<a href="{PreviousPage}">&larr; Previous</a>{/block:PreviousPage}
+               </div>
+               <div class="right">
+                  {block:NextPage}<a href="{NextPage}">Next &rarr;</a>{/block:NextPage}
+               </div>
+            </div>  
+         {/block:Pagination}
+
+         {block:DayPagination}
+            <div id="pagination">
+               <div class="left">
+                  {block:PreviousPage}<a href="{PreviousPage}">&larr; Previous</a>{/block:PreviousPage}
+               </div>
+               <div class="right">
+                  {block:NextPage}<a href="{NextPage}">Next &rarr;</a>{/block:NextPage}
+               </div>
+            </div>  
+         {/block:DayPagination}
+
+         {block:PermalinkPagination}
+            <div id="pagination">
+               <div class="left">
+                  {block:PreviousPost}<a href="{PreviousPost}">&larr; Previous</a>{/block:PreviousPost}
+               </div>
+               <div class="right">
+                  {block:NextPost}<a href="{NextPost}">Next &rarr;</a>{/block:NextPost}
+               </div>
+            </div>  
+         {/block:PermalinkPagination}
+
+         <div id="footer" class="clear">
+            <a href="http://www.tumblr.com/theme/9819">Simplixity</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+            Powered by <a href="http://tumblr.com">Tumblr</a>.
+         </div>
+
+      </div>
+
+      {block:Posts}
+         <div id="posts">
+            {block:Text}
+               <div class="text">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  {block:Title}<h1>{Title}</h1>{/block:Title}
+                  {Body}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Text}
+
+            {block:Photo}
+               <div class="photo">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <div class="left">
+                     {LinkOpenTag}
+                        <img src="{PhotoURL-400}" alt="{PhotoAlt}" />
+                     {LinkCloseTag}
+                  </div>
+
+                  <div class="right cap">
+                     {block:Caption}
+                        <div class="caption">
+                           {Caption}
+                        </div>
+                     {/block:Caption}
+
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                     {/block:HasTags}
+                  </div>
+
+                  <div class="clear"></div>
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Photo}
+
+            {block:Photoset}
+               <div class="photo">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <div class="left">
+                     {Photoset-400}
+                  </div>
+
+                  <div class="right cap">
+                     {block:Caption}
+                        <div class="caption">
+                           {Caption}
+                        </div>
+                     {/block:Caption}
+
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                     {/block:HasTags}
+                  </div>
+
+                  <div class="clear"></div>
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Photoset}
+
+            {block:Quote}
+               <div class="quote">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <h2>{Quote}</h2>
+                  {Source}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Quote}
+
+            {block:Link}
+               <div class="link">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <h1><a href="{URL}" {Target}>{Name}</a></h1>
+                  {block:Description}{Description}{/block:Description}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Link}
+
+            {block:Chat}
+               <div class="chat">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  {block:Title}<h1>{Title}</h1>{/block:Title}
+
+                  <ul>
+                     {block:Lines}
+                        <li class="{Alt} user_{UserNumber}">
+                           {block:Label}
+                              <strong>{Label}</strong>
+                           {/block:Label}
+                           {Line}
+                        </li>
+                     {/block:Lines}
+                  </ul>
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Chat}
+
+            {block:Audio}
+               <div class="audio">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <div class="left">
+                     {block:AlbumArt}
+                        <img src="{AlbumArtURL}" border="0" class="albumart" />
+                     {/block:AlbumArt}
+                     <div class="albuminfo">
+                     {block:TrackName}<h1>{TrackName}</h1>{/block:TrackName}
+                     {block:Artist}<strong>Artist:</strong> {Artist}<br />{/block:Artist}
+                     {block:Album}<strong>Album:</strong> {Album}<br />{/block:Album}
+                     <br />
+                     {AudioPlayerWhite}
+                      </div>
+                     <div class="clear"></div>
+                  </div>
+
+                  <div class="right cap">
+                     {block:Caption}
+                        <div class="caption">
+                           {Caption}
+                        </div>
+                     {/block:Caption}
+
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                     {/block:HasTags}
+                  </div>
+
+                  <div class="clear"></div>
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Audio}
+
+            {block:Video}
+               <div class="video">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <div class="left">
+                     {Video-400}
+                  </div>
+
+                  <div class="right cap">
+                     {block:Caption}
+                        <div class="caption">
+                           {Caption}
+                        </div>
+                     {/block:Caption}
+
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                     {/block:HasTags}
+                  </div>
+
+                  <div class="clear"></div>
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Video}
+
+            {block:Answer}
+               <div class="answer">
+                  <div class="asterisk"><a href="{Permalink}">*</a></div>
+                  <div class="post">
+                  <div class="info">
+                     {block:Date}
+                        {block:SameDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:SameDayDate}
+
+                        {block:NewDayDate}
+                           <span class="day">
+                              <span class="date"><a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year}</a></span>
+                              &middot;
+                              <span class="time"><a href="{Permalink}">{12HourWithZero}:{Minutes} {AmPm}</a></span>
+                              {block:NoteCount}
+                                 &middot;
+                                 <span class="notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>
+                              {/block:NoteCount}
+                           </span>
+                        {/block:NewDayDate}
+                     {/block:Date}
+                  </div>
+
+                  <h2><strong>{Asker} asked</strong>: {Question}</h2>
+                  {Answer}
+
+                  {block:HasTags}
+                     <div class="tags">
+                        {block:Tags}
+                           <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                        {/block:Tags}
+                     </div>
+                  {/block:HasTags}
+
+                  {block:PostNotes}
+                     <div id="notes">
+                        {PostNotes}
+                     </div>
+                  {/block:PostNotes}
+
+                  </div>
+               </div>
+            {/block:Answer}
+
+         </div>
+      {/block:Posts}
+      </div>
+   </div>
+</body>
+</html>
