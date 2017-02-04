@@ -1,0 +1,1301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Liteweight.
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   -->
+
+   <!-- CUSTOM THEME DATA -->
+   <meta name="color:Background" content="#fff"/>
+   <meta name="image:Background" content=""/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+   <meta name="font:Text" content="Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif"/>
+   <meta name="color:Text" content="#565656"/>
+   <meta name="color:Links" content="#ff9900"/>
+   <meta name="color:Links Hover" content="#0f83a2"/>
+   <meta name="color:Border 1" content="#ccc"/>
+   <meta name="color:Pre" content="#ebebeb"/>
+   <meta name="color:Searchbar" content="#ebebeb"/>
+   <meta name="color:Border 2" content="#dedede"/>
+   <meta name="color:Tags" content="#aaa"/>
+   <meta name="font:Headers" content="'Droid Serif', Georgia, Times, serif"/>
+   <meta name="color:Chat Line" content="#eee"/>
+   <meta name="color:Footer" content="#bbb"/>
+   <meta name="color:Page Headers" content="#aaa"/>
+   <meta name="color:Twitter" content="#aaa"/>
+   <meta name="if:Streampad" content="0"/>
+   <meta name="color:Streampad" content="#acacac"/>
+   <meta name="color:Streampad Text" content="#fff"/>
+   <meta name="text:Email" content=""/>
+   <meta name="if:Searchbar" content="1"/>
+   <meta name="if:Designer" content="1"/>
+   <meta name="if:Hide Extras" content="1"/>
+   <meta name="if:Mobile Link" content="1"/>
+   <meta name="if:Random Link" content="1"/>
+   <meta name="if:Display Following" content="0"/>
+   <meta name="if:Display Likes" content="1"/>
+   <meta name="text:Disqus Shortname" content=""/>
+
+   <style type="text/css">
+      @font-face {
+         font-family: 'Droid Serif';
+         src: url('http://static.tumblr.com/imovwvl/fXRl0zgpg/droidserif.eot');
+         src: local('Droid Serif'), local('DroidSerif'),
+         url('http://static.tumblr.com/imovwvl/zqtl0zgr6/droidserif.woff') format('woff'), 
+         url('http://static.tumblr.com/imovwvl/jUPl0zglz/droidserif.otf') format('opentype'),
+         url('http://static.tumblr.com/imovwvl/uH5l0zgqp/droidserif.ttf') format('truetype'),
+         url('http://static.tumblr.com/imovwvl/QmQl0zgq0/droidserif.svg#DroidSerif') format('svg');
+      }
+
+      @font-face {
+         font-family: 'Droid Serif';
+         src: url('http://static.tumblr.com/imovwvl/ooul0zsr3/droidserif-italic.eot');
+         src: local('Droid Serif'), local('DroidSerif'),
+         url('http://static.tumblr.com/imovwvl/L79l0zsrk/droidserif-italic.woff') format('woff'), 
+         url('http://static.tumblr.com/imovwvl/j6sl0zsvb/droidserif-italic.otf') format('opentype'),
+         url('http://static.tumblr.com/imovwvl/fwil0zssu/droidserif-italic.ttf') format('truetype'),
+         url('http://static.tumblr.com/imovwvl/X22l0zss6/droidserif-italic.svg#DroidSerif-Italic') format('svg');
+         font-style: italic;
+      }
+
+      html * {
+          margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background-color: {color:Background};
+         background-image: url('{image:Background}');
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: {text:Background Position};
+         font: 11px {font:Text};
+         color: {color:Text};
+         {block:ifTiledBackground}background-repeat: repeat!important;{/block:ifTiledBackground}
+         {block:ifScrollingBackground}background-attachment: scroll!important;{/block:ifScrollingBackground}
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Links};
+         text-decoration: none;
+         -webkit-transition: color 1.5s linear;
+         -moz-transition: color 1.5s linear;
+         -o-transition: color 1.5s linear;
+         transition: color 1.5s linear;
+      }
+
+      a:hover {
+         color: {color:Links Hover};
+         -webkit-transition: color .3s linear;
+         -moz-transition: color .3s linear;
+         -o-transition: color .3s linear;
+         transition: color .3s linear;
+      }
+
+      img, a img {
+         max-width: 500px;
+         border: 0px;
+         opacity: 0.75;
+         filter: alpha(opacity=75);
+         -webkit-transition: opacity 1.5s linear;
+         -moz-transition: opacity 1.5s linear;
+         -o-transition: opacity 1.5s linear;
+         transition: opacity 1.5s linear;
+      }
+
+      img:hover, a:hover img {
+         opacity: 1;
+         filter: alpha(opacity=100);
+         -webkit-transition: opacity .1s linear;
+         -moz-transition: opacity .1s linear;
+         -o-transition: opacity .1s linear;
+         transition: opacity .1s linear;
+      }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid {color:Border 1};
+      }
+
+      p { padding-top: 5px; }
+
+      pre {
+         margin: 10px 0;
+         padding: 10px;
+         word-wrap: break-word;
+         white-space: pre-wrap;
+         white-space: -moz-pre-wrap;
+         white-space: -pre-wrap;
+         white-space: -o-pre-wrap;
+         background-color: {color:Pre};
+         overflow: auto;
+      }
+
+      ul {
+         padding: 5px 0 0 25px;
+         list-style-type: square;
+      }
+
+      ol { padding: 5px 0 0 25px; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #nav {
+         margin: 10px auto 0 auto;
+         width: 527px;
+         text-align: center;
+      }
+
+      #content {
+         margin: 0 auto;
+         width: 527px;
+         height: 100%;
+      }
+
+      #links { height: 30px; }
+
+      .hidden {
+         width: 527px;
+         overflow: auto;
+      }
+
+      #about, #search, #following, #pages {
+         margin: 0 0 10px 0;
+         text-align: left;
+      }
+
+      #search input {
+         padding: 5px 10px;
+         background-color: {color:Searchbar};
+         border: 0;
+         width: 200px;
+      }
+
+      #more { margin-bottom: 10px; }
+
+      #icon {
+         float: left;
+         margin-right: 5px;
+      }
+
+      .icon {
+         float: left;
+         width: 16px;
+         padding-right: 5px;
+         margin-top: 5px;
+      }
+
+      .post {
+         float: left;
+         width: 500px;
+         border-left: 1px solid {color:Border 1};
+         padding-left: 5px;
+         padding-bottom: 5px;
+      }
+
+      .five { margin: -5px 0 5px 0; }
+
+      .date, .disqus {
+         float: left;
+         margin-top: 5px;
+         font-size: 9px;
+      }
+
+      .info { width: 500px; }
+
+      .show {
+         float: right;
+         margin-top: 5px;
+         font-size: 9px;
+      }
+
+      .data {
+         padding: 0 5px 25px 5px;
+         overflow: auto;
+         border-top: 1px dotted {color:Border 2};
+      }
+
+      .clear { clear: both; }
+
+      .tags { margin-bottom: 5px; }
+
+      .tags, .tags a {
+         color: {color:Tags};
+         font-size: 10px;
+      }
+
+      .tag_icon {
+         width: 13px;
+         float: left;
+         margin-top: 1px;
+         opacity: 1;
+         filter: alpha(opacity=100);
+      }
+
+      h1 { font: 25px {font:Headers}; }
+
+      .zero { margin-top: 0; }
+
+      h2 { font: 20px {font:Headers}; }
+
+      .chat {
+         padding: 0;
+         list-style-type: none;
+      }
+
+      .chat li { padding: 5px 10px; }
+      li.odd { background-color: {color:Chat Line}; }
+
+      .album_art {
+         float: left;
+         width: 55px;
+         margin: 0 5px 5px 0;
+      }
+
+      .album_info { float: left; }
+
+      h3 { font: 15px {font:Headers}; }
+
+      #notes ol {
+         padding: 0;
+         list-style-type: none;
+      }
+
+      #notes li {
+         padding: 5px 10px;
+         border-bottom: 1px dotted {color:Border 2};
+      }
+
+      .avatar { display: none; }
+
+      #footer {
+         float: right;
+         width: 500px;
+         border-left: 1px solid {color:Border 1};
+         padding: 0 0 20px 5px;
+         {block:ifStreampad}padding-bottom: 50px;{/block:ifStreampad}
+         text-align: center;
+      }
+
+      #footer, #footer a {
+         font-size: 9px;
+         color: {color:Footer};
+      }
+
+      #footer a:hover, .tags a:hover { color: {color:Links}; }
+
+      #pag {
+         position: fixed;
+         top: 45%;
+         width: 100%;
+         height: 16px;
+         text-align: center;
+      }
+
+      #pag img { width: 16px; }
+
+      #pag a img {
+         opacity: 0.5;
+         filter: alpha(opacity=50);
+      }
+
+      #pag a:hover img {
+         opacity: 1;
+         filter: alpha(opacity=100);
+      }
+
+      h4 {
+         font: 13px {font:Headers};
+         text-transform: uppercase;
+         color: {color:Page Headers};
+      }
+
+      #likes {
+         list-style-type: none;
+         padding: 0;
+      }
+
+      .like_post {
+         width: 155px;
+         float: left;
+         margin-right: 5px;
+         padding-right: 5px;
+         border-right: 1px dotted {color:Border 2};
+      }
+
+      .like_post img { width: 155px; }
+
+      #likes li:last-child { border: 0; }
+
+      .like_title, .like_link a { font: 15px {font:Headers}; }
+
+      #twitter_update_list {
+         font: 15px {font:Headers};
+         color: {color:Twitter};
+         list-style-type: none;
+         padding: 0;
+         text-align: left;
+      }
+
+      .dsq-brlink { display: block; text-align: center; margin-top: -25px; }
+
+      {CustomCSS}
+   </style>
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/GqMl77c4f/jquery.min.js"></script>
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/Upml77c5u/vimeo.js"></script> 
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/412l77c66/youtube.js"></script> 
+   <script type="text/javascript">function formatColor(color) { var formattedColor = color.split("#")[1]; if (formattedColor.length == 3) { var colorValues = formattedColor.split(""); formattedColor = colorValues[0]+colorValues[0]+colorValues[1]+colorValues[1]+colorValues[2]+colorValues[2]; } return formattedColor; } vimeoColor = "{color:Image Background}"; vimeoColor = formatColor(vimeoColor); youtubeColor = "{color:Image Background}"; youtubeColor = formatColor(youtubeColor);</script> 
+
+   <script type="text/javascript"> 
+      $(document).ready(function(){
+         $('.pulldown').click(function() {
+            var target = $(this).attr("rev");
+            var title = $(this).text();
+            var selected = $(this).hasClass("selected");
+            var el = $(this);
+         
+            $('#links .selected').removeClass("selected");
+         
+            if ($('div.hidden:not(#' + target + ')').is(':visible')) {
+               $('div.hidden:visible').slideUp('slow', function () {
+                  $('#' + target ).slideDown('slow');
+                  el.addClass("selected");
+               });
+            } else {
+               if (selected) {
+                  $('#' + target ).slideUp('slow');
+               } else {
+                  $('#' + target).slideDown('slow');
+                  el.addClass("selected");
+               }
+            }
+            return false;
+         });
+      });
+   </script>
+
+   <script type="text/javascript"> 
+      $(document).ready(function(){
+         $('.dropdown').click(function() {
+            var target = $(this).attr("rev");
+            var title = $(this).text();
+            var selected = $(this).hasClass("selected");
+            var el = $(this);
+         
+            $('.show .selected').removeClass("selected");
+         
+            if ($('div.info:not(#' + target + ')').is(':visible')) {
+               $('div.info:visible').slideUp('slow', function () {
+                  $('#' + target ).slideDown('slow');
+                  el.addClass("selected");
+               });
+            } else {
+               if (selected) {
+                  $('#' + target ).slideUp('slow');
+               } else {
+                  $('#' + target).slideDown('slow');
+                  el.addClass("selected");
+               }
+            }
+            return false;
+         });
+      });
+   </script>
+</head>
+<body>
+   <div id="pag">
+      <div style="float:left;width:30px;">
+         {block:Pagination}
+            {block:PreviousPage}
+               <a href="{PreviousPage}" title="Previous">
+                  <img src="http://static.tumblr.com/imovwvl/Osyl2zn3i/previous.png" alt="Previous" />
+               </a>
+            {/block:PreviousPage}
+         {/block:Pagination}
+
+         {block:DayPagination}
+            {block:PreviousDayPage}
+               <a href="{PreviousDayPage}" title="Previous">
+                  <img src="http://static.tumblr.com/imovwvl/Osyl2zn3i/previous.png" alt="Previous" />
+               </a>
+            {/block:PreviousDayPage}
+         {/block:DayPagination}
+
+         {block:PermalinkPagination}
+            {block:PreviousPost}
+               <a href="{PreviousPost}" title="Previous">
+                  <img src="http://static.tumblr.com/imovwvl/Osyl2zn3i/previous.png" alt="Previous" />
+               </a>
+            {/block:PreviousPost}
+         {/block:PermalinkPagination}
+      </div>
+
+      <div style="float:right;width:30px;">
+         {block:Pagination}
+            {block:NextPage}
+               <a href="{NextPage}" title="Next">
+                  <img src="http://static.tumblr.com/imovwvl/0I5l2zn4j/next.png" alt="Next" />
+               </a>
+            {/block:NextPage}
+         {/block:Pagination}
+
+         {block:DayPagination}
+            {block:NextDayPage}
+               <a href="{NextDayPage}" title="Next">
+                  <img src="http://static.tumblr.com/imovwvl/0I5l2zn4j/next.png" alt="Next" />
+               </a>
+            {/block:NextDayPage}
+         {/block:DayPagination}
+
+         {block:PermalinkPagination}
+            {block:NextPost}
+               <a href="{NextPost}" title="Next">
+                  <img src="http://static.tumblr.com/imovwvl/0I5l2zn4j/next.png" alt="Next" />
+               </a>
+            {/block:NextPost}
+         {/block:PermalinkPagination}
+      </div>
+   </div>
+
+   <div id="container">
+      <div id="nav">
+         <div id="links">
+            <a href="/"><img src="http://static.tumblr.com/imovwvl/gogl2ygix/home.png" alt="Home" title="Home" /></a>
+            &nbsp;&nbsp;
+            <a href="#" title="#about" class="pulldown" rev="about"><img src="http://static.tumblr.com/imovwvl/tnol2ygqf/about.png" alt="About" title="About" /></a>
+            &nbsp;&nbsp;
+            <a href="/archive"><img src="http://static.tumblr.com/imovwvl/F8Ql2yteq/archive.png" alt="Archive" title="Archive" /></a>
+            &nbsp;&nbsp;
+            <a href="{RSS}"><img src="http://static.tumblr.com/imovwvl/BHCl2ygmu/rss.png" alt="RSS" title="RSS" /></a>
+            &nbsp;&nbsp;
+            {block:HasPages}<a href="#" title="#pages" class="pulldown" rev="pages"><img src="http://static.tumblr.com/imovwvl/CTrl2ythw/pages.png" alt="Pages" title="Pages" /></a>
+            &nbsp;&nbsp;{/block:HasPages}
+            {block:Twitter}<a href="#" title="#twitter" class="pulldown" rev="twitter"><img src="http://static.tumblr.com/imovwvl/3jzl2zt7l/twitter.png" alt="Twitter" title="Twitter" /></a>
+            &nbsp;&nbsp;{/block:Twitter}
+            {block:ifSearchbar}<a href="#" title="#search" class="pulldown" rev="search"><img src="http://static.tumblr.com/imovwvl/jcWl2ygvi/search.png" alt="Search" title="Search" /></a>
+            &nbsp;&nbsp;{/block:ifSearchbar}
+            {block:ifHideExtras}<a href="#" title="#more" class="pulldown" rev="more"><img src="http://static.tumblr.com/imovwvl/rgBl2ytb1/more.png" alt="More" title="More"/></a>
+         </div>
+
+         <div class="hidden" id="more">{/block:ifHideExtras}
+            {block:ifMobileLink}<a href="/mobile"><img src="http://static.tumblr.com/imovwvl/MiEl2ygno/mobile.png" alt="Mobile" title="Mobile" /></a>
+            &nbsp;&nbsp;{/block:ifMobileLink}
+            {block:ifRandomLink}<a href="/random"><img src="http://static.tumblr.com/imovwvl/vGOl2ygoo/random.png" alt="Random" title="Random" /></a>
+            &nbsp;&nbsp;{/block:ifRandomLink}
+            {block:ifDisplayFollowing}<a href="#following"><img src="http://static.tumblr.com/imovwvl/sYUl2zpv9/following.png" alt="Following" title="Following" /></a>
+            &nbsp;&nbsp;{/block:ifDisplayFollowing}
+            {block:AskEnabled}<a href="/ask"><img src="http://static.tumblr.com/imovwvl/BIVl2ygt2/ask.png"  alt="Ask" title="Ask" /></a>
+            &nbsp;&nbsp;{/block:AskEnabled}
+            {block:SubmissionsEnabled}<a href="/submit"><img src="http://static.tumblr.com/imovwvl/JLYl2ygu7/submit.png" alt="Submit" title="Submit" /></a>
+            &nbsp;&nbsp;{/block:SubmissionsEnabled}
+            {block:ifEmail}<a href="mailto:{text:Email}"><img src="http://static.tumblr.com/imovwvl/VTjl2ygrs/email.png" alt="Email" title="Email" /></a>
+            &nbsp;&nbsp;{/block:ifEmail}
+            {block:ifDesigner}<a href="http://elletricity.com"><img src="http://static.tumblr.com/imovwvl/YDal2zno8/designer.png" alt="Theme" title="Theme by Elletricity" /></a>{/block:ifDesigner}
+         </div>
+
+         <div class="hidden" id="about">
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/tnol2ygqf/about.png" alt="About" title="About" />
+            </div>
+            <div class="post">
+               <img src="{PortraitURL-64}" id="icon" />
+               <strong>{Title}</strong> {Description}
+            </div>
+            <div class="clear"></div>
+         </div>
+
+         {block:HasPages}<div class="hidden" id="pages">
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/CTrl2ythw/pages.png" alt="Pages" title="Twitter" />
+            </div>
+            <div class="post"><ul class="five">
+               {block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+            </ul></div>
+            <div class="clear"></div>
+         </div>{/block:HasPages}
+
+         {block:Twitter}<div class="hidden" id="twitter">
+            <div class="icon">
+               <a href="http://twitter.com/{TwitterUsername}"><img src="http://static.tumblr.com/imovwvl/3jzl2zt7l/twitter.png" alt="Twitter" title="Twitter" /></a>
+            </div>
+            <div class="post" id="tweets">
+               <ul id="twitter_update_list"></ul>
+            </div>
+            <div class="clear"></div>
+         </div>{/block:Twitter}
+
+         {block:ifSearchbar}<div class="hidden" id="search">
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/jcWl2ygvi/search.png" alt="Search" title="Search" />
+            </div>
+            <div class="post">
+               <form action="/search" method="get">
+                  <input name="q" onfocus="this.value=''" type="text" value="Type here and press enter." />
+               </form>
+            </div>
+            <div class="clear"></div>
+         </div>{/block:ifSearchBar}
+
+         <script type="text/javascript">$('div.hidden').hide();</script>
+      </div>
+
+      <div id="content">
+      {block:SearchPage}
+         <div align="center" style="padding-bottom: 10px;">
+            <h4>{SearchResultCount} results(s) for <em>{SearchQuery}</em>.{block:NoSearchResults} Please try again.{/block:NoSearchResults}</h4>
+         </div>
+      {/block:SearchPage}
+
+      {block:TagPage}
+         <div align="center" style="padding-bottom: 10px;">
+            <h4>Posts tagged with <em>{Tag}</em>.</h4>
+         </div>
+      {/block:TagPage}
+
+      {block:Posts}
+         {block:Text}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}"><img src="http://static.tumblr.com/imovwvl/Xa9l2yi6p/text.png" alt="Text" /></a>
+            </div>
+            <div class="text post">
+               {block:Title}<h1>{Title}</h1>{/block:Title}
+               <div class="five">{Body}</div>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Text}
+
+         {block:Photo}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:Notecount}"><img src="http://static.tumblr.com/imovwvl/Ggrl2yiib/photo.png" alt="Photo" /></a>
+            </div>
+            <div class="post">
+               <div class="five zero">
+                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                  {block:Caption}
+                     <div class="info" id="{PostID}">{Caption}</div>
+                     <script type="text/javascript">$('div.info').hide();</script>
+                  {block:Caption}
+               </div>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+                  {block:Caption}
+                     <div class="show">
+                        <a href="#" title="#{PostID}" class="dropdown" rev="{PostID}">+</a>
+                     </div>
+                  {/block:Caption}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Photo}
+
+         {block:Photoset}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:Notecount}"><img src="http://static.tumblr.com/imovwvl/ZtZl2yrq5/photoset.png" alt="Photoset" /></a>
+            </div>
+            <div class="post">
+               <div class="five zero">
+                  {Photoset-500}
+                  {block:Caption}
+                     <div class="info" id="{PostID}">{Caption}</div>
+                     <script type="text/javascript">$('div.info').hide();</script>
+                  {block:Caption}
+               </div>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+                  {block:Caption}
+                     <div class="show">
+                        <a href="#" title="#{PostID}" class="dropdown" rev="{PostID}">+</a>
+                     </div>
+                  {/block:Caption}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Photoset}
+
+         {block:Quote}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:Notecount}"><img src="http://static.tumblr.com/imovwvl/fbel2yrpj/quote.png" alt="Quote" /></a>
+            </div>
+            <div class="post">
+               <h2>{Quote}</h2>
+               {block:Source}
+                  <div class="info" id="{PostID}"><div class="five zero">{Source}</div></div>
+                  <script type="text/javascript">$('div.info').hide();</script>
+               {block:Source}
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+                  {block:Source}
+                     <div class="show">
+                        <a href="#" title="#{PostID}" class="dropdown" rev="{PostID}">+</a>
+                     </div>
+                  {/block:Source}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Quote}
+
+         {block:Link}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:Notecount}"><img src="http://static.tumblr.com/imovwvl/lv3l2yu7l/link.png" alt="Link" /></a>
+            </div>
+            <div class="post">
+               <h2><a href="{URL}" {Target}>{Name} &rarr;</a></h2>
+               {block:Description}
+                  <div class="info" id="{PostID}"><div class="five">{Description}</div></div>
+                  <script type="text/javascript">$('div.info').hide();</script>
+               {block:Description}
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+                  {block:Description}
+                     <div class="show">
+                        <a href="#" title="#{PostID}" class="dropdown" rev="{PostID}">+</a>
+                     </div>
+                  {/block:Description}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Link}
+
+         {block:Chat}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}"><img src="http://static.tumblr.com/imovwvl/JU9l2zkch/chat.png" alt="Chat" /></a>
+            </div>
+            <div class="post">
+               {block:Title}<h1>{Title}</h1>{/block:Title}
+               <ul class="chat">{block:Lines}
+                  <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+               {/block:Lines}</ul>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Chat}
+
+         {block:Audio}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:Notecount}"><img src="http://static.tumblr.com/imovwvl/VmRl2zlcj/audio.png" alt="Audio" /></a>
+            </div>
+            <div class="post">
+               <div class="five zero">
+                  {block:AlbumArt}
+                     <img src="{AlbumArtURL}" border="0" class="album_art" alt="{block:TrackName}{PlaintextTrackName}{/block:TrackName}" />
+                  {/block:AlbumArt}
+                  <div class="album_info">
+                     {block:TrackName}<h1>{TrackName}</h1>{/block:TrackName}
+                     {block:Artist}<strong>Artist:</strong> {Artist}<br />{/block:Artist}
+                     {block:Album}<strong>Album:</strong> {Album}<br />{/block:Album}
+                  </div>
+                  <div style="clear:both;"></div>
+                  {AudioPlayerGrey}
+                  {block:Caption}
+                     <div class="info" id="{PostID}">{Caption}</div>
+                     <script type="text/javascript">$('div.info').hide();</script>
+                  {block:Caption}
+               </div>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+                  {block:Caption}
+                     <div class="show">
+                        <a href="#" title="#{PostID}" class="dropdown" rev="{PostID}">+</a>
+                     </div>
+                  {/block:Caption}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Audio}
+
+         {block:Video}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:Notecount}"><img src="http://static.tumblr.com/imovwvl/DJzl2zlmt/video.png" alt="Video" /></a>
+            </div>
+            <div class="post">
+               <div class="five zero">
+                  {Video-500}
+                  {block:Caption}
+                     <div class="info" id="{PostID}">{Caption}</div>
+                     <script type="text/javascript">$('div.info').hide();</script>
+                  {block:Caption}
+               </div>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+                  {block:Caption}
+                     <div class="show">
+                        <a href="#" title="#{PostID}" class="dropdown" rev="{PostID}">+</a>
+                     </div>
+                  {/block:Caption}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Video}
+
+         {block:Answer}
+            <div class="icon">
+               <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}"><img src="http://static.tumblr.com/imovwvl/LyGl2zlzb/answer.png" alt="Answer" /></a>
+            </div>
+            <div class="text post">
+               <h3>{Asker} asked: {Question}</h3>
+               <div class="five">{Answer}</div>
+               {block:HasTags}
+                  <div class="tags">
+                     <img src="http://static.tumblr.com/imovwvl/YS3l2yugo/tag.png" alt="Tags" class="tag_icon" />&nbsp;&nbsp;
+                     {block:Tags} <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                  </div>
+                  <div class="clear"></div>
+               {/block:HasTags}
+               <div class="data">
+                  {block:Date}
+                     <div class="date">
+                        {block:NewDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:NewDayDate}
+                        {block:SameDayDate}<a href="{Permalink}">{TimeAgo}</a>{/block:SameDayDate}
+                     </div>
+                  {/block:Date}
+                  {block:ifDisqusShortname}
+                     <div class="disqus">
+                        &nbsp;&middot; <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
+                     </div>
+                  {/block:ifDisqusShortname}
+               </div>
+            </div>
+            <div class="clear"></div>
+            {block:ifDisqusShortname}
+               <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div class="icon"><img src="http://static.tumblr.com/ns4labz/OLWl0uipn/disqus_av.jpg" alt="Disqus" title="Disqus" /></div><div class="post"><div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><div class="clear"></div>
+<script type="text/javascript">
+  /**
+    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+    */
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{/block:Permalink}<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:DisqusShortname}/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+               </script>
+            {/block:ifDisqusShortname}
+            {block:PostNotes}
+               <div class="icon">
+                  <img src="http://static.tumblr.com/imovwvl/Zm1l2zm89/notes.png" alt="Notes" />
+               </div>
+               <div class="post" id="notes">{PostNotes}</div>
+               <div class="clear"></div>
+            {/block:PostNotes}
+         {/block:Answer}
+      {/block:Posts}
+
+      {block:ifDisplayFollowing}{block:Following}
+         <div class="icon">
+            <img src="http://static.tumblr.com/imovwvl/sYUl2zpv9/following.png" alt="Following" title="Following" />
+         </div>
+         <div class="post" style="padding-bottom: 25px;">
+            {block:Followed}
+               <a href="{FollowedURL}" title="{FollowedName}"><img src="{FollowedPortraitURL-16}" alt="{FollowedName}" /> </a>
+            {/block:Followed}
+         </div>
+         <div class="clear"></div>
+      {/block:Following}{/block:ifDisplayFollowing}
+
+      {block:ifDisplayLikes}{block:Likes}
+         <div class="icon">
+            <a href="http://www.tumblr.com/liked/by/{Name}"><img src="http://static.tumblr.com/imovwvl/xJNl2zqau/likes.png" alt="Likes" title="Likes" /></a>
+         </div>
+         <div class="post" style="padding-bottom: 25px;">
+            {Likes limit="3" width="155" summarize="100"}
+         </div>
+         <div class="clear"></div>
+      {/block:Likes}{/block:ifDisplayLikes}
+
+      <div id="footer">
+         <a href="http://www.tumblr.com/theme/10212">Liteweight</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+         Icons by <a href="http://www.famfamfam.com/lab/icons/silk/">Mark James</a> and <a href="http://www.komodomedia.com/blog/2008/12/social-media-mini-iconpack/">Komodo Media</a>.
+         Powered by <a href="http://tumblr.com">Tumblr</a>.
+      </div>
+   </div>
+</body>
+
+<script type="text/javascript"> 
+   var menu=new menu.dd("menu");
+   menu.init("menu","menuhover");
+</script>
+
+{block:Twitter}
+   <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+   <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/{TwitterUsername}.json?callback=twitterCallback2&amp;count=1"></script>
+{/block:Twitter}
+
+   {block:ifStreampad}<script type="text/javascript" src="http://o.aolcdn.com/art/merge?f=/_media/sp/sp-player.js&f=/_media/sp/sp-player-tumblr.js&expsec=86400&ver=11"></script>{/block:ifStreampad}
+
+<script>
+   streampadPlayer.params.trackcolor = "{color:Streampad Text}";
+   streampadPlayer.params.bgcolor = "{color:Streampad}";
+</script>
+
+</html>
