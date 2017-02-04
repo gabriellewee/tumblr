@@ -1,0 +1,694 @@
+<html> 
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+<meta name="description" content="{MetaDescription}" />
+
+<!--
+THEME BY ELLETRICITY
+Theme Name: Poppy
+Author: Gabrielle Wee
+Credit: http://elletricity.com
+-->
+
+<!-- CUSTOM THEME DATA -->
+<meta name="color:Background" content="#FFFFFF"/>
+<meta name="image:Background" content="http://static.tumblr.com/imovwvl/mAzksz6sp/background.png"/>
+<meta name="text:Background Position" content="bottom right"/>
+<meta name="font:Title" content="garamond, serif"/>
+<meta name="font:Post Title" content="lucida grande, sans serif"/>
+<meta name="font:Text" content="lucida grande, sans serif"/>
+<meta name="font:Sidebar Headers" content="garamond, serif"/>
+<meta name="font:Quote" content="garamond, serif"/>
+
+<meta name="if:Display Title" content="1"/>
+<meta name="if:Display Profile Picture" content="1"/>
+<meta name="if:Display Custom Links" content="1"/>
+
+<meta name="text:Link Title 1" content="Link 1"/>
+<meta name="text:Link URL 1" content=""/>
+<meta name="text:Link Title 2" content="Link 2"/>
+<meta name="text:Link URL 2" content=""/>
+<meta name="text:Link Title 3" content="Link 3"/>
+<meta name="text:Link URL 3" content=""/>
+<meta name="text:Link Title 4" content="Link 4"/>
+<meta name="text:Link URL 4" content=""/>
+<meta name="text:Link Title 5" content="Link 5"/>
+<meta name="text:Link URL 5" content=""/>
+
+<meta name="if:Display Extra Info Box 1" content="0"/>
+<meta name="text:Box 1 Title" content=""/>
+<meta name="text:Box 1 Text" content=""/>
+
+<meta name="if:Display Extra Info Box 2" content="0"/>
+<meta name="text:Box 2 Title" content=""/>
+<meta name="text:Box 2 Text" content=""/>
+
+<meta name="if:Display Extra Info Box 3" content="0"/>
+<meta name="text:Box 3 Title" content=""/>
+<meta name="text:Box 3 Text" content=""/>
+
+<meta name="if:Display People I Follow" content="1"/>
+<meta name="if:Display Twitter Updates" content="1"/>
+<meta name="if:Display Search Bar" content="1"/>
+
+<style type="text/css">
+
+html * { margin:0;padding:0; }
+
+body {
+  background-color:{color:Background};
+  background-image:url('{image:Background}');
+  background-position:{text:Background Position};
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+#container {
+  margin:auto;
+  padding:0px;
+}
+
+#content {
+  height:100%;width:800px;
+  margin:auto;margin-top:50px;
+}
+
+#blog {
+  width:520px;
+  float:left;
+  background-color:rgba(255,255,255,0.5);
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+  -moz-box-shadow:1px 1px 5px #FFFFFF;
+  -webkit-box-shadow:1px 1px 5px #FFFFFF;
+}
+
+.section {
+  padding:10px 10px 5px 10px;
+  border-bottom:1px dotted #AAAAAA;
+}
+
+.section ul { padding-left:30px;list-style-type:circle; }
+.section ol { padding-left:45px;list-style-type:decimal-leading-zero; }
+.section li { padding-left:5px; }
+
+blockquote {
+  margin:5px 15px;
+  padding:4px;
+  background-color:rgba(189,222,154,0.5);
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+blockquote blockquote { background-color:rgba(255,255,255,0.5); }
+
+div, table, td, p, font, textarea, input, code {
+  font-family:{font:Text}, Lucida Sans Unicode, Helvetica, Arial, sans serif;
+  font-size:11px;
+  color:#121212;
+}
+
+p { padding-bottom:7px; }
+a img { border:0px; }
+
+a, a:link, a:active, a:visited { color:#FC0D03; }
+a:hover { color:#3E6C0E; }
+
+img, a img { max-width:500px; }
+
+.title { padding-bottom:10px; }
+
+h2 a {
+  font-family:{font:Post Title};
+  font-size:12px;
+  text-transform:uppercase;
+  text-decoration:none!important;
+  color:#FFFFFF!important;
+  background-color:rgba(18,18,18,0.6);
+  padding:3px;
+  line-height:25px;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+  margin-bottom:10px;
+}
+
+.info {
+  background-color:rgba(252,13,3,0.7);
+  margin:7px 0px;
+  padding:1px;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+
+.date, .date a, .notesinfo, .notesinfo a {
+  font-size:12px;
+  text-transform:uppercase;
+  text-decoration:none!important;
+  color:#FFFFFF;
+}
+
+.notesinfo { text-align:right!important; }
+
+.tags { padding:5px 0px; }
+
+.tags a {
+  font-size:10px;
+  text-transform:lowercase;
+  text-decoration:none!important;
+  color:#FFFFFF;
+  background-color:rgba(62,108,14,0.7);
+  padding:2px;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+
+.tags a:hover { background-color:rgba(252,13,3,0.7); }
+
+.text .area { margin-top:-5px; }
+
+.quotation {
+  font-family:{font:Quote};
+  font-size:30px;
+  font-style:italic;
+}
+
+.source { text-align:right; }
+
+a.link {
+  font-family:{font:Post Title};
+  font-size:12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-decoration:none!important;
+  color:#FFFFFF!important;
+  background-color:rgba(88,142,32,0.7);
+  padding:3px;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+
+a.link:hover { background-color:rgba(246,120,115,0.7); }
+
+.link .description { padding-top:5px; }
+
+.chat ul { padding:0px;list-style-type:none; }
+.chat li { padding:3px; }
+
+.odd {
+  background-color:rgba(189,222,154,0.5);
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+
+.label { font-weight:bold; }
+
+.video .caption { padding-top:5px; }
+
+.notes { padding-left:30px; }
+.notes li { list-style-type:circle!important;padding-left:5px; }
+.avatar { display:none; }
+
+.pagination { margin:10px;text-align:center; }
+
+.pagination a {
+  font-size:10px;
+  text-decoration:none!important;
+  color:#FFFFFF;
+  background-color:rgba(18,18,18,0.6);
+  padding:2px;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+
+#sidebar {
+  width:220px;
+  float:left;
+  margin-left:60px;
+  background-color:rgba(255,255,255,0.5);
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+  -moz-box-shadow:1px 1px 5px #FFFFFF;
+  -webkit-box-shadow:1px 1px 5px #FFFFFF;
+}
+
+h1 a {
+  font-family:{font:Title};
+  font-size:50px;
+  font-weight:normal;
+  font-style:italic;
+  color:#3E6C0E!important;
+  text-decoration:none;
+}
+
+#nav { padding:0px 10px 5px 10px; }
+#nav a { font-size:10px;text-decoration:none; }
+
+h3 {
+  padding-left:5px;
+  font-family:{font:Sidebar Headers};
+  font-size:20px;
+  font-weight:normal;
+  font-style:italic;
+  color:#3E6C0E;
+  text-decoration:none;
+}
+
+h3 a { color:#3E6C0E!important;text-decoration:none!important; }
+
+#about, #search, #follow, #twitter, #credit { padding:0px 10px 5px 10px; }
+
+#about a, #twitter a, #credit a, .box a { text-decoration:none; }
+
+.searchbar {
+  padding:5px;
+  max-width:140px;
+  background-color:rgba(255,255,255,0.5);
+  border:0px;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em;
+}
+
+#follow { text-align:center; }
+#follow a img { border:1px solid #fff; }
+
+#twitter_update_list { list-style-type:none; }
+#twitter_update_list li { padding-left:5px;margin-bottom:5px; }
+
+#credit, #credit a { font-size:10px; }
+
+{CustomCSS}
+
+</style>
+
+<body>
+<div id="container">
+
+<div id="content">
+
+<div id="blog">
+{block:Posts}
+
+{block:Text}
+<div class="text section">
+{block:Title}
+<div class="title"><h2><a href="{Permalink}">{Title}</a></h2></div>
+{/block:Title}
+<div class="area">
+{Body}
+
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+</div>
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Text}
+
+{block:Photo}
+<div class="photo section">
+<div class="area">
+{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" border="0"/>{LinkCloseTag}
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Photo}
+
+{block:Quote}
+<div class="quote section">
+<div class="area">
+<span class="quotation">&#8220;{Quote}&#8221;</span>
+{block:Source}
+<div class="source">{Source}</div>
+{/block:Source}
+
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Quote}
+
+{block:Link}
+<div class="link section">
+<div class="area">
+<a href="{URL}" class="link" {Target}>{Name}</a>
+{block:Description}
+<div class="description">{Description}</div>
+{/block:Description}
+
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Link}
+
+{block:Chat}
+<div class="chat section">
+{block:Title}
+<div class="title"><h2><a href="{Permalink}">{Title}</a></h2></div>
+{/block:Title}
+<div class="area">
+<ul class="chat">
+{block:Lines}
+<li class="{Alt} user_{UserNumber}">
+{block:Label}
+<span class="label">{Label}</span>
+{/block:Label}
+{Line}
+</li>
+{/block:Lines}
+</ul>
+
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Chat}
+
+{block:Video}
+<div class="video section">
+<div class="area">
+<div align="center">
+{Video-500}
+</div>
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Video}
+
+{block:Audio}
+<div class="audio section">
+<div class="area">
+{AudioPlayerWhite}
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+
+{block:HasTags}
+<p class="tags">
+{block:Tags}
+<a href="{TagURL}">{Tag}</a>
+{/block:Tags}
+</p>
+{/block:HasTags}
+
+<div class="info">
+<table width="100%"><tr>
+<td>
+<div class="date">
+Posted on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero} {Year} at {12HourWithZero}&middot;{Minutes} {CapitalAmPm}</a> / <a href="{Permalink}">Permalink</a>
+</div>
+</td><td>
+<div class="notesinfo">
+{block:NoteCount}
+<a href="{Permalink}">{NoteCountWithLabel}</a>
+{/block:NoteCount}
+</div>
+</td>
+</tr></table>
+</div>
+</div>
+
+{block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+
+</div>
+{/block:Audio}
+
+{/block:Posts}
+
+{block:Pagination}
+<div class="pagination">
+{block:PreviousPage}
+<a href="{PreviousPage}">&#171; Previous</a>
+{/block:PreviousPage}
+{block:NextPage}
+<a href="{NextPage}">Next &#187;</a>
+{/block:NextPage}
+</div>
+{/block:Pagination}
+
+{block:DayPagination}
+<div class="pagination">
+{block:PreviousDayPage}
+ <a href="{PreviousDayPage}">&#171; {DayOfMonthWithZero} {ShortMonth}</a>
+{/block:PreviousDayPage}
+{block:NextDayPage}
+<a href="{NextDayPage}">{DayOfMonthWithZero} {ShortMonth} &#187;</a>
+{/block:NextDayPage}
+</div>
+{/block:DayPagination}
+
+{block:PermalinkPagination}
+<div class="pagination">
+{block:PreviousPost}
+<a href="{PreviousPost}">&#171; Previous</a>
+{/block:PreviousPost}
+{block:NextPost}
+<a href="{NextPost}">Next &#187;</a>
+{/block:NextPost}
+</div>
+{/block:PermalinkPagination}
+
+</div>
+
+<div id="sidebar">
+{block:ifDisplayTitle}
+<h1><a href="/page/1">{Title}</a></h1>
+{/block:ifDisplayTitle}
+
+{block:ifDisplayProfilePicture}
+<p align="center"><img src="{PortraitURL-128}" /></p>
+{/block:ifDisplayProfilePicture}
+
+{block:ifDisplayCustomLinks}
+<p id="nav">
+<a href="{text:Link URL 1}">{text:Link Title 1}</a> · <a href="{text:Link URL 2}">{text:Link Title 2}</a> · <a href="{text:Link URL 3}">{text:Link Title 3}</a> · <a href="{text:Link URL 4}">{text:Link Title 4}</a> · <a href="{text:Link URL 5}">{text:Link Title 5}</a>
+</p>
+{/block:ifDisplayCustomLinks}
+
+{block:Description}
+<h3>About</h3>
+<div id="about">
+{Description}
+</div>
+{/block:Description}
+
+{block:ifDisplayExtraInfoBox1}
+<h3>{text:Box 1 Title}</h3>
+<div class="box">
+{text:Box 1 Text}
+</div>
+{block:ifDisplayExtraInfoBox1}
+
+{block:ifDisplayExtraInfoBox2}
+<h3>{text:Box 2 Title}</h3>
+<div class="box">
+{text:Box 2 Text}
+</div>
+{block:ifDisplayExtraInfoBox2}
+
+{block:ifDisplayExtraInfoBox3}
+<h3>{text:Box 3 Title}</h3>
+<div class="box">
+{text:Box 3 Text}
+</div>
+{block:ifDisplayExtraInfoBox3}
+
+{block:ifDisplaySearchBar}
+<h3>Search</h3>
+<div id="search">
+<form method="get" action="/search">
+<input class="searchbar" value="" name="q" type="text"> <input class="searchbar" value="Go" type="submit">
+</div>
+{/block:ifDisplaySearchBar}
+
+{block:ifDisplayPeopleIFollow}
+{block:Following}
+<h3>Following</h3>
+<div id="follow">
+{block:Followed}<a href="{FollowedURL}"><img src="{FollowedPortraitURL-24}" /></a> {/block:Followed}
+</div>
+{/block:Following}
+{/block:ifDisplayPeopleIFollow}
+
+{block:ifDisplayTwitterUpdates}
+{block:Twitter}
+<h3><a href="http://twitter.com/{TwitterUsername}">Latest Tweets</a></h3>
+<div id="twitter">
+<div id="tweets">
+<ul id="twitter_update_list"></ul>  
+</div>      
+</div>
+{/block:Twitter}
+{/block:ifDisplayTwitterUpdates}
+
+<div id="credit" align="center">
+<a href="http://www.tumblr.com/theme/3716">Poppy</a> by <a href="http://elletricity.com">Elletricity</a>. Powered by <a href="http://tumblr.com">Tumblr</a>.
+<br />
+Image by <a href="http://www.sxc.hu/photo/1161722">Dabobabo</a> on sxc.hu.
+</div>
+
+</div>
+
+</div>
+</div>
+
+{block:Twitter}
+ <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+ <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/{TwitterUsername}.json?callback=twitterCallback2&amp;count=3"></script>
+{/block:Twitter}
+
+</body>
+</html>
