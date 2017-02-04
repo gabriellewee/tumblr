@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/BzRl3ghe1/droidserif.css" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Bright.
+   Theme URI: http://www.tumblr.com/theme/12893
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   -->
+
+   <meta name="color:Background" content="#f5001d"/>
+   <meta name="image:Background" content=""/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+
+   <meta name="color:Body" content="#ffffff"/>
+   <meta name="color:Border" content="#eeeeee"/>
+   <meta name="image:Banner" content=""/>
+
+   <meta name="font:Text" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Text" content="#676767"/>
+   <meta name="color:Link" content="#db0058"/>
+   <meta name="color:Link Hover" content="#ff9900"/>
+   <meta name="color:Link Hover Border" content="#ffe6c0"/>
+   <meta name="font:Header" content="'Droid Serif', serif"/>
+   <meta name="color:Navigation" content="#898989"/>
+   <meta name="color:Navigation Hover" content="#f3f3f3"/>
+   <meta name="color:Searchbar Hover" content="#ebebeb"/>
+
+   <meta name="color:Title Border" content="#db77a1"/>
+   <meta name="color:Date Background" content="#ff9900"/>
+   <meta name="color:Date Text" content="#ffffff"/>
+   <meta name="color:Tags" content="#898989"/>
+   <meta name="color:Tags Hover" content="#676767"/>
+   <meta name="color:Chat Line" content="#f1f1f1"/>
+
+   <meta name="color:Pagination" content="#898989"/>
+   <meta name="color:Pagination Hover" content="#676767"/>
+
+   <meta name="if:Zoom" content="1"/>
+   <meta name="if:Twitter" content="1"/>
+   <meta name="if:Searchbar" content="1"/>
+   <meta name="if:Endless Scrolling" content="0"/>
+
+   <style type="text/css">
+      html * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: {color:Background}{block:ifBackgroundImage} url('{image:Background}'){/block:ifBackgroundImage}{block:ifNotTiledBackground} no-repeat{/block:ifNotTiledBackground}{block:ifNotScrollingBackground} fixed{/block:ifNotScrollingBackground} {text:Background Position};
+         font: 11px {font:Text};
+         color: {color:Text};
+         -webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Link};
+         text-decoration: none;
+      }
+
+      a:hover {
+         color: {color:Link Hover};
+         border-bottom: 1px solid {color:Link Hover Border};
+      }
+
+      img, a img { border: 0; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid;
+      }
+
+      p { padding-top: 5px; }
+      blockquote p:first-child { padding: 0; }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+      ul ul, ul ol, ol ol, ol ul { padding-bottom: 5px; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         background: {color:Chat Line};
+         max-height: 300px;
+         overflow: auto;
+      }
+
+      .left { float: left; }
+      .right { float: right; }
+      .clear { clear: both; }
+      .five { margin-top: -5px; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         margin: 0 auto;
+         width: 810px;
+         height: 100%;
+         padding: 0;
+         background: {color:Body};
+      }
+
+      {block:ifBannerImage}
+         #header {
+            width: 100%;
+            height: 200px;
+            background: url('{image:Banner}') repeat top center;
+         }
+      {/block:ifBannerImage}
+
+      #posts {
+         width: 810px;
+         padding: 15px;
+         margin-left: -15px;
+         overflow: auto;
+      }
+
+      h1 a {
+         font: 25px {font:Header};
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         color: {color:Text}!important;
+         border: 0!important;
+      }
+
+      #pages {
+         border-top: 1px solid {color:Border};
+         border-bottom: 1px solid {color:Border};
+         margin: 2px 0 3px;
+         overflow: auto;
+      }
+ 
+      #pages a {
+         display: block;
+         float: left;
+         padding: 2px 5px;
+         color: {color:Navigation};
+         font-weight: bold;
+      }
+
+      {block:ifEndlessScrolling}input {
+         float: left;
+         margin: 0;
+         padding: 2px 5px;
+         border: 0;
+         font: 11px {font:Text};
+         color: {color:Navigation};
+         -webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;
+         font-weight: bold;
+      }{block:ifEndlessScrolling}
+ 
+      #pages a:hover{block:ifEndlessScrolling}, input:hover{/block:ifEndlessScrolling} {
+         background: {color:Navigation Hover};
+         border: 0;
+      }
+
+      #credit {
+         display: block;
+         float: right!important;
+         background: none!important;
+         color: {color:Border}!important;
+      }
+
+      #description, #footer, #pag {
+         width: 780px;
+         padding: 10px 15px 15px;
+      }
+
+      #desc {
+         padding-bottom: 5px;
+         border-bottom: 1px solid {color:Border};
+      }
+
+      #twitter {
+         padding: 5px 0 10px;
+         {block:Description}padding: 10px 0;{/block:Description}
+         border-bottom: 1px solid {color:Border};
+      }
+
+      #birdy { margin-left: 10px; }
+      #birdy img { width: 28px; }
+      #birdy a { border: 0!important; }
+      #tweet {
+         width: 730px;
+         margin: 6px 0 0 10px;
+         font: 14px {font:Header};
+      }
+
+      #tagpage, #searchpage { text-align: center; margin-top: 10px; }
+      #tagpage h2, #tagpage h2 a, #searchpage h2 {
+         font-family: {font:Header};
+         font-size: 14px!important;
+         text-transform: none!important;
+         color: {color:Header}!important;
+         text-transform: uppercase;
+         text-decoration: none;
+         letter-spacing: 1px;
+      }
+
+      .post {
+         float: left;
+         width: 780px;
+         margin: 0 0 30px 15px;
+      }
+
+      .body p:first-child { padding: 0; }
+
+      h2 { margin-bottom: 5px; }
+
+      h2 a {
+         font: 18px {font:Header};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         border-bottom: 1px dotted {color:Title Border};
+      }
+
+      h2 a:hover { border-bottom: 1px dotted {color:Link Hover Border}; }
+
+      h3 {
+         font: italic 17px {font:Header};
+         text-transform: none;
+         letter-spacing: 0;
+      }
+
+      h4 {
+         font: 12px {font:Header};
+         padding: 5px;
+         background: {color:Chat Line};
+      }
+
+      .date {
+         margin-top: 5px;
+         width: 760px;
+         padding: 5px 10px;
+         background: {color:Date Background};
+      }
+
+      .date, .date a { 
+         font-size: 10px;
+         color: {color:Date Text};
+         letter-spacing: 1px;
+         text-decoration: none;
+         text-transform: uppercase;
+         border: 0!important;
+      }
+
+      .tags { margin-top: 3px; }
+
+      .tags a {
+         color: {color:Tags};
+         font-size: 10px;
+      }
+
+      .tags a:hover { color: {color:Tags Hover}; }
+
+      {block:ifZoom}.zoom, .zoom:hover {
+         position: relative;
+         z-index: 1;
+         visibility: hidden;
+         padding: 2px 4px;
+         color: #fff!important;
+         background: #000!important;
+         background: rgba(0, 0, 0, 0.5)!important;
+         border: 0!important;
+      }
+
+      .photo img {
+         position: relative;
+         margin-top: -15px;
+         z-index: 0;
+      }
+
+      .photo_container img { margin-top: 0!important; }
+      .photo:hover .zoom { visibility: visible; }{/block:ifZoom}
+
+      .chat h2 { margin-bottom: 5px; }
+      .chat ul { padding: 0; list-style-type: none; }
+      .chat li { padding: 5px 10px; }
+      .odd { background: {color:Chat Line}; }
+
+      {block:Posts}{block:AlbumArt}.cover {
+         display: block;
+         float: left;
+         width: 96px;
+         height: 76px;
+         margin: 0 20px 0 -74px;
+         background: url('http://static.tumblr.com/imovwvl/i1Hl4rcp8/vinyl.png');
+         z-index: 1;
+      }
+
+      .album_art {
+         display: block;
+         float: left;
+         margin-top: 1px;
+         width: 72px;
+      }
+
+      .info { float: left; }{/block:AlbumArt}{/block:Posts}
+      .info span { display: block; }
+
+      #notes ol {
+         margin: 5px 15px 0 -15px;
+         padding: 0;
+         list-style-type: none;
+      }
+
+      #notes li {
+         float: left;
+         padding: 5px 10px;
+         background: {color:Chat Line};
+         margin: 3px 0 0 3px;
+      }
+
+      .avatar { display: none; }
+
+      #footer { text-align: center; }
+ 
+      {block:ifNotEndlessScrolling}input {
+         margin-top: 5px;
+         padding: 3px;
+         background: {color:Chat Line};
+         border: 0;
+         color: {color:Text};
+         font: italic 11px {font:Header};
+         -webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;
+      }
+ 
+      input:hover { background: {color:Searchbar Hover}; }{/block:ifNotEndlessScrolling}
+
+      #pag a {
+         font: 11px {font:Header};
+         color: {color:Pagination};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      #pag a:hover { color: {color:Pagination Hover}; }
+
+      #pag .left, #pag .right { width: 290px!important; }
+      #pag .left { text-align: left; }
+      #pag .right { text-align: right; }
+      #pag .center { float: left; width: 200px; text-align: center!important; }
+
+      #current, #pag .center a { font: 11px {font:Date}; padding: 0 5px; }
+
+      {block:IndexPage}
+         .post { width: 250px; }
+         img, a img { max-width: 250px; border: 0; }
+         .date { width: 230px; }
+         .cover { display: none; }
+         .album_art { width: 100%; display: inline; float: none; margin: 0; }
+         .info { width: 100%!important; }
+         .audio_player { width: 100%; background: #e4e4e4; text-align: center; }
+      {/block:IndexPage}
+
+      {block:PermalinkPage}
+         .image { float: left; }
+         .photo .caption, .photoset .caption, .video .caption {
+            float: left;
+            margin: -5px 0 0 15px;
+            width: 265px;
+         }
+
+         .tags {
+            float: left;
+            margin: 5px 0 0 15px;
+            width: 265px;
+         }
+      {/block:PermalinkPage}
+
+      {CustomCSS}
+   </style>
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/GqMl77c4f/jquery.min.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/f2bldgcq4/youtube.js"></script>
+
+   {block:IndexPage}<script type="text/javascript" src="http://static.tumblr.com/imovwvl/58Blgjm9g/masonry.min.js"></script>{/block:IndexPage}
+   {block:ifEndlessScrolling}<script type="text/javascript" src="http://static.tumblr.com/imovwvl/X3nlg0ka2/jquery.infinitescroll.min.js"></script>{/block:ifEndlessScrolling}
+   <script type="text/javascript">
+      $(window).load(function() {
+         var $wall = $('#posts');
+         $wall.masonry({
+            itemSelector: '.post' 
+         });
+
+         {block:ifEndlessScrolling}$wall.infinitescroll({
+            navSelector  : '#pag',
+            nextSelector : '#pag .right a',
+            itemSelector : '.post',
+            debug : false
+            },
+
+            function( newElement ) { 
+               setTimeout(function() {
+                  $wall.masonry({ appendedContent: $( newElement ) });
+               }, 1000);
+            }
+         );{/block:ifEndlessScrolling}
+      });
+   </script>
+</head>
+<body>
+   <div id="container">
+      <div id="content">
+         {block:ifBannerImage}<div id="header"></div>{/block:ifBannerImage}
+         <div id="description">
+            <h1><a href="/">{Title}</a></h1>
+            <div id="pages">
+               <a href="/archive">{lang:Archive}</a>
+               <a href="{RSS}">{lang:RSS}</a>
+               {block:AskEnabled}
+                  <a href="/ask">Ask</a>
+               {/block:AskEnabled}
+               {block:SubmissionsEnabled}
+               <a href="/submit">Submit</a>
+               {/block:SubmissionsEnabled}
+               {block:HasPages}
+                  {block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}
+               {/block:HasPages}
+               {block:ifEndlessScrolling}
+                  {block:ifSearchBar}<form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search" /></form>{/block:ifSearchBar}
+                  <a id="credit" href="http://elletricity.com">theme</a>
+               {/block:ifEndlessScrolling}
+            </div>
+            <div class="clear"></div>
+            {block:Description}<div id="desc">{Description}</div>{/block:Description}
+            {block:Twitter}{block:ifTwitter}
+               <div id="twitter">
+                  <div id="birdy" class="left">
+                     <a href="http://twitter.com/{TwitterUsername}" title="Follow on Twitter"><img src="http://static.tumblr.com/imovwvl/HXLl79lj9/twitter.png" /></a>
+                  </div>
+                  <div id="tweet" class="left"><span id="tweets"></span></div>
+                  <div class="clear"></div>
+               </div>
+               <script type="text/javascript">
+                  function recent_tweets(data) {
+                     for (i=0; i<1; i++) {
+                        document.getElementById("tweets").innerHTML = 
+                           document.getElementById("tweets").innerHTML + 
+                           data[i].text;
+                     }
+                  }
+               </script>
+            {/block:ifTwitter}{/block:Twitter}
+
+            {block:TagPage}
+               <div id="tagpage">
+                  <h2>{lang:Posts tagged Tag 3}.</h2>
+               </div>
+            {/block:TagPage}
+
+            {block:SearchPage}
+               <div id="searchpage">
+                  <h2>{lang:Your search for SearchQuery returned SearchResultCount results}.</h2>
+               </div>
+            {/block:SearchPage}
+         </div>
+
+         <div id="posts">
+            {block:Posts}
+               <div class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}post">
+                  {block:Text}
+                     {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                     <div class="body">{Body}</div>
+                  {/block:Text}
+
+                  {block:Photo}
+                     <div class="photo">
+                        {block:ifZoom}<a class="zoom" href="{PhotoURL-HighRes}">zoom</a><br />{/block:ifZoom}
+                        {LinkOpenTag}<img class="image" src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+                     </div>
+                     {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                  {/block:Photo}
+
+                  {block:Photoset}
+                     {block:IndexPage}{Photoset-250}{/block:IndexPage}
+                     {block:PermalinkPage}<div class="left">{Photoset-500}</div>{/block:PermalinkPage}
+                     {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                  {/block:Photoset}
+
+                  {block:Quote}
+                     <h3>{Quote}</h3>
+                     {block:Source}<div class="body">{Source}</div>{/block:Source}
+                  {/block:Quote}
+
+                  {block:Link}
+                     <h2><a href="{URL}" {Target}>{Name} &rsaquo;</a></h2>
+                     {block:Description}<div class="body">{Description}</div>{/block:Description}
+                  {/block:Link}
+
+                  {block:Chat}
+                     {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                     <ul class="five">{block:Lines}
+                        <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                     {/block:Lines}</ul>
+                  {/block:Chat}
+
+                  {block:Audio}
+                     {block:AlbumArt}
+                        <img src="{AlbumArtURL}" class="album_art" />
+                        <span class="cover"></span>
+                     {/block:AlbumArt}
+                     <div class="info"{block:PermalinkPage}{block:AlbumArt} style="margin-top: 2px;"{/block:AlbumArt}{/block:PermalinkPage}>
+                        {AudioPlayerGrey}
+                        <div style="margin-top: 5px;">
+                           {block:TrackName}<span><strong>Title</strong>: {TrackName}</span>{/block:TrackName}
+                           {block:Artist}<span><strong>Artist:</strong> {Artist}</span>{/block:Artist}
+                           {block:PermalinkPage}<span>{PlayCountWithLabel}</span>{/block:PermalinkPage}
+                        </div>
+                     </div>
+                     <div class="clear"></div>
+                     {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                  {/block:Audio}
+
+                  {block:Video}
+                     {block:IndexPage}{Video-250}{/block:IndexPage}
+                     {block:PermalinkPage}<div class="left">{Video-500}</div>{/block:PermalinkPage}
+                     {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                  {/block:Video}
+
+                  {block:Answer}
+                     <h4><strong>{Asker} asked:</strong> {Question}</h4>
+                     {Answer}
+                  {/block:Answer}
+
+                  {block:HasTags}
+                      <div class="tags">
+                         {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                      </div>
+                      <div class="clear"></div>
+                  {/block:HasTags}
+                  {block:Date}<div class="date">
+                     <div class="left"><a href="{Permalink}">{TimeAgo}</a></div>
+                     {block:NoteCount}<div class="right"><a href="{Permalink}">{NoteCountWithLabel}</a></div>{/block:NoteCount}
+                     <div class="clear"></div>
+                  </div>{/block:Date}
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               </div>
+            {/block:Posts}
+         </div>
+
+         {block:Pagination}
+           <div id="pag">
+              <div class="left">
+                 {block:PreviousPage}
+                    <a href="{PreviousPage}">&larr; {lang:Previous}</a>
+                 {/block:PreviousPage}
+                 &nbsp;
+              </div>
+              <div class="center">
+                 {block:JumpPagination length="5"}
+                    {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                    {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                 {/block:JumpPagination}
+              </div>
+               <div class="right">
+                  &nbsp;
+                  {block:NextPage}
+                     <a href="{NextPage}">{lang:Next} &rarr;</a>
+                  {/block:NextPage}
+               </div>
+            </div>
+            <div class="clear"></div>
+         {/block:Pagination}
+
+         {block:DayPagination}
+            <div id="pag">
+               <div class="left">
+                  {block:PreviousDayPage}
+                     <a href="{PreviousDayPage}">&larr; {lang:Previous}</a>
+                  {/block:PreviousDayPage}
+                  &nbsp;
+               </div>
+               <div class="center">
+                  {block:JumpPagination length="5"}
+                     {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                     {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                  {/block:JumpPagination}
+               </div>
+               <div class="right">
+                  &nbsp;
+                  {block:NextDayPage}
+                     <a href="{NextDayPage}">{lang:Next} &rarr;</a>
+                  {/block:NextDayPage}
+               </div>
+            </div>
+            <div class="clear"></div>
+         {/block:DayPagination}
+
+         {block:PermalinkPagination}
+            <div id="pag">
+               <div class="left">
+                  {block:PreviousPost}
+                     <a href="{PreviousPost}">&larr; {lang:Previous}</a>
+                  {/block:PreviousPost}
+                  &nbsp;
+               </div>
+               <div class="center">
+                  {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                  {/block:JumpPagination}
+               </div>
+               <div class="right">
+                  &nbsp;
+                  {block:NextPost}
+                     <a href="{NextPost}">{lang:Next} &rarr;</a>
+                  {/block:NextPost}
+               </div>
+            </div>
+            <div class="clear"></div>
+         {/block:PermalinkPagination}
+
+         <div id="footer">
+            <a href="http://www.tumblr.com/theme/12893">Bright</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+            Powered by <a href="http://tumblr.com">Tumblr</a>.
+            {block:ifNotEndlessScrolling}{block:ifSearchBar}<br /><form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form>{/block:ifSearchBar}{/block:ifNotEndlessScrolling}
+         </div>
+      </div>
+   </div>
+
+   {block:Twitter}{block:ifTwitter}
+      <script type="text/javascript" src="/tweets.js"></script>
+   {/block:ifTwitter}{/block:Twitter}
+
+</body>
+</html>
