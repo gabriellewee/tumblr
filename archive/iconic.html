@@ -1,0 +1,862 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/BzRl3ghe1/droidserif.css" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Iconic.
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   --> 
+
+   <!-- CUSTOM THEME DATA -->
+   <meta name="color:Background" content="#f9f9f9"/>
+   <meta name="image:Background" content=""/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+   <meta name="font:Text" content="Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans serif"/>
+   <meta name="color:Text" content="#121212"/>
+   <meta name="color:Links" content="#ff9900"/>
+   <meta name="color:Links Hover" content="#0f83a2"/>
+   <meta name="color:Navigation" content="#ebebeb"/>
+   <meta name="color:Border" content="#aaaaaa"/>
+   <meta name="font:Headers" content="'Droid Serif', Georgia, Times New Roman, Times, serif"/>
+   <meta name="color:Headers" content="#676767"/>
+   <meta name="color:Notecount" content="#bebebe"/>
+   <meta name="color:Date" content="#c8c8c8"/>
+   <meta name="color:Tags" content="#bebebe"/>
+   <meta name="color:Date Hover" content="#949494"/>
+   <meta name="color:Odd Chat Lines" content="#ebebeb"/>
+   <meta name="color:Searchbar Border" content="#ebebeb"/>
+   <meta name="color:Searchbar Background" content="#ffffff"/>
+   <meta name="color:Searchbar Text" content="#aaaaaa"/>
+   <meta name="color:About" content="#4d4d4d"/>
+   <meta name="text:Email" content=""/>
+   <meta name="if:Display Following" content="1"/>
+
+   <style type="text/css">
+      html * {
+          margin: 0;
+         padding: 0;
+      }
+
+      body {
+              background-color: {color:Background};
+              background-image: url('{image:Background}');
+             background-repeat: no-repeat;
+         background-attachment: fixed;
+           background-position: {text:Background Position};
+                          font: 11px {font:Text};
+                         color: {color:Text};
+         {block:ifTiledBackground}background-repeat: repeat!important;{/block:ifTiledBackground}
+         {block:ifScrollingBackground}background-attachment: scroll!important;{/block:ifScrollingBackground}
+      }
+
+      a, a:link, a:active, a:visited {
+                      color: {color:Links};
+            text-decoration: none;
+         -webkit-transition: color 1.5s linear;
+            -moz-transition: color 1.5s linear;
+              -o-transition: color 1.5s linear;
+                 transition: color 1.5s linear;
+      }
+
+      a:hover {
+                      color: {color:Links Hover};
+         -webkit-transition: color .3s linear;
+            -moz-transition: color .3s linear;
+              -o-transition: color .3s linear;
+                 transition: color .3s linear;
+      }
+
+      img, a img {
+                     border: 0px;
+                    opacity: 0.75;
+                     filter: alpha(opacity=75);
+         -webkit-transition: opacity 1.5s linear;
+            -moz-transition: opacity 1.5s linear;
+              -o-transition: opacity 1.5s linear;
+                 transition: opacity 1.5s linear;
+      }
+
+      img:hover, a:hover img {
+                    opacity: 1;
+                     filter: alpha(opacity=100);
+         -webkit-transition: opacity .1s linear;
+            -moz-transition: opacity .1s linear;
+                 transition: opacity .1s linear;
+      }
+
+      blockquote {
+               margin: 5px 0 0 11px;
+         padding-left: 10px;
+          border-left: 1px solid;
+      }
+
+      p { padding-top: 5px; }
+
+      pre {
+                   margin: 10px 0;
+                  padding: 10px;
+                word-wrap: break-word;
+              white-space: -moz-pre-wrap;
+              white-space: -pre-wrap;
+              white-space: -o-pre-wrap;
+              white-space: pre-wrap;
+         background-color: {color:Navigation};
+                 overflow: auto;
+      }
+
+      span { font-family: {font:Headers}; }
+      span.action { font-family: {font:Text}; }
+
+      #container {
+          margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+                   margin: 0px auto;
+                  padding: 45px 5px;
+                    width: 600px;
+                   height: 100%;
+              border-left: 1px solid {color:Border};
+         background-color: {color:Background};
+      }
+
+      #nav {
+                 position: fixed;
+                      top: 0;
+                    width: 100%;
+                   height: 30px;
+                  padding: 5px 0;
+         background-color: {color:Navigation};
+            border-bottom: 1px solid {color:Border};
+               text-align: center;
+      }
+
+      #nav img { width: 30px; }
+
+      #pag {
+           position: fixed;
+             bottom: 0;
+              width: 100%;
+             height: 30px;
+            padding: 5px 0;
+         text-align: center;
+      }
+
+      #pag img { width: 30px; }
+
+      #nav a img, #pag a img {
+         opacity: 0.5;
+          filter: alpha(opacity=50);
+      }
+
+      #nav a:hover img, #pag a:hover img {
+         opacity: 1;
+          filter: alpha(opacity=100);
+      }
+
+      h1, h2, h3 {
+         font-family: {font:Headers};
+         font-weight: normal;
+               color: {color:Headers};
+      }
+
+      h1 { font-size: 25px; }
+      h2 { font-size: 18px; }
+      h3 { font-size: 13px; }
+
+      .icon {
+               float: left;
+         margin-left: -40px;
+               width: 30px;
+              height: 30px;
+          text-align: center;
+      }
+
+      .icon img { width: 30px; }
+
+      .post { width: 600px; }
+
+      .left {
+         float: left;
+         width: 600px;
+      }
+
+      .left_alt { float: left; }
+
+      .ten {
+          clear: both;
+         height: 10px;
+      }
+
+      .post ul {
+                 padding: 5px 0 0 25px;
+         list-style-type: square;
+      }
+
+      .post ol { padding: 5px 0 0 25px; }
+
+      .date { margin-bottom: 3px; }
+
+      .date, .date a {
+          font-size: 10px;
+         font-style: italic;
+              color: {color:Date};
+      }
+
+      .tags {
+                clear: both;
+          padding-top: 2px!important;
+            font-size: 9px;
+                color: {color:Tags};
+      }
+
+      .tags a {
+         font-size: 9px;
+             color: {color:Tags};
+      }
+
+      .date a:hover, .tags a:hover, .icon a:hover { color: {color:Date Hover}; }
+
+      .photo .date { width: 600px; }
+
+      .padding { padding-right: 5px; }
+      .caption { float: left; width: 195px; }
+      .caption_alt { clear: both; }
+
+      {block:PermalinkPage}
+      .padding { display: none!important; }
+      .caption { clear:both!important; width: 600px; }
+      #hq img { max-width: 600px; }
+      {/block:PermalinkPage}
+
+      .chat ul {
+                 padding: 0;
+                   width: 600px;
+         list-style-type: none;
+      }
+
+      .chat li { padding: 5px 10px; }
+      .chat li.odd { background-color: {color:Odd Chat Lines}; }
+
+      .albumart {
+                 float: left;
+                 width: 80px;
+         padding-right: 10px;
+      }
+
+      .albuminfo {
+         float: left;
+         width: 490px!important;
+      }
+
+      #notes {
+         float: left;
+         width: 600px;
+      }
+
+      #notes img.avatar { display: none; }
+      #notes ol { padding-left: 30px; }
+      #notes li { padding-bottom: 3px; }
+
+      #search input {
+                  padding: 5px 10px;
+                    width: 250px;
+                   border: 4px solid {color:Searchbar Border};
+         background-color: {color:Searchbar Background};
+                    color: {color:Searchbar Text};
+      }
+
+      #about { color: {color:About}; }
+      #icon {
+                 width: 50px;
+         padding-right: 5px;
+      }
+
+      #day, .results { padding-bottom:10px; }
+      .results strong { color: #121212; }
+
+      #footer {
+         margin-top: 10px;
+         text-align: center;
+          font-size: 10px;
+              color: {color:Date};
+      }
+
+      #footer a {
+         font-size: 10px;
+             color: {color:Date};
+      }
+
+      #footer a:hover { color: {color:Date Hover}; }
+
+      {block:PermalinkPage}
+      #about { display: none!important; }
+      {/block:PermalinkPage}
+
+      {block:DayPage}
+      #about { display: none!important; }
+      {/block:DayPage}
+
+      {CustomCSS}
+
+   </style>
+
+   <script type="text/javascript">
+      function highlight(field) {
+         field.focus();
+         field.select();
+         }
+   </script>
+
+</head>
+<body>
+<div id="container"><div id="content">
+   {block:IndexPage}
+   <div id="about">
+      <div class="icon">
+         <img src="http://static.tumblr.com/imovwvl/heZl0yl06/about.png" alt="about" title="About" />
+      </div>
+      <div class="left">
+         <h1>{Title}</h1>
+         <img id="icon" src="{PortraitURL-128}" alt="icon" align="left" />
+         {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a> &middot; {/block:Pages}{/block:HasPages}{Description}
+      </div>
+      <div class="ten"></div>
+   </div>
+   {/block:IndexPage}
+
+   {block:DayPage}
+   <div id="day">
+      <h3>Posts dated&nbsp;&nbsp;<em>{Month} {DayOfMonthWithZero}, {Year}</em>.</h3>
+   </div>
+   {/block:DayPage}
+
+   {block:TagPage}
+      <div class="results">
+         <h2>Posts tagged with <strong><em><a href="{TagURL}">{Tag}</a></em></strong>.</h2>
+      </div>
+   {/block:TagPage}
+
+   {block:SearchPage}
+      <div class="results">
+         <h2>You searched for <strong><em>{URLSafeSearchQuery}</em></strong> with {SearchResultCount} results.
+         {block:NoSearchResults}Try again?{/block:NoSearchResults}</h2>
+      </div>
+   {/block:SearchPage}
+
+   {block:Posts}
+      {block:Text}
+      <div class="text post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/hv4l0zeiq/text.png" alt="text" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <h2 style="margin-bottom:-5px;">{block:Title}{Title}{/block:Title}</h2>
+            {Body}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Text}
+
+      {block:Photo}
+      <div class="photo post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/tWil0zdwx/photo.png" alt="photo" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <div class="left_alt padding" style="width: 400px;">
+               {LinkOpenTag}<img src="{PhotoURL-400}" title="{block:Caption}{PlaintextCaption}{/block:Caption}" alt="{PhotoAlt}" />{LinkCloseTag}
+            </div>
+            {block:PermalinkPage}
+            <div id="hq"><img src="{PhotoURL-HighRes}" /></div>
+            {/block:PermalinkPage}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Photo}
+
+      {block:Photoset}
+      <div class="photo post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/tWil0zdwx/photo.png" alt="photo" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <div class="left_alt padding">{Photoset-400}</div>
+            {block:PermalinkPage}<div id="hq">{Photoset-500}</div>{/block:PermalinkPage}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Photoset}
+
+      {block:Quote}
+      <div class="quote post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/oFPl0ym1o/quote.png" alt="quote" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <h2>{Quote}</h2>
+            {block:Source}{Source}{/block:Source}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Quote}
+
+      {block:Link}
+      <div class="link post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/izYl0zeqw/link.png" alt="link" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <h2 style="margin-bottom:-5px;"><a href="{URL}">{Name}</a></h2>
+            {block:Description}{Description}{/block:Description}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Link}
+
+      {block:Chat}
+      <div class="chat post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/eowl0zemf/chat.png" alt="chat" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <h2>{block:Title}{Title}{/block:Title}</h2>
+            <ul>
+            {block:Lines}
+               <li class="{Alt} user_{UserNumber}">
+                  {block:Label}<strong>{Label}</strong>{/block:Label}
+                  {Line}
+               </li>
+            {/block:Lines}
+            </ul>
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Chat}
+
+      {block:Audio}
+      <div class="audio post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/Uvhl0zevp/audio.png" alt="audio" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            {block:AlbumArt}
+               <img src="{AlbumArtURL}" border="0" class="albumart" alt="album art" />
+            {/block:AlbumArt}
+            <div class="albuminfo">
+               {block:TrackName}<strong>Track:</strong> {TrackName}<br />{/block:TrackName}
+               {block:Artist}<strong>Artist:</strong> {Artist}<br />{/block:Artist}
+               {block:Album}<strong>Album:</strong> {Album}<br />{/block:Album}
+               <br />{AudioPlayerGrey}<br />
+            </div>
+            {block:Caption}<div class="caption_alt">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Audio}
+
+      {block:Video}
+      <div class="video post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/TjAl0zg2q/video.png" alt="video" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <div class="left_alt padding">{Video-400}</div>
+            {block:PermalinkPage}<div id="hq">{Video-500}</div>{/block:PermalinkPage}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Video}
+
+      {block:Answer}
+      <div class="answer post">
+         <div class="icon">
+            <a href="{Permalink}" title="{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}">
+               <img src="http://static.tumblr.com/imovwvl/OJjl0zg3q/answer.png" alt="answer" />
+            </a>
+         </div>
+         <div class="left">
+            {block:Date}
+            <div class="date">
+               {block:SameDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:SameDayDate}
+               {block:NewDayDate}
+                  <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a>
+                  at
+                  <a href="{Permalink}">{12HourWithZero}:{Minutes}{AmPm}</a>
+               {/block:NewDayDate}
+            </div>
+            {/block:Date}
+            <h3><strong>{Asker} asked</strong>: {Question}</h3>
+            {Answer}
+            {block:HasTags}
+            <div class="tags">
+               {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+            </div>
+            {/block:HasTags}
+         </div>
+         <div class="ten"></div>
+         {block:PostNotes}
+            <div class="icon">
+               <img src="http://static.tumblr.com/imovwvl/QBfl0zpit/notes.png" alt="notes" />
+            </div>
+            <div id="notes" class="left">{PostNotes}</div>
+            <div class="ten"></div>
+         {/block:PostNotes}
+      </div>
+      {/block:Answer}
+   {/block:Posts}
+
+   {block:Following}{block:ifDisplayFollowing}
+   <div id="following">
+      <div class="icon">
+         <img src="http://static.tumblr.com/imovwvl/ZLrl117l1/following.png" alt="following" title="Following" />
+      </div>
+      <div class="left">
+         <h2>Following</h2>
+         {block:Followed}<a href="{FollowedURL}" title="{FollowedName}"><img src="{FollowedPortraitURL-30}" alt="{FollowedName}" /></a> {/block:Followed}
+      </div>
+      <div class="ten"></div>
+   </div>
+   {/block:ifDisplayFollowing}{/block:Following}
+
+   <div id="search">
+      <div class="icon">
+         <img src="http://static.tumblr.com/imovwvl/wLnl0y46d/search.png" alt="search" title="Search" />
+      </div>
+      <div class="left">
+         <form action="/search" method="get">
+            <input name="q" value="Type here and press enter" type="text" onclick="highlight(this);" />
+         </form>
+      </div>
+      <div class="ten"></div>
+   </div>
+
+   <div id="footer">
+      <a href="http://www.tumblr.com/theme/10214">Iconic</a> by <a href="http://elletricity.com">Gabrielle Wee</a>.
+      Icons by <a href="http://brsev.deviantart.com/art/Token-128429570">Brsev</a>.
+      Powered by <a href="http://tumblr.com">Tumblr</a>.
+   </div>
+
+</div></div>
+
+<div id="pag">
+   <div style="float:left;width:30px;">
+   {block:Pagination}
+      {block:PreviousPage}
+         <a href="{PreviousPage}" title="Previous">
+            <img src="http://static.tumblr.com/imovwvl/XZkl0y4fu/previous.png" alt="previous" />
+         </a>
+      {/block:PreviousPage}
+   {/block:Pagination}
+
+   {block:DayPagination}
+      {block:PreviousDayPage}
+         <a href="{PreviousPage}" title="Previous">
+            <img src="http://static.tumblr.com/imovwvl/XZkl0y4fu/previous.png" alt="previous" />
+         </a>
+      {/block:PreviousDayPage}
+   {/block:DayPagination}
+
+   {block:PermalinkPagination}
+      {block:PreviousPost}
+         <a href="{PreviousPost}" title="Previous">
+            <img src="http://static.tumblr.com/imovwvl/XZkl0y4fu/previous.png" alt="previous" />
+         </a>
+      {/block:PreviousPost}
+   {/block:PermalinkPagination}
+</div>
+
+<div style="float:right;width:30px;">
+   {block:Pagination}
+      {block:NextPage}
+         <a href="{NextPage}" title="Next">
+            <img src="http://static.tumblr.com/imovwvl/M1zl0y4l8/next.png" alt="next" />
+         </a>
+      {/block:NextPage}
+   {/block:Pagination}
+
+   {block:DayPagination}
+      {block:NextDayPage}
+         <a href="{NextDayPage}" title="Next">
+            <img src="http://static.tumblr.com/imovwvl/M1zl0y4l8/next.png" alt="next" />
+         </a>
+      {/block:NextDayPage}
+   {/block:DayPagination}
+
+   {block:PermalinkPagination}
+      {block:NextPost}
+         <a href="{NextPost}" title="Next">
+            <img src="http://static.tumblr.com/imovwvl/M1zl0y4l8/next.png" alt="next" />
+         </a>
+      {/block:NextPost}
+   {/block:PermalinkPagination}
+</div>
+</div>
+
+<div id="nav">
+   <a href="/" title="Home"><img src="http://static.tumblr.com/imovwvl/Q7Fl0y3xo/home.png" alt="home" /></a>
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/archive" title="Archive"><img src="http://static.tumblr.com/imovwvl/Zywl0y3z1/archives.png" alt="archives" /></a>
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="{RSS}" title="RSS"><img src="http://static.tumblr.com/imovwvl/VI4l0y3zi/rss.png" alt="rss" /></a>
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/mobile" title="Mobile"><img src="http://static.tumblr.com/imovwvl/7eCl0y415/mobile.png" alt="mobile" /></a>
+   {block:AskEnabled}&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/ask" title="Ask"><img src="http://static.tumblr.com/imovwvl/7wCl0zv4h/ask.png" alt="ask" /></a>{/block:AskEnabled}
+   {block:SubmissionsEnabled}&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/submit" title="Submit"><img src="http://static.tumblr.com/imovwvl/LlXl0zv8l/submit.png" alt="submit" /></a>{/block:SubmissionsEnabled}
+   {block:ifEmail}&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="mailto:{text:Email}" title="Email"><img src="http://static.tumblr.com/imovwvl/WPql0y448/email.png" alt="email" /></a>{/block:ifEmail}
+   {block:Twitter}&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="http://twitter.com/{TwitterUsername}" title="Twitter"><img src="http://static.tumblr.com/imovwvl/z6nl117e6/twitter.png" alt="twitter" /></a>{block:Twitter}
+   {block:Following}{block:ifDisplayFollowing}&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="#following" title="Following"><img src="http://static.tumblr.com/imovwvl/nUul11fxg/following.png" alt="following" /></a>{/block:ifDisplayFollowing}{/block:Following}
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="#search" title="Search"><img src="http://static.tumblr.com/imovwvl/wLnl0y46d/search.png" alt="search" /></a>
+
+
+</body>
+</html>
