@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/BzRl3ghe1/droidserif.css" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Simplix.
+   Theme URI: http://www.tumblr.com/theme/12630
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   Music Overlays: http://komodomedia.com
+   -->
+
+   <meta name="color:Background" content="#14072a"/>
+   <meta name="image:Background" content=""/>
+   <meta name="text:Background Position" content="center center"/>
+   <meta name="if:Tiled Background" content="1"/>
+   <meta name="if:Scrolling Background" content="0"/>
+
+   <meta name="font:Text" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Text" content="#676767"/>
+   <meta name="if:Anti Aliased Text" content="1"/>
+
+   <meta name="color:Link" content="#40185a"/>
+   <meta name="color:Link Hover" content="#1e042f"/>
+   <meta name="color:Link Border" content="#eeeeee"/>
+
+   <meta name="color:Blockquote Border" content="#bbbbbb"/>
+
+   <meta name="color:Posts" content="#ffffff"/>
+
+   <meta name="font:Header" content="Droid Serif, serif"/>
+   <meta name="color:Header" content="#bbbbbb"/>
+
+   <meta name="font:Navigation" content="Georgia, serif"/>
+   <meta name="color:Navigation" content="#cccccc"/>
+   <meta name="color:Navigation Hover" content="#aaaaaa"/>
+
+   <meta name="color:Pages Border" content="#eeeeee"/>
+   <meta name="color:Pages" content="#898989"/>
+   <meta name="color:Pages Hover" content="#f3f3f3"/>
+
+   <meta name="font:Twitter" content="Droid Serif, serif"/>
+
+   <meta name="color:Post Border" content="#eeeeee"/>
+
+   <meta name="font:Title" content="Droid Serif, serif"/>
+   <meta name="color:Title" content="#999999"/>
+   <meta name="color:Title Border" content="#dddddd"/>
+   <meta name="color:Title Hover" content="#666666"/>
+   <meta name="color:Title Border Hover" content="#aaaaaa"/>
+
+   <meta name="color:Tags" content="#898989"/>
+   <meta name="color:Tags Hover" content="#676767"/>
+
+   <meta name="font:Date" content="Droid Serif, serif"/>
+   <meta name="color:Date" content="#aaaaaa"/>
+   <meta name="color:Date Hover" content="#898989"/>
+
+   <meta name="color:Chat Line" content="#ebebeb"/>
+   <meta name="color:Question" content="#f1f1f1"/>
+
+   <meta name="color:Pagination" content="#898989"/>
+   <meta name="color:Pagination Hover" content="#676767"/>
+
+   <meta name="color:Footer" content="#aaaaaa"/>
+   <meta name="color:Footer Hover" content="#898989"/>
+   <meta name="color:Search Hover" content="#ebebeb"/>
+
+   <meta name="if:Banner" content="0"/>
+   <meta name="image:Banner" content=""/>
+   <meta name="if:Zoom" content="1"/>
+   <meta name="if:Icon" content="0"/>
+   <meta name="if:Twitter" content="1"/>
+   <meta name="if:Searchbar" content="1"/>
+   <meta name="if:Endless Scrolling" content="0"/>
+   <meta name="if:Streampad" content="0"/>
+   <meta name="color:Streampad" content="#5f2b81"/>
+
+   <style type="text/css">
+      html * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: {color:Background}{block:ifBackgroundImage} url('{image:Background}'){/block:ifBackgroundImage}{block:ifNotTiledBackground} no-repeat{/block:ifNotTiledBackground}{block:ifNotScrollingBackground} fixed{/block:ifNotScrollingBackground} {text:Background Position};
+         font: 11px {font:Text};
+         text-stroke: 1px transparent;
+         {block:ifAntiAliasedText}-webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;{/block:ifAntiAliasedText}
+         color: {color:Text};
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Link};
+         text-decoration: none;
+      }
+
+      a:hover {
+         color: {color:Link Hover};
+         border-bottom: 1px solid {color:Link Border};
+      }
+
+      img, a img, a:hover img {
+         border: 0!important;
+         max-width: 500px;
+      }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid {color:Blockquote Border};
+      }
+
+      p { padding-top: 5px; }
+      blockquote p:first-child { padding-top: 0; }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+      ul ul, ul ol, ol ol, ol ul { padding-bottom: 5px; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         background: {color:Question};
+         max-height: 300px;
+         overflow: auto;
+      }
+
+      .left { float: left; }
+      .right { float: right; }
+      .clear { clear: both; }
+      .five { margin-top: -5px; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         margin: 0 auto;
+         width: 580px;
+         height: 100%;
+         padding: 0;
+      }
+
+      #header { margin: 15px 0 -15px; }
+      #header img { width: 580px!important; max-width: 580px!important; }
+      #header a { border: 0; }
+
+      #posts {
+         margin: 15px 0;
+         background: {color:Posts};
+         padding: 30px 40px;
+      }
+
+      {block:ifStreampad}#posts { margin-bottom: 45px; }{/block:ifStreampad}
+
+      h1.left a {
+         font: 20px {font:Header};
+         color: {color:Header}!important;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         border: 0!important;
+      }
+
+      #icon { float: left; margin: 3px 5px 0 0; }
+      #icon img { width: 18px; }
+
+      h1.right { margin-top: 4px; }
+
+      h1.right, h1.right a {
+         font: italic 14px {font:Navigation};
+         color: {color:Navigation}!important;
+         text-transform: lowercase;
+      }
+
+      h1.right a:hover {
+         border: 0;
+         color: {color:Navigation Hover}!important;
+      }
+
+      #pages {
+         border-top: 1px solid {color:Pages Border};
+         border-bottom: 1px solid {color:Pages Border};
+         margin: 2px 0 3px;
+         overflow: auto;
+      }
+
+      #pages a {
+         display: block;
+         float: left;
+         padding: 2px 5px;
+         color: {color:Pages};
+         font-weight: bold;
+      }
+
+      {block:ifEndlessScrolling}input {
+         float: left;
+         margin: 0;
+         padding: 2px 5px;
+         border: 0;
+         font: 11px {font:Text};
+         color: {color:Pages};
+         {block:ifAntiAliasedText}-webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;{/block:ifAntiAliasedText}
+         font-weight: bold;
+      }{block:ifEndlessScrolling}
+ 
+      #pages a:hover{block:ifEndlessScrolling}, input:hover{/block:ifEndlessScrolling} {
+         background: {color:Pages Hover};
+         border: 0;
+      }
+
+      #desc {
+         border-bottom: 1px solid {color:Post Border};
+         padding-bottom: 5px;
+      }
+
+      #twitter { overflow: auto; }
+      #birdy { margin-left: 10px; }
+      #birdy img { width: 28px; }
+      #birdy a { border: 0!important; }
+      #tweet {
+         width: 445px;
+         margin: 6px 0 0 10px;
+         font: 14px {font:Twitter};
+      }
+
+      #tagpage, #searchpage { text-align: center; }
+      #tagpage h2, #tagpage h2 a, #searchpage h2 {
+         font-family: {font:Title};
+         font-size: 14px!important;
+         text-transform: none!important;
+         color: {color:Title}!important;
+         text-transform: uppercase;
+         text-decoration: none;
+         letter-spacing: 1px;
+      }
+
+      #info { padding-bottom: 15px; }
+
+      .post {
+         border-bottom: 1px solid {color:Post Border};
+         margin-bottom: 15px;
+         padding-bottom: 15px;
+      }
+
+      h2 a {
+         font: 17px {font:Title};
+         color: {color:Title}!important;
+         text-transform: uppercase;
+         text-decoration: none;
+         letter-spacing: 1px;
+         border-bottom: 1px dotted {color:Title Border};
+      }
+
+      h2 a:hover {
+         color: {color:Title Hover}!important;
+         border-bottom: 1px dotted {color:Title Hover Border};
+      }
+
+      h2 { margin-bottom: 5px; }
+
+      .tags { margin-top: 3px; }
+
+      .tags a {
+         color: {color:Tags};
+         font-size: 10px;
+      }
+
+      .tags a:hover { color: {color:Tags Hover}; }
+
+      .source { margin: 15px 0 -10px; }
+
+      .source, .source a {
+         font: 10px {font:Date};
+         color: {color:Date};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .source, .source a:hover { color: {color:Date Hover}; }
+
+      .date { margin-top: 15px; }
+
+      .date, .date a {
+         font: 10px {font:Date};
+         color: {color:Date};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .date, .date a:hover { color: {color:Date Hover}; }
+
+      #notes ol { padding: 0; list-style-type: none; }
+      #notes li { padding: 5px 10px; background: {color:Question}; margin-bottom: 3px; }
+      .avatar { display: none; }
+
+      .body p:first-child { padding: 0; }
+
+      {block:ifZoom}.zoom, .zoom:hover {
+         position: relative;
+         z-index: 1;
+         visibility: hidden;
+         padding: 2px 4px;
+         color: #fff!important;
+         background: #000!important;
+         background: rgba(0, 0, 0, 0.5)!important;
+      }
+
+      .photo img {
+         position: relative;
+         margin-top: -15px;
+         z-index: 0;
+      }
+
+      .photo_container img { margin-top: 0!important; }
+      .photo:hover .zoom { visibility: visible; }{/block:ifZoom}
+
+      .quote h2 { font: italic 17px {font:Title}; }
+
+      .chat ul { padding: 0; list-style-type: none; }
+      .chat li { padding: 5px 10px; }
+      .odd { background: {color:Chat Line}; }
+
+      .cover {
+         display: block;
+         float: left;
+         width: 96px;
+         height: 76px;
+         margin-left: -74px;
+         background-image: url('http://static.tumblr.com/imovwvl/i1Hl4rcp8/vinyl.png');
+         z-index: 1;
+      }
+
+      {block:Posts}{block:AlbumArt}.album_art {
+         display: block;
+         float: left;
+         margin-top: 1px;
+         width: 72px;
+      }
+
+      .info { float: left; margin-left: 20px; }{/block:AlbumArt}{/block:Posts}
+      .info span { display: block; }
+
+      .answer h3 {
+         font: 13px {font:Header};
+         padding: 5px;
+         background: {color:Question};
+      }
+
+      #pag a {
+         font: 11px {font:Date};
+         color: {color:Pagination};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      #pag a:hover { color: {color:Pagination Hover}; }
+
+      #pag .left, #pag .right { width: 150px!important; }
+      #pag .left { text-align: left; }
+      #pag .right { text-align: right; }
+      #pag .center { float: left; width: 200px; text-align: center!important; }
+
+      #current, #pag .center a { font: 11px {font:Date}; padding: 0 5px; }
+
+      #footer {
+         margin-top: 10px;
+         text-align: center;
+         font: 11px {font:Date};
+      }
+
+      #footer, #footer a { color: {color:Footer}; }
+      #footer a:hover { color: {color:Footer Hover}; }
+
+      {block:ifNotEndlessScrolling}input {
+         margin-top: 5px;
+         padding: 3px;
+         background: {color:Question};
+         border: 0;
+         color: {color:Text};
+         font: italic 11px {font:Date};
+         {block:ifAntiAliasedText}-webkit-text-stroke: 1px transparent;
+         -moz-text-stroke: 1px transparent;
+         -o-text-stroke: 1px transparent;
+         text-stroke: 1px transparent;{/block:ifAntiAliasedText}
+      }
+
+      input:hover { background: {color:Search Hover}; }{/block:ifNotEndlessScrolling}
+
+      {CustomCSS}
+   </style>
+
+   <script type="text/javascript" src="http://static.tumblr.com/3driglx/GqMl77c4f/jquery.min.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/f2bldgcq4/youtube.js"></script>
+</head>
+<body>
+   <div id="container"><div id="content">
+   {block:ifBanner}<div id="header"><a href="/"><img src="{image:Banner}" /></a></div>{/block:ifBanner}
+   <div id="posts">
+      <div id="info">
+         {block:ifIcon}<div id="icon"><a href="/" title="{Name}"><img src="{PortraitURL-64}" /></a></div>{/block:ifIcon}
+         <h1 class="left" style="max-width: 350px;"><a href="/">{Title}</a></h1>
+         <h1 class="right">
+            <a href="/archive">{lang:Archive}</a>/<a href="{RSS}">{lang:RSS}</a>{block:AskEnabled}/<a href="/ask">Ask</a>{/block:AskEnabled}{block:SubmissionsEnabled}/<a href="/submit">Submit</a>{/block:SubmissionsEnabled}{block:ifEndlessScrolling}/<a href="http://elletricity.com">Theme</a>{/block:ifEndlessScrolling}
+         </h1>
+         <div class="clear"></div>
+         {block:HasPages}
+            <div id="pages">
+               {block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}
+               {block:ifEndlessScrolling}
+                  {block:ifSearchBar}<form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search" /></form>{/block:ifSearchBar}
+               {/block:ifEndlessScrolling}
+            </div>
+            <div class="clear"></div>
+         {/block:HasPages}
+         {block:Description}<div id="desc">{Description}</div>{/block:Description}
+      </div>
+
+      {block:Twitter}{block:ifTwitter}
+         <div id="twitter" class="post">
+            <div id="birdy" class="left"><a href="http://twitter.com/{TwitterUsername}" title="Follow on Twitter"><img src="http://static.tumblr.com/imovwvl/HXLl79lj9/twitter.png" /></a></div>
+            <div id="tweet" class="left"><span id="tweets"></span></div>
+            <div class="clear"></div>
+         </div>
+         <script type="text/javascript">
+            function recent_tweets(data) {
+               for (i=0; i<1; i++) {
+                  document.getElementById("tweets").innerHTML = 
+                     document.getElementById("tweets").innerHTML + 
+                     data[i].text;
+               }
+            }
+         </script>
+      {/block:ifTwitter}{/block:Twitter}
+
+      {block:TagPage}
+         <div id="tagpage" class="post">
+            <h2>{lang:Posts tagged Tag 3}.</h2>
+         </div>
+      {/block:TagPage}
+
+      {block:SearchPage}
+         <div id="searchpage" class="post">
+            <h2>{lang:Your search for SearchQuery returned SearchResultCount results}.</h2>
+         </div>
+      {/block:SearchPage}
+
+      <div class="autopagerize_page_element">{block:Posts}
+         <div class="{block:Text}text {/block:Text}{block:Photoset}photoset {/block:Photoset}{block:Quote}quote {/block:Quote}{block:Link}link {/block:Link}{block:Chat}chat {/block:Chat}{block:Audio}audio {/block:Audio}{block:Video}video {/block:Video}{block:Answer}answer {/block:Answer}post">
+            {block:Text}
+               {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+               <div class="body">{Body}</div>
+            {/block:Text}
+
+            {block:Photo}
+               <div class="photo">
+                  {block:ifZoom}<a class="zoom" href="{PhotoURL-HighRes}">zoom</a><br />{/block:ifZoom}
+                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+               </div>
+               {block:Caption}{Caption}{/block:Caption}
+            {/block:Photo}
+
+            {block:Photoset}
+               {Photoset-500}
+               {block:Caption}{Caption}{/block:Caption}
+            {/block:Photoset}
+
+            {block:Quote}
+               <h2>{Quote}</h2>
+               {block:Source}<div class="body">{Source}</div>{/block:Source}
+            {/block:Quote}
+
+            {block:Link}
+               <h2><a href="{URL}" {Target}>{Name} &rsaquo;</a></h2>
+               {block:Description}<div class="body">{Description}</div>{/block:Description}
+            {/block:Link}
+
+            {block:Chat}
+               {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+               <ul class="five">{block:Lines}
+                  <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+               {/block:Lines}</ul>
+            {/block:Chat}
+
+            {block:Audio}
+               {block:AlbumArt}
+                  <img src="{AlbumArtURL}" class="album_art" />
+                  <span class="cover"></span>
+               {/block:AlbumArt}
+               <div class="info"{block:AlbumArt} style="margin-top: 2px;"{/block:AlbumArt}>
+                  {AudioPlayerGrey}
+                  <div style="margin-top: 5px;">
+                     {block:TrackName}<span><strong>Title</strong>: {TrackName}</span>{/block:TrackName}
+                     {block:Artist}<span><strong>Artist:</strong> {Artist}</span>{/block:Artist}
+                     <span>{PlayCountWithLabel}</span>
+                  </div>
+               </div>
+               <div class="clear"></div>
+               {block:Caption}{Caption}{/block:Caption}
+            {/block:Audio}
+
+            {block:Video}
+               {Video-500}
+               {block:Caption}{Caption}{/block:Caption}
+            {/block:Video}
+
+            {block:Answer}
+               <h3><strong>{Asker} asked:</strong> {Question}</h3>
+               {Answer}
+            {/block:Answer}
+
+            {block:HasTags}
+               <div class="tags">
+                   {block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+               </div>
+            {/block:HasTags}
+
+            {block:ContentSource}
+               <div class="source">via
+                  {block:SourceLogo}<a href="{SourceURL}"><img src="{BlackLogoURL}" style="height: 9px; padding: 0; margin: 2px 0 0;" alt="{SourceTitle}" /></a>{/block:SourceLogo}
+                  {block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo}
+               </div>
+            {/block:ContentSource}
+
+            {block:Date}
+               <div class="date">
+                  <div class="left"><a href="{Permalink}">{TimeAgo}</a> on <a href="{URL}/day/{Year}/{MonthNumberWithZero}/{DayOfMonth}">{Month} {DayOfMonthWithZero}, {Year}</a> at {12HourWithZero}:{Minutes}{AmPm}</div>
+                  <div class="right"><a href="{Permalink}">{NoteCountWithLabel}</a></div>
+                  <div class="clear"></div>
+               </div>
+            {/block:Date}
+         </div>
+
+         {block:PostNotes}<div class="post" id="notes">{PostNotes}</div>{/block:PostNotes}
+      {/block:Posts}</div>
+
+      {block:ifNotEndlessScrolling}{block:Pagination}
+         <div id="pag">
+            <div class="left">
+               {block:PreviousPage}
+                  <a href="{PreviousPage}">&larr; {lang:Previous}</a>
+               {/block:PreviousPage}
+               &nbsp;
+            </div>
+            <div class="center">
+               {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+               {/block:JumpPagination}
+            </div>
+            <div class="right">
+               &nbsp;
+               {block:NextPage}
+                  <a href="{NextPage}">{lang:Next} &rarr;</a>
+               {/block:NextPage}
+            </div>
+         </div>
+         <div class="clear"></div>
+      {/block:Pagination}{/block:ifNotEndlessScrolling}
+
+      {block:ifNotEndlessScrolling}{block:DayPagination}
+         <div id="pag">
+            <div class="left">
+               {block:PreviousDayPage}
+                  <a href="{PreviousDayPage}">&larr; {lang:Previous}</a>
+               {/block:PreviousDayPage}
+               &nbsp;
+            </div>
+            <div class="center">
+               {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+               {/block:JumpPagination}
+            </div>
+            <div class="right">
+               &nbsp;
+               {block:NextDayPage}
+                  <a href="{NextDayPage}">{lang:Next} &rarr;</a>
+               {/block:NextDayPage}
+            </div>
+         </div>
+         <div class="clear"></div>
+      {/block:DayPagination}{/block:ifNotEndlessScrolling}
+
+      {block:PermalinkPagination}
+         <div id="pag">
+            <div class="left">
+               {block:PreviousPost}
+                  <a href="{PreviousPost}">&larr; {lang:Previous}</a>
+               {/block:PreviousPost}
+               &nbsp;
+            </div>
+            <div class="center">
+               {block:JumpPagination length="5"}
+                  {block:CurrentPage}<span id="current">{PageNumber}</span>{/block:CurrentPage}
+                  {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
+               {/block:JumpPagination}
+            </div>
+            <div class="right">
+               &nbsp;
+               {block:NextPost}
+                  <a href="{NextPost}">{lang:Next} &rarr;</a>
+               {/block:NextPost}
+            </div>
+         </div>
+         <div class="clear"></div>
+      {/block:PermalinkPagination}
+
+      <div id="footer">
+         <a href="http://www.tumblr.com/theme/12630">Simplix</a> by <a href="http://elletricity.com">Gabrielle Wee</a>. Powered by <a href="http://tumblr.com">Tumblr</a>.
+         {block:ifNotEndlessScrolling}{block:ifSearchBar}<br /><form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form>{/block:ifSearchBar}{/block:ifNotEndlessScrolling}
+      </div>
+   </div></div></div>
+
+   {block:Twitter}{block:ifTwitter}
+      <script type="text/javascript" src="/tweets.js"></script>
+   {/block:ifTwitter}{/block:Twitter}
+
+   {block:ifStreampad}
+      <script type="text/javascript" src="http://o.aolcdn.com/art/merge?f=/_media/sp/sp-player.js&f=/_media/sp/sp-player-tumblr.js&expsec=86400&ver=11"></script>
+
+      <script>
+         streampadPlayer.params.trackcolor = "ffffff";
+         streampadPlayer.params.bgcolor = "{color:Streampad}";
+      </script>
+   {/block:ifStreampad}
+
+   {block:ifEndlessScrolling}<script type="text/javascript" src="http://static.tumblr.com/q0etgkr/Lillcjek4/infinitetumblrbycodysherman.js"></script>{/block:ifEndlessScrolling}
+</body>
+</html>
