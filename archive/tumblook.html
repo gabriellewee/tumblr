@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+   <title>Tumblr | {Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+   <meta name="image:Profile Picture" content="http://static.tumblr.com/imovwvl/KKll598i2/default.gif"/>
+   <meta name="if:Show Information" content="1"/>
+   <meta name="if:Show Following" content="1"/>
+   <meta name="if:Show Nine Following Only" content="1"/>
+   <meta name="if:Thumbnail Pictures" content="0"/>
+   <meta name="if:Show Online" content="1"/>
+   <meta name="text:Formspring Username" content=""/>
+   <meta name="text:AIM Screen Name" content=""/>
+   <meta name="text:Email" content=""/>
+   <meta name="text:Name" content=""/>
+   <meta name="text:Relationship Status" content=""/>
+   <meta name="text:Birthday" content=""/>
+   <meta name="text:Current City" content=""/>
+   <meta name="text:Hometown" content=""/>
+   <meta name="text:Political Views" content=""/>
+   <meta name="text:Religious Views" content=""/>
+   <meta name="text:Website" content="http://"/>
+
+   <style type="text/css">
+      html * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background-color: #fff;
+         font: 11px "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+         color: #333;
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:active, a:visited { color: #3b5998; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      a img { border: 0; }
+
+      img { max-width: 500px; }
+      blockquote img { max-width: 450px; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 3px solid #ccc;
+      }
+
+      blockquote:hover { border-color: #3b5998; }
+
+      p { padding-top: 5px!important; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         background: #f1f1f1;
+         overflow: auto;
+      }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #header {
+         background-color: #3b5998;
+         height: 41px;
+         width: 100%;
+      }
+
+      h1 a {
+         float: left;
+         padding: 4px 6px 1px;
+         font-size: 22px;
+         color: #fff!important;
+         text-transform: lowercase;
+      }
+
+      h1 a:hover { background-color: #4b67a1; text-decoration: none; }
+
+      .nav {
+         width: 12px;
+         height: 26px;
+         background-repeat: no-repeat;
+         background-position: center 9px;
+      }
+
+      #home { background-image: url('http://static.tumblr.com/imovwvl/NO8l55s57/home.png'); }
+      #archive { background-image: url('http://static.tumblr.com/imovwvl/8e8l55sfz/archive.png'); }
+      #rss { background-image: url('http://static.tumblr.com/imovwvl/DDzl55swr/rss.png'); }
+
+      #header .inside { width: 930px; margin: auto; padding-top: 10px; }
+      #tumblr { margin-right: 5px!important; }
+
+      #search {
+         float: right;
+         background-color: #627aad;
+         border: 1px solid #1d4088;
+         border-bottom: 0;
+         height: 30px;
+         padding-left: 4px;
+         width: 750px;
+      }
+
+      #searchbar {
+         margin-top: 4px;
+         background: #fff;
+         border: 1px solid #3b5998;
+         display: inline-block;
+         position: relative;
+      }
+
+      #searchbar input {
+         color: #777;
+         border: 0;
+         border-right: 1px solid #e5e5e5 !important;
+         outline: none;
+         margin: 2px 20px 2px 0;
+         padding: 1px 3px !important;
+         width: 271px;
+      }
+
+      #searchbar button {
+         background: url('http://static.tumblr.com/imovwvl/wzHl55uwt/search.png') no-repeat 0 0;
+         border: 0;
+         cursor: pointer;
+         display: block;
+         float: right;
+         height: 19px;
+         padding: 0;
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 20px;
+         z-index: 2;
+      }
+
+      #nav_2 {
+         float: right;
+      }
+
+      #nav_2 a {
+         display: inline-block;
+         height: 100%;
+         padding: 8px 10px;
+         color: #fff;
+         font-weight: bold;
+         text-decoration: none!important;
+      }
+
+      #nav_2 a:hover { background-color: #6d86b7; }
+
+      #header_2 {
+         top: 0;
+         width: 100%;
+         height: 72px;
+         background: #edeff4;
+         border-bottom: 1px solid #d8dfea;
+      }
+
+      #content {
+         margin: -50px auto 0;
+         width: 900px;
+         padding: 0;
+      }
+
+      #column_1 { float: left; width: 200px; }
+
+      #nav_3 { margin: 3px 0 20px; }
+
+      #nav_3 a {
+         display: block;
+         border-bottom: 1px solid #d8dfea;
+         padding: 3px 8px;
+         text-decoration: none!important;
+      }
+
+      #nav_3 a:hover { background-color: #3b5998; color: #fff; }
+
+      #desc {
+         padding: 7px;
+         border: 1px solid #d8dfea;
+         margin-bottom: 20px;
+      }
+
+      .misc { border-right: 1px solid #d8dfea; }
+
+      h2 {
+         font-size: 11px;
+         background-color: #eceff5;
+         border-top: 1px solid #94a3c4;
+         padding: 5px 8px;
+       }
+
+      .inside_2 { padding: 10px 7px 10px 8px; }
+
+      #info dt { color: #777; padding-bottom: 2px; }
+      #info dd { padding-bottom: 6px; }
+
+      #following div, #following div img { width: 50px; overflow: hidden; }
+      #following div { float: left; height: 65px; margin: 0 11px 10px 0; }
+
+      #column_2 { margin-left: 20px; float: left; width: 500px; }
+
+      h1 { font-size: 16px; }
+      #column_2 h1 { float: left; margin-right: 7px; }
+      #twitter { margin-top: 2px; font-weight: normal; }
+      #twitter span { color: #555!important; }
+      #twitter a { font-size: 9px; color: #999; }
+
+      #nav_4 { padding: 0; list-style-type: none; margin-top: 10px; }
+
+      #nav_4 li {
+         float: left;
+         font-size: 13px;
+         font-weight: bold;
+         margin-right: 2px;
+      }
+
+      @-moz-document url-prefix() { #nav_4 { margin-top: 8px; } h1 a { padding-bottom: 0; } }
+
+      #nav_4 li span {
+         display: block;
+         background-color: #fff;
+         padding: 3px 11px;
+         border: 1px solid #d8dfea;
+         border-bottom: 1px solid #fff;
+         margin-top: -1px;
+      }
+
+      #nav_4 li a {
+         display: block;
+         background-color: #d8dfea;
+         padding: 3px 11px;
+         text-decoration: none!important;
+      }
+
+      #nav_4 li a:hover { background-color: #627aad; color: #fff; }
+
+      .clear { clear: both; }
+      .five { margin-top: -5px; }
+
+      #posts { margin-top: 17px; }
+
+      h3 { font-size: 13px; }
+      .post { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+
+      .date { margin-top: 4px; color: #777; }
+      .tags { color: #aaa; overflow: auto; margin: 5px 0; }
+      .tags div {
+         float: left;
+         width: 11px;
+         height: 11px;
+         margin: 2px 5px 0 0;
+         background: url('http://static.tumblr.com/imovwvl/fidl569mv/tag.png');
+      }
+
+      .icon {
+         float: left;
+         margin: 0 5px 0 0;
+         width: 16px;
+         height: 16px;
+         background-image: url('http://static.tumblr.com/imovwvl/hWfl596qn/icon_1.png');
+      }
+
+      .text .icon, .answer .icon { background-position: 0px -257px; }
+      .photo .icon { background-position: 0px -209px; }
+      .quote .icon { background-position: 0px -140px; }
+      .link .icon { background-position: 0px -241px; margin-top: -1px; }
+      .chat .icon { background-position: 0px -107px; }
+      .audio .icon { background-image: url('http://static.tumblr.com/imovwvl/DPFl596qy/icon_2.gif'); background-position: -16px 0; }
+      .video .icon { background-position: 0px -19px; }
+      .likenote .icon {
+         background-position: 0px -290px;
+         background-image: url('http://static.tumblr.com/imovwvl/hWfl596qn/icon_1.png');
+      }
+
+      .likenote a { text-decoration: none!important; }
+      .likenote span.one:hover { text-decoration: underline!important; }
+      .likenote strong { color: #333; font-weight: normal!important; }
+
+      .avatar { width: 16px!important; padding: 0!important; border: 0!important; }
+      .chat ul, #notes ol { padding: 0; list-style-type: none; }
+
+      .chat li, #notes li, .likenote {
+         padding: 5px 0px 4px 5px;
+         margin-bottom: 2px;
+      }
+
+      .chat li.odd, #notes li, .likenote {
+         background-color: #eceff5;
+         border-bottom: 1px solid #e5eaf1;
+      }
+
+      .likenote, #notes li { width: 400px!important; }
+
+      .like_top {
+         background: url('http://static.tumblr.com/imovwvl/370l5br9h/cny9pytx.png') no-repeat -930px -69px;
+         clear: left;
+         height: 5px;
+         margin: 0px 0px 0px 17px;
+         width: 9px;
+      }
+
+      .album_art {
+         float: left;
+         margin-right: 5px;
+         width: 70px;
+      }
+
+     .play_count {
+         color: #aaa;
+         display: block;
+         margin-top: 5px;
+      }
+
+      .answer h3 { color: #3b5998; }
+      h3 span { font-weight: normal; color: #333; }
+      .answered { color: #959595; margin-top: -5px; }
+ 
+      .avatar { float: left; margin: 1px 6px 0 0; }
+
+      #pag {
+         padding: 10px 15px;
+         margin-bottom: 30px;
+         background-color: #edeff4;
+         border: 1px solid #d8dfea;
+         overflow: auto;
+      }
+
+      .left { float: left; }
+      .right { float: right; }
+
+      #column_3 { float: right; margin: 70px 0 10px; width: 161px; border-left: 1px solid #ccc; background-color: #e5e5e5; word-wrap: break-word; }
+      #column_3 .inner { margin-left: 4px; background-color: #fff; }
+      #column_3 #likes { padding: 0; list-style-type: none; }
+      #column_3 li.like_post { border-top: 1px solid #e5e5e5; padding: 10px; }
+      #column_3 img, #column_3 embed { width: 151px; }
+
+      #footer {
+         border-top: 1px solid #b3b3b3;
+         margin-bottom: 45px;
+         padding: 8px;
+      }
+
+      #footer .left, #footer .right small { color: #737373; }
+      #footer .right { text-align: right; }
+
+      .results h3 { color: #ccc; }
+
+      {block:ifShowNineFollowingOnly}#following { height: 215px; overflow: hidden; }{block:ifShowNineFollowingOnly}
+
+      .post img {
+         max-width: 492px;
+         padding: 3px;
+         border: 1px solid #ccc;
+      }
+
+      .post img:hover { border: 1px solid #3b5998; }
+
+      {block:ifThumbnailPictures}{block:IndexPage}
+      .post img {
+         width: 130px;
+         float: left;
+         margin-right: 10px;
+
+      .photo .caption { float: left; margin-top: -5px; width: 350px; }
+      {/block:IndexPage}{/block:ifThumbnailPictures}
+
+      {block:AskEnabled}.post iframe {
+         width: 482px!important;
+         padding: 8px;
+         background-color: #f2f2f2!important;
+         border: 1px solid #b5b5b5;
+         border-bottom-color: #cbcbcb;
+         border-top: 2px solid #919191;
+         margin-top: 5px;
+      }
+
+      {block:IndexPage}.post iframe { margin-top: 0; }{/block:IndexPage}
+
+      #posts { margin-top: 12px; }{/block:AskEnabled}
+
+      {CustomCSS}
+   </style>
+
+   <!--[if IE 07]>
+      <style tyle="text/css">#nav_4 { margin-top: 8px; }</style>
+   <![endif]-->
+
+   <!--[if IE 08]>
+      <style tyle="text/css">#nav_4 { margin-top: 9px; }</style>
+   <![endif]-->
+
+   <script src="http://static.tumblr.com/i4mzrmx/lk4kqww5w/jquery-1.3.2.min.js" type="text/javascript"></script> 
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/OIpl28qhx/youtube.js"></script>
+</head>
+<body>
+   <div id="container">
+      <div id="header">
+         <div class="inside">
+            <h1 id="tumblr"><a href="http://tumblr.com">tumblr</a></h1>
+            <h1><a class="nav" id="home" href="/"></a></h1>
+            <h1><a class="nav" id="archive" href="/archive"></a></h1>
+            <h1><a class="nav" id="rss" href="{RSS}"></a></h1>
+
+            <div id="search">
+               <span id="searchbar">
+                  <form action="/search" method="get">
+                     <input name="q" onfocus="this.value=''" type="text" value="Search" />
+                     <button type="submit" title="Search"></button>
+                  </form>
+               </span>
+               <div id="nav_2">
+                  {block:PermalinkPage}<a href="javascript:(function()%7Bwindow.location=%22http://tmv.proto.jp/reblog.php?post_url=%22+window.location%7D());">Reblog</a>{/block:PermalinkPage}
+                  <a href="http://www.tumblr.com/follow/{Name}">Follow</a>
+                  <a href="http://tumblr.com/dashboard">Dashboard</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="header_2"></div>
+      <div id="content">
+         <div id="column_1">
+            <a href="/"><img src="{image:Profile Picture}" alt="{Title}" width="200px" /></a>
+            <div id="nav_3">
+               <a href="http://toys.tumblrist.com/imageview/{Name}">View {Name}'s Photos</a>
+               {block:AskEnabled}<a href="/ask">Ask {Name} a Question</a>{/block:AskEnabled}
+               {block:SubmissionsEnabled}<a href="/submit">Submit a Post</a>{/block:SubmissionsEnabled}
+               {block:ifFormspringUsername}<a href="http://formspring.me/{text:Formspring Username}">View {Name}'s Formspring</a>{/block:ifFormspringUsername}
+               {block:ifAIMScreenName}<a href="aim:goim?screenname={text:AIM Screen Name}">Talk to {Name} on AIM</a>{/block:ifAIMScreenName}
+               {block:ifEmail}<a href="mailto:{text:Email}">Email {Name}</a>{/block:ifEmail}
+            </div>
+            <div id="desc">{Description}</div>
+            {block:ifShowInformation}<div class="misc">
+               <h2>Information</h2>
+               <div id="info" class="inside_2"><dl>
+                  {block:ifName}<dt>Name:</dt><dd>{text:Name}</dd>{/block:ifName}
+                  {block:ifRelationshipStatus}<dt>Relationship Status:</dt><dd>{text:Relationship Status}</dd>{/block:ifRelationshipStatus}
+                  {block:ifBirthday}<dt>Birthday:</dt><dd>{text:Birthday}</dd>{/block:ifBirthday}
+                  {block:ifCurrentCity}<dt>Current City:</dt><dd>{text:Current City}</dd>{/block:ifCurrentCity}
+                  {block:ifHometown}<dt>Hometown:</dt><dd>{text:Hometown}</dd>{/block:ifHometown}
+                  {block:ifPoliticalViews}<dt>Political Views:</dt><dd>{text:Political Views}</dd>{/block:ifPoliticalViews}
+                  {block:ifReligiousViews}<dt>Religious Views:</dt><dd>{text:Religious Views}</dd>{/block:ifReligiousViews}
+                  {block:ifWebsite}<dt>Website:</dt><dd><a href="{text:Website}">{text:Website}</a></dd>{/block:ifWebsite}
+               </dl></div>
+            </div>{/block:ifShowInformation}
+
+            {block:Following}{block:ifShowFollowing}<div class="misc">
+               <h2>Following{block:ifShowNineFollowingOnly} (Random 9){/block:ifShowNineFollowingOnly}</h2>
+               <div id="following" class="inside_2">
+                  {block:Followed}<div><a href="{FollowedURL}" title="{FollowedTitle}"><img src="{FollowedPortraitURL-64}" alt="" /></a><a href="{FollowedURL}">{FollowedName}</a></div>{/block:Followed}
+               </div>
+            </div>{/block:ifShowFollowing}{/block:Following} 
+         </div>
+
+         <div id="column_2">
+            <h1>{Title}</h1>
+            {block:Twitter}
+               <h3 id="twitter">
+                  <span id="tweets"></span>        
+               </h3>
+               <script type="text/javascript">
+                  function recent_tweets(data) {
+                     for (i=0; i<1; i++) {
+                        document.getElementById("tweets").innerHTML = 
+                           document.getElementById("tweets").innerHTML + 
+                           data[i].text +
+                           ' <a href="http://twitter.com/{TwitterUsername}">' +
+                           'Follow on Twitter' + '</a>';
+                     }
+                  }
+               </script>
+            {/block:Twitter}
+            <div class="clear"></div>
+            <ul id="nav_4">
+               <li><span>Posts</span></li>
+               {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+            </ul>
+            <div class="clear"></div>
+            <div id="posts">
+               {block:IndexPage}{block:AskEnabled}<div id="ask" class="post">
+                  <iframe frameborder="0" scrolling="no" width="482" height="149" src="http://www.tumblr.com/ask_form/{Name}.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]-->
+               </div>{/block:AskEnabled}{/block:IndexPage}
+
+               {block:TagPage}
+                  <div class="post results"><h3>Posts tagged with <em>{Tag}</em>.</h3></div>
+               {/block:TagPage}
+
+               {block:SearchPage}
+                  <div class="post results"><h3>You searched for <em>{SearchQuery}</em> with {SearchResultCount} result(s).{block:NoSearchResults} Try again?{/block:NoSearchResults}</h3></div>
+               {/block:SearchPage}
+
+               {block:Posts}
+                  {block:Text}
+                     <div class="text post">
+                        {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+                        <div class="five">{Body}</div>
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this post: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Post</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Text}
+
+                  {block:Photo}
+                     <div class="photo post">
+                        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" class="hover" />{LinkCloseTag}
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                        <div class="clear"></div>
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this photo: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Photo</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Photo}
+
+                  {block:Photoset}
+                     <div class="photo post">
+                        {Photoset-500}
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this photo: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags} 
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Photo</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Photoset}
+
+                  {block:Quote}
+                     <div class="quote post">
+                        <h3>{Quote}</h3>
+                        {block:Source}<div class="caption">{Source}</div>{/block:Source}
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this post: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Post</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Quote}
+
+                  {block:Link}
+                     <div class="link post">
+                        <h3><a href="{URL}"{Target}>{Name} &rarr;</a></h3>
+                        {block:Description}<div class="five">{Description}</div>{/block:Description}
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this post: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Post</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Link}
+
+                  {block:Chat}
+                     <div class="chat post">
+                        {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+                        <ul>{block:Lines}
+                           <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                        {/block:Lines}</ul>
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this post: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Post</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Chat}
+
+                  {block:Audio}
+                     <div class="audio post">
+                        {block:AlbumArt}<img src="{AlbumArtURL}" class="album_art" alt="" />{/block:AlbumArt}
+                        {AudioPlayerGrey}
+                        <span class="play_count">{PlayCountWithLabel}</span>
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                        <div class="clear"></div>
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this post: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Post</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Audio}
+
+                  {block:Video}
+                     <div class="video post">
+                        {Video-500}
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this video: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Video</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Video}
+
+                  {block:Answer}
+                     <div class="answer post">
+                        <h3>{Asker} <span>{Question}</span></h3>{/block:Title}
+                        <div class="answered">{Answer}</div>
+                        {block:HasTags}
+                           <div class="tags">
+                              <div></div> In this post: {block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;{/block:Tags}
+                           </div>
+                        {/block:HasTags}
+                        {block:Date}<div class="date"><div class="icon"></div>
+                           {Month} {DayOfMonth} at {12Hour}:{Minutes}{AmPm}
+                           {block:RebloggedFrom}via <a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                           {block:IndexPage}&middot; <a href="{Permalink}">Like</a> &middot; <a href="{Permalink}">View Post</a>{/block:IndexPage}
+                        </div>{/block:Date}
+                        {block:NoteCount}
+                           <div class="like_top"></div>
+                           <div class="likenote">
+                              <div class="icon"></div>
+                              <a href="{Permalink}"><span class="one">{NoteCount} people</span> <strong>like this.</strong></a>
+                              <div class="clear"></div>
+                           </div>
+                        {/block:NoteCount}
+                        {block:PostNotes}<div id="notes">{PostNotes}</div>{/block:PostNotes}
+                     </div>
+                  {/block:Answer}
+               {/block:Posts}
+
+               {block:Pagination}
+                  <div id="pag">
+                     {block:PreviousPage}
+                        <div class="left"><a href="{PreviousPage}" title="Previous">Previous</a></div>
+                     {/block:PreviousPage}
+                     {block:NextPage}
+                        <div class="right"><a href="{NextPage}" title="Next">Next</a></div>
+                     {/block:NextPage}
+                  </div>
+               {/block:Pagination}
+
+               {block:DayPagination}
+                  <div id="pag">
+                     {block:PreviousDayPage}
+                        <div class="left"><a href="{PreviousDayPage}" title="Previous">Previous</a></div>
+                     {/block:PreviousDayPage}
+                     {block:NextDayPage}
+                        <div class="right"><a href="{NextDayPage}" title="Next">Next</a></div>
+                     {/block:NextDayPage}
+                  </div>
+               {/block:DayPagination}
+
+               {block:PermalinkPagination}
+                  <div id="pag">
+                     {block:PreviousPost}
+                        <div class="left"><a href="{PreviousPost}" title="Previous">Previous</a></div>
+                     {/block:PreviousPost}
+                     {block:NextPost}
+                        <div class="right"><a href="{NextPost}" title="Next">Next</a></div>
+                     {/block:NextPost}
+                  </div>
+               {/block:PermalinkPagination}
+            </div>
+         </div>
+         {block:Likes}<div id="column_3">
+            <div class="inner">
+               {Likes limit="5" width="161" summarize="100"}
+               <div style="background-color:#fff;width:100%;text-align:right;" class="right">
+                  <a href="http://www.tumblr.com/liked/by/{Name}">View more likes</a>
+               </div>
+            </div>
+         </div>{/block:Likes}
+         <div class="clear"></div>
+         <div id="footer">
+            <div class="left">{Name} &copy; 2010</div>
+            <div class="right"><a href="http://elleusine.tumblr.com/tumblook">Tumblook</a> by <a href="http://elleusine.tumblr.com">Gabrielle Wee</a> &middot; <a href="http://tumblr.com">Powered by Tumblr</a><br /><small>Disclaimer: This is not Facebook.com or any site associated with Facebook.com.</small></div>
+         </div>
+      </div>
+   </div>
+   {block:Twitter}
+      <script type="text/javascript" src="/tweets.js"></script>
+   {/block:Twitter}
+   {block:ifShowOnline}<div style="position: fixed; bottom: 0; right: 15px; padding: 7px 15px; border: 1px solid #999; border-bottom:0; background: #f4f4f4 url('http://static.ak.fbcdn.net/rsrc.php/zCCSI/hash/7am1obcj.png');"><strong><script type="text/javascript" src="http://www.usuarios-online.com/usuarios.php?v={Name}.tumblr.com"></script> online.</strong></div>{/block:ifShowOnline}
+   <script type="text/javascript">
+      <!--
+         var links = document.getElementsByTagName ("a");
+         for (var l = 0; l < links.length; l++) {
+         str = links[l].innerHTML;
+         if (str.match (/<span class=\"one\">1 people<\/span> <strong>like/i)) links[l].innerHTML = str.replace (/<span class=\"one\">1 people<\/span> <strong>like/i, "<span class=\"one\">1 person<\/span> <strong>likes");
+      }//-->
+   </script>
+</body>
+</html>
