@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Lollipop.
+   Author: Gabrielle Wee
+   Credit: http://elletricity.tumblr.com
+   -->
+
+   <meta name="font:Text" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Text" content="#676767"/>
+   <meta name="font:Headers" content="Courier, 'Courier New', monospace"/>
+   <meta name="color:Headers" content="#343434"/>
+   <meta name="color:Tags" content="#898989"/>
+
+   <meta name="if:Show Icon" content="1"/>
+   <meta name="if:Two Columns" content="1"/>
+   <meta name="if:Streampad" content="0"/>
+
+   <meta name="if:Kwon Jiyong" content="1"/>
+   <meta name="color:Kwon Jiyong 1" content="#a477ab"/>
+   <meta name="color:Kwon Jiyong 2" content="#4f4154"/>
+   <meta name="color:Kwon Jiyong 3" content="#f5c3dd"/>
+
+   <meta name="if:Dong Youngbae" content="0"/>
+   <meta name="color:Dong Youngbae 1" content="#e85681"/>
+   <meta name="color:Dong Youngbae 2" content="#58af8a"/>
+   <meta name="color:Dong Youngbae 3" content="#d0e9f0"/>
+
+   <meta name="if:Choi Seunghyun" content="0"/>
+   <meta name="color:Choi Seunghyun 1" content="#febb54"/>
+   <meta name="color:Choi Seunghyun 2" content="#99b6af"/>
+   <meta name="color:Choi Seunghyun 3" content="#ede2e5"/>
+
+   <meta name="if:Kang Daesung" content="0"/>
+   <meta name="color:Kang Daesung 1" content="#fa2312"/>
+   <meta name="color:Kang Daesung 2" content="#538b3a"/>
+   <meta name="color:Kang Daesung 3" content="#f2ced9"/>
+
+   <meta name="if:Lee Seunghyun" content="0"/>
+   <meta name="color:Lee Seunghyun 1" content="#e677af"/>
+   <meta name="color:Lee Seunghyun 2" content="#7059b7"/>
+   <meta name="color:Lee Seunghyun 3" content="#f7f3b3"/>
+
+   <style type="text/css">
+      html * {
+          margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: #fff url('http://static.tumblr.com/imovwvl/3rql46f3x/paper.png');
+         font: 11px {font:Text};
+         color: {color:Text};
+         -webkit-text-stroke: 1px transparent;
+         word-wrap: break-word;
+      }
+
+      a, a:link, a:active, a:visited {
+         text-decoration: none;
+         transition: color 1.5s linear;
+         -webkit-transition: color 1.5s linear;
+         -moz-transition: color 1.5s linear;
+      }
+
+      a:hover {
+         -o-transition: color .3s linear;
+         -webkit-transition: color .3s linear;
+         -moz-transition: color .3s linear;
+      }
+
+      a:active { outline: none; }
+      a:focus { -moz-outline-style: none; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid;
+      }
+
+      p { padding-top: 5px!important; }
+
+      pre {
+         margin: 5px 10px 0;
+         padding: 5px;
+         word-wrap: break-word;
+         white-space: pre-wrap;
+         white-space: -moz-pre-wrap;
+         white-space: -pre-wrap;
+         white-space: -o-pre-wrap;
+         background: url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+         overflow: auto;
+      }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         margin: 0 auto{block:ifStreampad} 45px{/block:ifStreampad};
+         width: 600px;
+      }
+
+      #header {
+         margin: 0 auto;
+         width: 600px;
+      }
+
+      #posts {
+         width: 580px;
+         margin-left: -10px;
+      }
+
+      .border {
+         float: left;
+         margin: 0 0 10px 10px;
+         padding: 2px;
+         background-image: url('http://static.tumblr.com/imovwvl/3rql46f3x/paper.png');
+      }
+
+      .post {
+         padding: 13px;
+         width: 540px;
+         background: #fff url('http://static.tumblr.com/imovwvl/DdVl46hi7/paper-inner.png');
+         overflow: auto;
+         overflow-x: hidden;
+      }
+
+      #about { margin: 10px auto; }
+
+      .border-inner {
+         padding: 18px 0;
+         width: 540px;
+         text-align: center;
+         background-image: url('http://static.tumblr.com/imovwvl/3rql46f3x/paper.png');
+      }
+
+      h1 { font-size: 25px; }
+
+      h2 {
+         font: normal 18px/16px {font:Headers};
+         text-transform: uppercase;
+         letter-spacing: -2px;
+         color: {color:Headers};
+      }
+
+      hr {
+         height: 2px;
+         border: 0;
+         margin: 3px 0;
+         background-image: url('http://static.tumblr.com/imovwvl/3rql46f3x/paper.png');
+      }
+
+      .clear { clear: both; }
+      .left { float: left; }
+      .right { float: right; }
+      .five { margin-top: -5px; }
+
+      .tags { margin-top: 2px; }
+      .tags a {
+         font-size: 10px;
+         color: {color:Tags}!important;
+      }
+
+      .info {
+         margin-top: 2px;
+         overflow: auto;
+         overflow-x: hidden;
+      }
+
+      .info a {
+         font: 11px Courier, 'Courier New', monospace;
+         text-transform: uppercase;
+         letter-spacing: -1px;
+      }
+
+      .avatar { display: none; }
+
+      #notes ol {
+         padding: 0!important;
+         list-style-type: none;
+      }
+
+      #notes .clear {
+         margin: 5px 0;
+         height: 2px;
+         background-image: url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+      }
+
+      #notes li blockquote { display: none; }
+
+      .chat ul {
+         list-style-type: none;
+         padding-left: 0;
+      }
+
+      .chat li { padding: 5px 10px; }
+      .odd { background-image: url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png'); }
+
+      .albumart {
+         margin-bottom: 10px;
+         padding: 15px;
+         background-image: url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+         overflow: auto;
+      }
+
+      .albumart img { width: 250px; }
+      .audio embed { width: 530px; }
+
+      .player {
+         padding: 5px;
+         background-image: url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+      }
+
+      h4 {
+         font-weight: normal;
+         padding: 5px;
+         background-image: url('http://static.tumblr.com/imovwvl/bkVl320i9/paper.png');
+         overflow: auto;
+      }
+
+      h4 img {
+         float: left;
+         margin-right: 5px;
+      }
+
+      #next {
+         position: fixed;
+         top: 30%;
+         right: 10px;
+      }
+
+      #previous {
+         position: fixed;
+         top: 30%;
+         left: 10px;
+      }
+
+      #next a, #previous a { font: 100px 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; }
+
+      #search input {
+         border: 0;
+         background: none;
+         width: 100%;
+         color: {color:Text};
+         font-style: italic;
+         -webkit-text-stroke: 1px transparent;
+      }
+
+      #footer { text-align: center; }
+
+      {block:ifTwoColumns}{block:IndexPage}
+      #posts .post { width: 250px; }
+      .post img { max-width: 250px; }
+
+      .border-inner {
+         padding: 0;
+         width: 250px;
+      }
+
+      .photoset embed { max-height: 188px; width: 250px; }
+
+      .albumart { padding: 0; }
+      .albumart .right { display: none; }
+      .audio embed { width: 240px; }
+      .video .border-inner { display: none; }
+      {/block:IndexPage}{/block:ifTwoColumns}
+
+      {block:ifKwonJiyong}
+      a, a:link, a:active, a:visited { color: {color:Kwon Jiyong 1}; }
+      a:hover { color: {color:Kwon Jiyong 2}; }
+
+      #header {
+         margin-top: -50px;
+         height: 576px;
+         background: url('http://static.tumblr.com/imovwvl/mXhl4dv0v/gd.png');
+      }
+
+      .border { background-color: {color:Kwon Jiyong 1}; }
+      .border-inner, hr, #notes .clear, .odd, .albumart, .player, h4 { background-color: {color:Kwon Jiyong 3}; }
+
+      #about { margin: -40px auto 10px; }
+
+      .tags a:hover { color: {color:Kwon Jiyong 1}!important; }
+      .info a { color: {color:Kwon Jiyong 2}; }
+      .info a:hover { color: {color:Kwon Jiyong 1}; }
+      {/block:ifKwonJiyong}
+
+      {block:ifDongYoungbae}
+      a, a:link, a:active, a:visited { color: {color:Dong Youngbae 1}; }
+      a:hover { color: {color:Dong Youngbae 2}; }
+
+      #header {
+         margin: -20px 0 0 -15px;
+         height: 552px;
+         background: url('http://static.tumblr.com/imovwvl/Y0sl4dv1g/ty.png');
+      }
+
+      .border { background-color: {color:Dong Youngbae 1}; }
+      .border-inner, hr, #notes .clear, .odd, .albumart, .player, h4 { background-color: {color:Dong Youngbae 3}; }
+
+      #about { margin: -50px auto 10px; }
+
+      .tags a:hover { color: {color:Dong Youngbae 1}!important; }
+      .info a { color: {color:Dong Youngbae 2}; }
+      .info a:hover { color: {color:Dong Youngbae 1}; }
+      {/block:ifDongYoungbae}
+
+      {block:ifChoiSeunghyun}
+      a, a:link, a:active, a:visited { color: {color:Choi Seunghyun 1}; }
+      a:hover { color: {color:Choi Seunghyun 2}; }
+
+      #header {
+         height: 540px;
+         background: url('http://static.tumblr.com/imovwvl/w5Wl4dv29/top.png');
+      }
+
+      .border { background-color: {color:Choi Seunghyun 1}; }
+      .border-inner, hr, #notes .clear, .odd, .albumart, .player, h4 { background-color: {color:Choi Seunghyun 3}; }
+
+      #about { margin: -70px auto 10px; }
+
+      .tags a:hover { color: {color:Choi Seunghyun 1}!important; }
+      .info a { color: {color:Choi Seunghyun 2}; }
+      .info a:hover { color: {color:Choi Seunghyun 1}; }
+      {/block:ifChoiSeunghyun}
+
+      {block:ifKangDaesung}
+      a, a:link, a:active, a:visited { color: {color:Kang Daesung 1}; }
+      a:hover { color: {color:Kang Daesung 2}; }
+
+      #header {
+         margin: -20px 0 0 -20px;
+         height: 553px;
+         background: url('http://static.tumblr.com/imovwvl/Vftl4dypn/ds.png');
+      }
+
+      .border { background-color: {color:Kang Daesung 1}; }
+      .border-inner, hr, #notes .clear, .odd, .albumart, .player, h4 { background-color: {color:Kang Daesung 3}; }
+
+      #about { margin: -100px auto 10px; }
+
+      .tags a:hover { color: {color:Kang Daesung 1}!important; }
+      .info a { color: {color:Kang Daesung 2}; }
+      .info a:hover { color: {color:Kang Daesung 1}; }
+      {/block:ifKangDaesung}
+
+      {block:ifLeeSeunghyun}
+      a, a:link, a:active, a:visited { color: {color:Lee Seunghyun 1}; }
+      a:hover { color: {color:Lee Seunghyun 2}; }
+
+      #header {
+         height: 440px;
+         background: url('http://static.tumblr.com/imovwvl/UL1l4e0o4/sr.png');
+      }
+
+      .border { background-color: {color:Lee Seunghyun 1}; }
+      .border-inner, hr, #notes .clear, .odd, .albumart, .player, h4 { background-color: {color:Lee Seunghyun 3}; }
+
+      #about { margin: -20px auto 10px; }
+
+      .tags a:hover { color: {color:Lee Seunghyun 1}!important; }
+      .info a { color: {color:Lee Seunghyun 2}; }
+      .info a:hover { color: {color:Lee Seunghyun 1}; }
+      {/block:ifLeeSeunghyun}
+
+      {CustomCSS}
+   </style>
+
+   <script src="http://static.tumblr.com/i4mzrmx/lk4kqww5w/jquery-1.3.2.min.js" type="text/javascript"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/OIpl28qhx/youtube.js"></script>
+
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/dJWl20ley/jqueryformasonry.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/rSGl20lfv/masonry.js"></script>
+   <script type="text/javascript">
+      $(window).load(function() {
+         $('#posts').masonry();
+      });
+   </script>
+
+   <script src="http://static.tumblr.com/3driglx/BWxl1w5i2/cufon.js" type="text/javascript"></script>
+   <script src="http://static.tumblr.com/imovwvl/9Ull4cqxy/earth_400.font.js" type="text/javascript"></script>
+   <script type="text/javascript">
+      Cufon.replace('h1');
+   </script>
+</head>
+<body>
+   <div id="container"><div id="content">
+      <div id="header"></div>
+      <div class="border" id="about"><div class="post">
+         <h1>{Title}</h1>
+         {block:ifShowIcon}<img src="{PortraitURL-64}" alt="" style="float:left;margin-right:5px" />{/block:ifShowIcon}
+         <a href="/">Home</a> &middot; <a href="/archive">Archive</a> &middot;
+         <a href="{RSS}">RSS</a> &middot;
+         {block:AskEnabled}<a href="/ask">Ask</a> &middot;{/block:AskEnabled}
+         {block:SubmissionsEnabled}<a href="/submit">Submit</a> &middot;{/block:SubmissionsEnabled}
+         {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a> &middot; {/block:Pages}{/block:HasPages}
+         {Description}
+      </div></div>
+      <div class="clear"></div>
+      <div id="posts">
+         {block:Posts}
+            {block:Text}
+               <div class="text border"><div class="post">
+                  {block:Title}<h2>{Title}</h2><hr />{/block:Title}
+                  <div class="five">{Body}</div>
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Text}
+
+            {block:Photo}
+               <div class="photo border"><div class="post">
+                  <div class="border-inner">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
+                  {block:Caption}{Caption}{/block:Caption}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Photo}
+
+            {block:Photoset}
+               <div class="photoset border"><div class="post">
+                  <div class="border-inner">{Photoset-500}</div>
+                  {block:Caption}{Caption}{/block:Caption}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Photoset}
+
+            {block:Quote}
+               <div class="quote border"><div class="post">
+                  <h2>{Quote}</h2><hr />
+                  {block:Source}{Source}{/block:Source}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Quote}
+
+            {block:Link}
+               <div class="link border"><div class="post">
+                  <h2><a href="{URL}" {Target}>{Name} &rsaquo;</a></h2><hr />
+                  {block:Description}<div class="five">{Description}</div>{/block:Description}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Link}
+
+            {block:Chat}
+               <div class="chat border"><div class="post">
+                  {block:Title}<h2>{Title}</h2><hr />{/block:Title}
+                  <ul class="five">{block:Lines}
+                     <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                  {/block:Lines}</ul>
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Chat}
+
+            {block:Audio}
+               <div class="audio border"><div class="post">
+                  {block:AlbumArt}
+                     <div class="albumart">
+                        <img src="{AlbumArtURL}" alt="{block:Caption}{PlaintextCaption}{/block:Caption}" class="left" /><img src="{AlbumArtURL}" alt="{block:Caption}{PlaintextCaption}{/block:Caption}" class="right" />
+                     </div>
+                  {/block:AlbumArt}
+                  <div class="player">{AudioPlayer}</div>
+                  {block:Caption}{Caption}{/block:Caption}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Audio}
+
+            {block:Video}
+               <div class="video border"><div class="post">
+                  {block:ifTwoColumns}{block:IndexPage}<div class="small">{Video-250}</div>{/block:IndexPage}{/block:ifTwoColumns}
+                  <div class="border-inner">{Video-500}</div>
+                  {block:Caption}{Caption}{/block:Caption}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Video}
+
+            {block:Answer}
+               <div class="answer border"><div class="post">
+                  <h4><img src="{AskerPortraitURL-48}" alt="{PlaintextAsker}" />
+                  <strong>{Asker} asked:</strong> {Question}</h4>
+                  {Answer}
+                  {block:HasTags}<div class="tags">
+                     {block:Tags}
+                        <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                     {/block:Tags}
+                  </div>{/block:HasTags}
+                  {block:Date}<div class="info">
+                     <a class="left" href="{Permalink}">{TimeAgo}</a>
+                     {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                  </div>{/block:Date}
+               </div></div>
+               {block:PostNotes}
+                  <div id="notes" class="border"><div class="post">
+                     {PostNotes}
+                  </div></div>
+               {/block:PostNotes}
+            {/block:Answer}
+         {/block:Posts}
+
+         <div id="search" class="border"><div class="post">
+            <form action="/search" method="get"><input name="q" onfocus="this.value=''" type="text" value="Search this tumblelog." /></form>
+         </div></div>
+
+         <div id="footer" class="border"><div class="post">
+            Brushes by <a href="http://axeraider70.deviantart.com">Xavier Durand-Hollis</a> and <a href="http://koreanthemes.tumblr.com/lollipop-brushes">various</a>.<br />
+            Theme by <a href="http://elletricity.tumblr.com">Elletricity</a>.
+            Powered by <a href="http://tumblr.com">Tumblr</a>.
+         </div></div>
+      </div>
+   </div></div>
+
+   {block:Pagination}
+      {block:PreviousPage}
+         <div id="previous"><a href="{PreviousPage}" title="Previous">&lsaquo;</a></div>
+      {/block:PreviousPage}
+      {block:NextPage}
+         <div id="next"><a href="{NextPage}" title="Next">&rsaquo;</a></div>
+      {/block:NextPage}
+   {/block:Pagination}
+
+   {block:DayPagination}
+      {block:PreviousDayPage}
+         <div id="previous"><a href="{PreviousDayPage}" title="Previous">&lsaquo;</a></div>
+      {/block:PreviousDayPage}
+      {block:NextDayPage}
+         <div id="next"><a href="{NextDayPage}" title="Next">&rsaquo;</a></div>
+      {/block:NextDayPage}
+   {/block:DayPagination}
+
+   {block:PermalinkPagination}
+      {block:PreviousPost}
+         <div id="previous"><a href="{PreviousPost}" title="Previous">&lsaquo;</a></div>
+      {/block:PreviousPost}
+      {block:NextPost}
+         <div id="next"><a href="{NextPost}" title="Next">&rsaquo;</a></div>
+      {/block:NextPost}
+   {/block:PermalinkPagination}
+
+   {block:ifStreampad}<script type="text/javascript" src="http://o.aolcdn.com/art/merge?f=/_media/sp/sp-player.js&f=/_media/sp/sp-player-tumblr.js&expsec=86400&ver=11"></script>{/block:ifStreampad}
+
+<script>
+   streampadPlayer.params.trackcolor = "ffffff";
+   {block:ifKwonJiyong}streampadPlayer.params.bgcolor = "{color:Kwon Jiyong 1}";{/block:ifKwonJiyong}
+   {block:ifDongYoungbae}streampadPlayer.params.bgcolor = "{color:Dong Youngbae 1}";{/block:ifDongYoungbae}
+   {block:ifChoiSeunghyun}streampadPlayer.params.bgcolor = "{color:Choi Seunghyun 1}";{/block:ifChoiSeunghyun}
+   {block:ifKangDaesung}streampadPlayer.params.bgcolor = "{color:Kang Daesung 1}";{/block:ifKangDaesung}
+   {block:ifLeeSeunghyun}streampadPlayer.params.bgcolor = "{color:Lee Seunghyun 1}";{/block:ifLeeSeunghyun}
+</script>
+
+   <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
