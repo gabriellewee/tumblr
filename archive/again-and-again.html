@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+   <title>{Title}</title>
+   <link rel="shortcut icon" href="{Favicon}" />
+   <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic" >
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="{MetaDescription}" />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Again & Again
+   Author: Gabrielle Wee
+   Credit: http://elletricity.tumblr.com
+   -->
+
+   <meta name="font:Text" content="Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif"/>
+   <meta name="color:Text" content="#ddd"/>
+   <meta name="color:Links" content="#ea96a1"/>
+   <meta name="color:Links Hover" content="#b28ddc"/>
+   <meta name="font:Headers" content="'Droid Serif', serif"/>
+   <meta name="color:Title" content="#ea96a1"/>
+   <meta name="color:Post" content="#0f0103"/>
+   <meta name="color:Post Borders" content="#250207"/>
+   <meta name="color:Post Titles" content="#b28ddc"/>
+   <meta name="color:Chatline" content="#08020f"/>
+   <meta name="color:Chatline Border" content="#24103a"/>
+   <meta name="color:Tags" content="#aaa"/>
+   <meta name="if:Streampad" content="0"/>
+   <meta name="color:Streampad" content="#000"/>
+
+   <style type="text/css">
+      html * {
+          margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: #000;
+         font: 11px {font:Text};
+         color: {color:Text};
+      }
+
+      a, a:link, a:active, a:visited {
+         color: {color:Links};
+         text-decoration: none;
+         transition: color 1.5s linear;
+         -webkit-transition: color 1.5s linear;
+         -moz-transition: color 1.5s linear;
+      }
+
+      a:hover {
+         color: {color:Links Hover};
+         -o-transition: color .3s linear;
+         -webkit-transition: color .3s linear;
+         -moz-transition: color .3s linear;
+      }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 1px solid;
+      }
+
+      p { padding-top: 5px!important; }
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: square; }
+
+      h1 {
+         font: 18px {font:Headers};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         color: {color:Title};
+       }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #content {
+         margin: 0 auto;
+         width: 600px;
+         height: 100%;
+      }
+
+      #banner {
+         background: url('http://static.tumblr.com/imovwvl/dgtl37v4o/2pm.png');
+         width: 600px;
+         height: 480px;
+      }
+
+      #posts {
+         width: 422px;
+         margin: -80px auto 0;
+      }
+
+      .post {
+         padding: 10px;
+         background-color: {color:Post};
+         border: 1px solid {color:Post Borders};
+         margin-bottom: 10px;
+         overflow: auto;
+      }
+
+      h2 {
+         font: 15px {font:Headers};
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         padding-bottom: 2px;
+         margin-bottom: 1px;
+         border-bottom: 1px solid {color:Text};
+         color: {color:Post Titles};
+      }
+
+      .date {
+         margin-top: 5px;
+         padding-top: 5px;
+         border-top: 1px solid {color:Text};
+         overflow: auto;
+      }
+
+      .date a {
+         font-size: 9px;
+         text-transform: uppercase;
+      }
+
+      .left { float: left; }
+      .right { float: right; }
+      .five { margin-top: -5px; }
+
+      .tags { padding-top: 2px; }
+
+      h3 { font: 15px {font:Headers}; }
+
+      .chat ul {
+         list-style-type: none;
+         padding-left: 0;
+      }
+
+      .chat li { padding: 5px 10px; }
+
+      .odd {
+         background: {color:Chatline};
+         border: 1px solid {color:Chatline Border};
+      }
+
+      #footer, #footer a, .tags a {
+         color: {color:Tags};
+         text-align: center;
+         font-size: 9px;
+      }
+
+      #footer a:hover, .tags a:hover, #pag a:hover { color: {color:Links}; }
+      {block:ifStreampad}#footer { margin-bottom: 45px; }{/block:ifStreampad}
+
+      .albumart img { width: 200px; padding-bottom: 5px; }
+      .audio embed { width: 400px; }
+
+      h4 {
+         font: 13px 'Droid Serif', serif;
+         padding: 10px;
+         background: {color:Chatline};
+         border: 1px solid {color:Chatline Border};
+      }
+
+      #notes ol {
+         padding: 0;
+         list-style-type: none;
+      }
+
+      #notes li {
+         padding: 5px 10px;
+         border-bottom: 1px solid {color:Links Hover};
+      }
+
+      .avatar { display: none; }
+
+      {CustomCSS}
+   </style>
+
+   <script src="http://static.tumblr.com/i4mzrmx/lk4kqww5w/jquery-1.3.2.min.js" type="text/javascript"></script> 
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/OIpl28qhx/youtube.js"></script> 
+
+</head>
+<body>
+   <div id="container">
+      <div id="content">
+         <div id="banner"></div>
+         <div id="posts">
+            <div class="post">
+               <h1>{Title}</h1>
+               <img src="{PortraitURL-64}" alt="" style="float: left; padding-right: 5px" />
+               <a href="/">Home</a> &middot; <a href="/archive">Archive</a> &middot;
+               <a href="{RSS}">RSS</a> &middot;
+               {block:AskEnabled}<a href="/ask">Ask</a> &middot;{/block:AskEnabled}
+               {block:SubmissionsEnabled}<a href="/submit">Submit</a> &middot;{/block:SubmissionsEnabled}
+               {block:HasPages}{block:Pages}<a href="{URL}">{Label}</a> &middot; {/block:Pages}{/block:HasPages}
+               {Description}
+            </div>
+            {block:TagPage}<div class="post" style="text-align: center;"><h4>Posts tagged with <a href="{TagURL}"><em>{Tag}</em></a>.</h4></div>{/block:TagPage}
+            {block:Posts}
+               {block:Text}
+                  <div class="text post">
+                     {block:Title}<h2>{Title}</h2>{block:Title}
+                     <div class="five">{Body}</div>
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Text}
+
+               {block:Photo}
+                  <div class="photo post">
+                     {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}" />{LinkCloseTag}
+                     {block:Caption}{Caption}{/block:Caption}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Photo}
+
+               {block:Photoset}
+                  <div class="photoset post">
+                     {Photoset-400}
+                     {block:Caption}{Caption}{/block:Caption}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Photoset}
+
+               {block:Quote}
+                  <div class="quote post">
+                     <h3>&ldquo;{Quote}&rdquo;</h3>
+                     {block:Source}{Source}{/block:Source}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Quote}
+
+               {block:Link}
+                  <div class="link post">
+                     <h3><a href="{URL}" {Target}>{Name} &#8881;</a></h3>
+                     {block:Description}<div class="five">{Description}</div>{/block:Description}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Link}
+
+               {block:Chat}
+                  <div class="chat post">
+                     {block:Title}<h3>{Title}</h3>{/block:Title}
+                     <ul class="five">{block:Lines}
+                        <li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+                     {/block:Lines}</ul>
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Chat}
+
+               {block:Audio}
+                  <div class="audio post">
+                     {block:AlbumArt}
+                        <div class="albumart">
+                           <img src="{AlbumArtURL}" alt="{block:Caption}{PlaintextCaption}{/block:Caption}" /><img src="{AlbumArtURL}" alt="{block:Caption}{PlaintextCaption}{/block:Caption}" />
+                        </div>
+                     {block:AlbumArt}
+                     {AudioPlayerWhite}
+                     {block:Caption}{Caption}{/block:Caption}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                             <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Audio}
+
+               {block:Video}
+                  <div class="video post">
+                     {Video-400}
+                     {block:Caption}{Caption}{/block:Caption}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Video}
+
+               {block:Answer}
+                  <div class="answer post">
+                     <h4>{Asker} asked: {Question}</h4>
+                     {Answer}
+                     {block:HasTags}
+                        <div class="tags">
+                           {block:Tags}
+                              <a href="{TagURL}">#{Tag}</a>&nbsp;&nbsp;
+                           {/block:Tags}
+                        </div>
+                        <div class="clear"></div>
+                     {/block:HasTags}
+                     {block:Date}
+                        {block:NewDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:NewDayDate}
+
+                        {block:SameDayDate}
+                           <div class="date">
+                              <a class="left" href="{Permalink}">{TimeAgo}</a>
+                              {block:NoteCount}<a class="right" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                           </div>
+                        {/block:SameDayDate}
+                     {/block:Date}
+                  </div>
+                  {block:PostNotes}
+                     <div class="post" id="notes">{PostNotes}</div>
+                  {/block:PostNotes}
+               {/block:Answer}
+            {/block:Posts}
+            {block:Pagination}
+               <div class="post" id="pag">
+                  {block:PreviousPage}
+                     <a class="left" href="{PreviousPage}" title="Previous">&laquo; Previous</a>
+                  {/block:PreviousPage}
+                  {block:NextPage}
+                     <a class="right" href="{NextPage}" title="Next">Next &raquo;</a>
+                  {/block:NextPage}
+               </div>
+            {/block:Pagination}
+
+            {block:DayPagination}
+               <div class="post" id="pag">
+                  {block:PreviousDayPage}
+                     <a class="left" href="{PreviousDayPage}" title="Previous">&laquo; Previous</a>
+                  {/block:PreviousDayPage}
+                  {block:NextDayPage}
+                     <a class="right" href="{NextDayPage}" title="Next">Next &raquo;</a>
+                  {/block:NextDayPage}
+               </div>
+            {/block:DayPagination}
+
+            {block:PermalinkPagination}
+               <div class="post" id="pag">
+                  {block:PreviousPost}
+                     <a class="left" href="{PreviousPost}" title="Previous">&laquo; Previous</a>
+                  {/block:PreviousPost}
+                  {block:NextPost}
+                     <a class="right" href="{NextPost}" title="Next">Next &raquo;</a>
+                  {/block:NextPost}
+               </div>
+            {/block:PermalinkPagination}
+            <div class="post" id="footer">
+               Theme by <a href="http://elletricity.com">Elletricity</a>.
+               Powered by <a href="http://tumblr.com">Tumblr</a>.
+            </div>
+         </div>
+      </div>
+   </div>
+   {block:ifStreampad}<script type="text/javascript" src="http://o.aolcdn.com/art/merge?f=/_media/sp/sp-player.js&f=/_media/sp/sp-player-tumblr.js&expsec=86400&ver=11"></script>{/block:ifStreampad}
+
+<script>
+   streampadPlayer.params.trackcolor = "{color:Text}";
+   streampadPlayer.params.bgcolor = "{color:Streampad}";
+</script>
+</body>
+</html>
