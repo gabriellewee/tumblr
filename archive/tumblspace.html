@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/wfHlnxczy/clear.css" />
+<meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+<meta name="description" content="{MetaDescription}" />
+
+<!--
+	THEME BY ELLETRICITY
+	Theme Name: Tumblspace
+	Author: Gabrielle Wee
+	Credit: http://elletricity.com
+-->
+
+<meta name="image:Profile Picture" content="http://static.tumblr.com/imovwvl/4zKlpfcpu/default.png"/>
+
+<meta name="color:Background" content="#ebebeb"/>
+<meta name="image:Background" content=""/>
+<meta name="text:Background Position" content="center center"/>
+<meta name="if:Tiled Background" content="1"/>
+<meta name="if:Scrolling Background" content="0"/>
+
+<meta name="text:Gender" content=""/>
+<meta name="text:Age" content=""/>
+<meta name="text:Location" content=""/>
+<meta name="text:Country" content=""/>
+
+<meta name="if:Interests" content="1"/>
+<meta name="text:General" content=""/>
+<meta name="text:Music" content=""/>
+<meta name="text:Movies" content=""/>
+<meta name="text:Television" content=""/>
+<meta name="text:Books" content=""/>
+<meta name="text:Heroes" content=""/>
+
+<meta name="if:Details" content="1"/>
+<meta name="text:Here For" content=""/>
+<meta name="text:Relationship Status" content=""/>
+<meta name="text:Sexual Orientation" content=""/>
+<meta name="text:Hometown" content=""/>
+<meta name="text:Religion" content=""/>
+<meta name="text:Occupation" content=""/>
+
+<meta name="text:Like to Meet" content=""/>
+
+<style type="text/css">
+	body {
+		background: {color:Background}{block:ifBackgroundImage} url('{image:Background}'){/block:ifBackgroundImage}{block:ifNotTiledBackground} no-repeat{/block:ifNotTiledBackground}{block:ifNotScrollingBackground} fixed{/block:ifNotScrollingBackground} {text:Background Position};
+		font: 11px Helvetica, Arial, sans serif;
+		color: #000;
+		word-wrap: break-word;
+	}
+	a, a:link, a:active, a:visited {
+		font-weight: bold;
+		color: #039;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #d30;
+		text-decoration: underline;
+	}
+	blockquote {
+		margin: 5px 0 0 11px;
+		padding-left: 10px;
+		border-left: 1px solid;
+	}
+	blockquote img, blockquote a img {
+		max-width: 390px;
+	}
+	p {
+		padding-top: 5px;
+	}
+	ol, ul {
+		padding: 5px 0 0 25px;
+	}
+	ul {
+		list-style-type: square;
+	}
+	ol {
+		list-style-type: decimal;
+	}
+	blockquote p:first-child, blockquote ul:first-child, blockquote ol:first-child,
+	.body p:first-child, .body ul:first-child, .body ol:first-child,
+	.caption p:first-child, .caption ul:first-child, .caption ol:first-child {
+		padding-top: 0;
+	}
+	ul ul, ul ol, ol ol, ol ul {
+		padding-bottom: 5px;
+	}
+	pre {
+		padding: 5px;
+		word-wrap: break-word;
+		background: #f1f1f1;
+	}
+
+	#container {
+		margin: auto;
+		padding: 0px;
+	}
+	#content {
+		margin: 0 auto 50px;
+		padding: 0;
+		width: 795px;
+	}
+
+	#banner {
+		background: #039;
+		padding: 10px 15px;
+		text-align: center;
+	}
+	#search_bar, #search_button {
+		background: #fff;
+		border: 0;
+		padding: 3px 7px;
+	}
+	#search_bar {
+		width: 350px;
+	}
+	#nav {
+		background: #69c;
+		padding: 3px 5px;
+		text-align: center;
+	}
+	#nav a {
+		font-weight: normal;
+		color: #fff;
+	}
+	#nav a:hover {
+		color: #000;
+	}
+
+	#body_content {
+		background: #fff;
+		padding: 15px 25px;
+	}
+
+	#sidebar {
+		float: left;
+		width: 300px;
+	}
+	#profile_picture {
+		float: left;
+		max-width: 170px;
+		max-height: 170px;
+	}
+	#basic_info {
+		float: left;
+		margin-left: 15px;
+	}
+	#basic_info span {
+		display: block;
+	}
+	#url {
+		margin-top: 15px;
+		padding: 0 2px;
+		border: 1px solid #69c;
+	}
+	.box_one {
+		margin-top: 15px;
+		background: #69c;
+		padding: 2px;
+	}
+	.box_one h2 {
+		font-size: 15px;
+		color: #fff;
+		margin: 0 0 3px 10px;
+	}
+	.box_two {
+		background: #fff;
+		padding: 3px;
+		margin-top: -3px;
+	}
+	.box_two tr:last-child {
+		display: none;
+	}
+	.box_left {
+		background: #b1d0f0;
+		padding: 3px;
+		width: 100px;
+		color: #369;
+		font-weight: bold;
+	}
+	.box_middle {
+		width: 3px;
+	}
+	.box_right {
+		background: #d5e8fb;
+		padding: 3px;
+		width: 175px;
+	}
+	.border {
+		height: 3px;
+	}
+
+	#other_side {
+		float: right;
+		width: 420px;
+	}
+	#blurbs_title, #posts_title {
+		background: #fc9;
+		color: #f60;
+		padding-left: 10px;
+	}
+	.blurbs_box {
+		margin: 3px 5px 0;
+	}
+	.blurbs_box h3 {
+		margin: 0 0;
+		font-weight: normal;
+		color: #f60;
+	}
+
+	#posts {
+		margin-top: 15px;
+	}
+	#page_count {
+		display: block;
+		margin: 3px 5px;
+		font-weight: bold;
+	}
+	#page_count span {
+		color: #c00;
+		font-weight: normal;
+	}
+
+	.post {
+		width: 400px;
+		padding: 5px 10px;
+		margin-bottom: 3px;
+		background: #f9d6b4;
+	}
+	.post h3 {
+		margin: 0 0 5px;
+		text-align: right;
+	}
+	.post h3 a {
+		color: #000;
+	}
+	.post h2 {
+		margin-top: -5px;
+	}
+	.post h2 a {
+		color: #000;
+		font-weight: normal;
+	}
+	.chat {
+		padding: 0;
+		list-style-type: none;
+	}
+	.chat li {
+		margin-bottom: 3px;
+	}
+	.chat li:last-child {
+		margin: 0;
+	}
+	#bracket {
+		float: left;
+		margin-top: -7px;
+		font: 30px Courier, monospace;
+	}
+	#pag {
+		margin-top: 5px;
+	}
+	#prev {
+		float: left;
+	}
+	#next {
+		float: right;
+	}
+
+	.avatar {
+		display: none;
+	}
+	#notes ol {
+		padding: 0;
+		list-style-type: none;
+	}
+	#notes li {
+		margin-bottom: 3px;
+	}
+
+	#footer {
+		margin-top: 5px;
+		text-align: center;
+	}
+	#footer a {
+		color: #000;
+		font-weight: normal;
+	}
+
+	{CustomCSS}
+</style>
+
+</head>
+<body>
+<div id="container">
+<div id="content">
+	<div id="banner">
+		<form action="/search" method="get">
+			<input id="search_bar" type="text" name="q" value="{SearchQuery}"/>
+			<input id="search_button" type="submit" value="Search"/>
+		</form>
+	</div>
+
+	<div id="nav">
+		<a href="/">Home</a> |
+		<a href="/archive">Archive</a> |
+		<a href="{RSS}">RSS</a> |
+		{block:AskEnabled}<a href="/ask">Ask</a> |{/block:AskEnabled}
+		{block:SubmissionsEnabled}<a href="/submit">Submit</a> |{block:SubmissionsEnabled}
+		<a href="/random">Random</a>
+		{block:HasPages}{block:Pages} | <a href="{URL}">{Label}</a>{/block:Pages}{/block:HasPages}
+	</div>
+
+	<div id="body_content">
+		<div id="sidebar">
+			<h1>{Title}</h1>
+			{block:ifProfilePictureImage}<img id="profile_picture" src="{image:Profile Picture}" alt=""/>{/block:ifProfilePictureImage}
+			<div id="basic_info">
+				{block:ifGender}<span>{text:Gender}</span>{/block:ifGender}
+				{block:ifAge}<span>{text:Age}</span>{/block:ifAge}
+				{block:ifLocation}<span>{text:Location}</span>{/block:ifLocation}
+				{block:ifCountry}<span>{text:Country}</span>{/block:ifCountry}
+			</div>
+			<div class="clear"></div>
+
+			<div id="url">
+				<strong>Tumblr URL:</strong><br/>&nbsp;&nbsp;
+				<a href="http://{Name}.tumblr.com">www.{Name}.tumblr.com</a>
+			</div>
+
+			{block:ifInterests}<div id="interests" class="box_one">
+				<h2>Interests</h2>
+				<table class="box_two" cellpadding="0" cellspacing="0">
+					{block:ifGeneral}<tr>
+						<td class="box_left">General</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:General}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifGeneral}
+
+					{block:ifMusic}<tr>
+						<td class="box_left">Music</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Music}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifMusic}
+
+					{block:ifMovies}<tr>
+						<td class="box_left">Movies</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Movies}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifMovies}
+
+					{block:ifTelevision}<tr>
+						<td class="box_left">Television</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Television}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifTelevision}
+
+					{block:ifBooks}<tr>
+						<td class="box_left">Books</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Books}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifBooks}
+
+					{block:ifHeroes}<tr>
+						<td class="box_left">Heroes</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Heroes}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifHeroes}
+				</table>
+			</div>{/block:ifInterests}
+
+			{block:ifDetails}<div id="details" class="box_one">
+				<h2>Details</h2>
+				<table class="box_two" cellpadding="0" cellspacing="0">
+					{block:ifHereFor}<tr>
+						<td class="box_left">Here for</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Here For}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifHereFor}
+
+					{block:ifRelationshipStatus}<tr>
+						<td class="box_left">Status</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Relationship Status}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifRelationshipStatus}
+
+					{block:ifSexualOrientation}<tr>
+						<td class="box_left">Orientation</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Sexual Orientation}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifSexualOrientation}
+
+					{block:ifHometown}<tr>
+						<td class="box_left">Hometown</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Hometown}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifHometown}
+
+					{block:ifReligion}<tr>
+						<td class="box_left">Religion</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Religion}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifReligion}
+
+					{block:ifOccupation}<tr>
+						<td class="box_left">Occupation</td>
+						<td class="box_middle"></td>
+						<td class="box_right">{text:Occupation}</td>
+					</tr>
+
+					<tr><td class="border"></td></tr>{/block:ifOccupation}
+				</table>
+			</div>{/block:ifDetails}
+		</div>
+
+		<div id="other_side">
+			<div id="blurbs">
+				<h2 id="blurbs_title">Blurbs</h2>
+				<div class="blurbs_box">
+					<h3>About Me</h3>
+					{Description}
+				</div>
+
+				{block:ifLikeToMeet}<div class="blurbs_box">
+					<h3>Who I'd Like to Meet</h3>
+					{text:Like to Meet}
+				</div>{/block:ifLikeToMeet}
+			</div>
+
+			<div id="posts">
+				<h2 id="posts_title">Posts</h2>
+				<span id="page_count">Displaying <span>{CurrentPage}</span> of <span>{TotalPages}</span> pages. <a href="/archive">View all</a></span>
+				{block:Posts}
+					<div class="post">
+						{block:Date}<h3><a href="{Permalink}">{Month} {DayOfMonth} {Year} {12Hour}:{Minutes} {CapitalAmPm}{block:NoteCount} &middot; {NoteCountWithLabel}{/block:NoteCount}</a></h3>{/block:Date}
+
+						{block:Text}
+							{block:Title}<h2>{Title}</h2>{/block:Title}
+							<div class="body">{Body}</div>
+						{/block:Text}
+
+						{block:Photo}
+							{LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
+							{block:Caption}{Caption}{/block:Caption}
+						{/block:Photo}
+
+						{block:Photoset}
+							{Photoset-400}
+							{block:Caption}{Caption}{/block:Caption}
+						{/block:Photoset}
+
+						{block:Quote}
+							<h2>{Quote}</h2>
+							{block:Source}<div class="body">{Source}</div>{block:Source}
+						{/block:Quote}
+
+						{block:Link}
+							<h2><a href="{URL}" {Target}>{Name} &rarr;</a></h2>
+							{block:Description}
+								<div class="body">{Description}</div>
+							{/block:Description}
+						{/block:Link}
+
+						{block:Chat}
+							{block:Title}<h2>{Title}</h2>{/block:Title}
+							<ul class="chat">{block:Lines}
+								<li class="{Alt} user_{UserNumber}">{block:Label}<strong>{Label}</strong>{/block:Label} {Line}</li>
+							{/block:Lines}</ul>
+						{/block:Chat}
+
+						{block:Audio}
+							<div class="left">{AudioPlayerBlack}</div>
+							<div id="bracket">}</div>
+							<div class="left" style="margin-left: 5px;">
+								{block:Artist}{Artist} -{/block:Artist}
+								{block:TrackName}{TrackName}{/block:TrackName}
+								<br />{PlayCountWithLabel}
+							</div>
+							<div class="clear"></div>
+							{block:Caption}{Caption}{/block:Caption}
+						{/block:Audio}
+
+						{block:Video}
+							{Video-400}
+							{block:Caption}{Caption}{/block:Caption}
+						{/block:Video}
+
+						{block:Answer}
+							<h2>{Asker} asked: {Question}</h2>
+							<div class="body">{Answer}</div>
+						{/block:Answer}
+					</div>
+
+					{block:PostNotes}
+						<div id="notes" class="post">{PostNotes}</div>
+					{/block:PostNotes}
+				{/block:Posts}
+
+				{block:Pagination}
+					<div id="pag">
+						{block:PreviousPage}<a id="prev" href="{PreviousPage}">&larr; Previous</a>{/block:PreviousPage}
+						{block:NextPage}<a id="next" href="{NextPage}">Next &rarr;</a>{/block:NextPage}
+					</div>
+					<div class="clear"></div>
+				{/block:Pagination}
+
+				{block:DayPagination}
+					<div id="pag">
+						{block:PreviousDayPage}<a id="prev" href="{PreviousDayPage}">&larr; Previous</a>{/block:PreviousDayPage}
+						{block:NextDayPage}<a id="next" href="{NextDayPage}">Next &rarr;</a>{/block:NextDayPage}
+					</div>
+					<div class="clear"></div>
+				{/block:DayPagination}
+
+				{block:PermalinkPagination}
+					<div id="pag">
+						{block:PreviousPost}<a id="prev" href="{PreviousPost}">&larr; Previous</a>{/block:PreviousPost}
+						{block:NextPost}<a id="next" href="{NextPost}">Next &rarr;</a>{/block:NextPost}
+					</div>
+					<div class="clear"></div>
+				{/block:PermalinkPagination}
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+
+	<div id="footer">
+		<a href="http://elleusine.net/tumblspace">Tumblspace</a> by <a href="http://elleusine.net">Gabrielle Wee</a>. Powered by <a href="http://tumblr.com">Tumblr</a>.
+	</div>
+</div>
+</div>
+</body>
+</html>
